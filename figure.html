@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title">Style Atelier - Фигура: типажи, посадка и пропорции</title>
+<meta name="description" data-i18n-content="meta.desc" content="Как подбирать одежду по типу фигуры: женские и мужские типажи, правила посадки, коррекция роста и визуальные приемы.">
+<meta property="og:type" content="website">
+<meta property="og:title" data-i18n-content="meta.title" content="Style Atelier - Фигура: типажи, посадка и пропорции">
+<meta property="og:description" data-i18n-content="meta.desc" content="Как подбирать одежду по типу фигуры: женские и мужские типажи, правила посадки, коррекция роста и визуальные приемы.">
+<meta name="theme-color" content="#FAF7F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+main.page-figure .type-layout{display:grid;grid-template-columns:140px 1fr;gap:28px;align-items:start}
+main.page-figure .type-svg{border:1px solid var(--line);border-radius:var(--radius);background:var(--cream);padding:16px 12px}
+main.page-figure .type-svg svg{width:100%;height:auto}
+main.page-figure .quiz-result ul{list-style:none;margin:0 auto 1.5em;padding:0;max-width:540px;text-align:left}
+main.page-figure .quiz-result ul li{position:relative;padding-left:1.7em;margin-bottom:.55em}
+main.page-figure .quiz-result ul li::before{content:"+";position:absolute;left:0;color:var(--sage);font-weight:700}
+main.page-figure .finder-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:1.4em}
+main.page-figure .finder-note{text-align:center;color:var(--muted);font-size:.92rem;max-width:640px;margin:1.6em auto 0}
+main.page-figure .height-grid ul{padding-left:1.2em;margin-bottom:0}
+main.page-figure .height-grid li{margin-bottom:.6em}
+main.page-figure .mist-table td:first-child{font-weight:600;white-space:normal;min-width:170px}
+main.page-figure .hero-figs{width:100%;max-width:420px;margin:0 auto}
+@media(max-width:640px){
+  main.page-figure .type-layout{grid-template-columns:1fr}
+  main.page-figure .type-svg{max-width:180px}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Перейти к содержимому</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">SA</span><span class="brand-name">Style Atelier</span></a>
+    <nav class="main-nav" id="mainNav" data-i18n-aria="a11y.nav" aria-label="Основная навигация">
+      <a href="index.html" data-i18n="nav.home">Главная</a>
+      <a href="colors.html" data-i18n="nav.colors">Цвет</a>
+      <a href="figure.html" data-i18n="nav.figure" class="active">Фигура</a>
+      <a href="styles.html" data-i18n="nav.styles">Стили</a>
+      <a href="combinations.html" data-i18n="nav.combo">Сочетания</a>
+      <a href="capsule.html" data-i18n="nav.capsule">Капсула</a>
+      <a href="builder.html" data-i18n="nav.builder" class="nav-cta">Конструктор</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" data-i18n-aria="a11y.langLabel" aria-label="Выбор языка">
+        <button data-lang="ru" class="active">RU</button><button data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" data-i18n-aria="a11y.menu" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1" class="page-figure">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow" data-i18n="hero.eyebrow">Фигура</span>
+        <h1 data-i18n="hero.title">Одежда под твой тип фигуры</h1>
+        <p class="lede" data-i18n="hero.lede">Плечи, талия, бедра: научись читать свои пропорции и подбирать силуэты, которые создают баланс. Правила ниже - ориентиры, а не догмы: твой вкус решает.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#finderSec" data-i18n="hero.cta1">Определить свой типаж</a>
+          <a class="btn btn-ghost" href="builder.html" data-i18n="hero.cta2">Конструктор образа</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg class="hero-figs" viewBox="0 0 380 180" role="img">
+          <title data-i18n="hero.artT">Три типа женской фигуры: песочные часы, прямоугольник, груша</title>
+          <g stroke="var(--ink)" stroke-width="2" fill="none">
+            <g transform="translate(8,8)">
+              <circle cx="60" cy="14" r="9"/>
+              <path d="M60 23 L60 32"/>
+              <path d="M46 36 C51 52 54 66 52 82 C50 96 45 108 43 124 L43 140 L77 140 L77 124 C75 108 70 96 68 82 C66 66 69 52 74 36 Z"/>
+            </g>
+            <g transform="translate(134,8)">
+              <circle cx="60" cy="14" r="9"/>
+              <path d="M60 23 L60 32"/>
+              <path d="M46 36 C45 58 44 78 44 98 L44 140 L76 140 L76 98 C76 78 75 58 74 36 Z"/>
+            </g>
+            <g transform="translate(260,8)">
+              <circle cx="60" cy="14" r="9"/>
+              <path d="M60 23 L60 32"/>
+              <path d="M50 36 C52 54 52 70 48 88 C44 104 40 116 38 128 L38 140 L82 140 L82 128 C80 116 76 104 72 88 C68 70 68 54 70 36 Z"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINDER QUIZ -->
+  <section class="section alt" id="finderSec">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="finder.eyebrow">Определитель</span>
+        <h2 data-i18n="finder.title">Узнай свой типаж за минуту</h2>
+        <p class="lede" data-i18n="finder.lede">Ответь на 3-4 вопроса - покажем твой типаж и ключевые рекомендации. Большинство людей - смешанные типажи: ориентируйся на доминирующий признак.</p>
+      </div>
+      <div id="figureFinder"></div>
+      <p class="finder-note" data-i18n="finder.note">Типажи - это ориентиры для выбора силуэтов, а не ярлыки. Если сомневаешься между двумя - читай оба разбора ниже.</p>
+    </div>
+  </section>
+
+  <!-- WOMEN -->
+  <section class="section" id="womenSec">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="secW.eyebrow">Женские типажи</span>
+        <h2 data-i18n="secW.title">Пять женских типажей</h2>
+        <p class="lede" data-i18n="secW.lede">Для каждого типажа - признаки, цель коррекции и конкретные рекомендации по категориям одежды. Начни с определителя выше, если еще не знаешь свой типаж.</p>
+      </div>
+
+      <article class="rule-card" id="type-hourglass">
+        <div class="type-layout">
+          <div class="type-svg">
+            <svg viewBox="0 0 120 170" role="img" stroke="var(--ink)" stroke-width="2" fill="none">
+              <title data-i18n="w1.name">Песочные часы</title>
+              <circle cx="60" cy="16" r="9"/>
+              <path d="M60 25 L60 34"/>
+              <path d="M46 38 C51 54 54 68 52 84 C50 98 45 110 43 126 L43 142 L77 142 L77 126 C75 110 70 98 68 84 C66 68 69 54 74 38 Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="rule-tag" data-i18n="lbl.tagW">Женский типаж</span>
+            <h3 data-i18n="w1.name">Песочные часы</h3>
+            <p><strong data-i18n="lbl.signs">Признаки:</strong> <span data-i18n="w1.signs">Плечи и бедра примерно равны, талия четко выражена.</span></p>
+            <p class="rule-why"><strong data-i18n="lbl.goal">Цель:</strong> <span data-i18n="w1.goal">Сохранить естественный баланс и подчеркнуть талию - фигура уже сбалансирована, главное не прятать пропорции.</span></p>
+            <div class="rule-do">
+              <p><strong data-i18n="lbl.do">Делай:</strong></p>
+              <p data-i18n-html="w1.do"><strong>Вырезы:</strong> V-вырез, глубокий овальный, «сердечком» - ведут линию к талии.<br><strong>Верх:</strong> приталенные жакеты с вытачками, топы с запахом, трикотаж со стрейчем.<br><strong>Низ:</strong> высокая посадка, прямой или слегка зауженный крой, bootcut.<br><strong>Платья:</strong> с запахом, футляр, юбка-карандаш; ремень средней ширины на естественной талии.</p>
+            </div>
+            <p class="rule-avoid"><strong data-i18n="lbl.avoid">Избегай:</strong> <span data-i18n="w1.avoid">Бесформенные балахоны и «коробчатые» жакеты; жесткие ткани без эластичности; объемные слои сверху и снизу одновременно.</span></p>
+            <p class="rule-ex"><strong data-i18n="lbl.err">Типичные ошибки:</strong> <span data-i18n="w1.err">Прятать талию под oversize - фигура выглядит крупнее; заниженная посадка брюк; слишком тесная одежда со складками.</span></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rule-card" id="type-pear">
+        <div class="type-layout">
+          <div class="type-svg">
+            <svg viewBox="0 0 120 170" role="img" stroke="var(--ink)" stroke-width="2" fill="none">
+              <title data-i18n="w2.name">Груша</title>
+              <circle cx="60" cy="16" r="9"/>
+              <path d="M60 25 L60 34"/>
+              <path d="M50 38 C52 56 52 72 48 90 C44 106 40 118 38 130 L38 142 L82 142 L82 130 C80 118 76 106 72 90 C68 72 68 56 70 38 Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="rule-tag" data-i18n="lbl.tagW">Женский типаж</span>
+            <h3 data-i18n="w2.name">Груша</h3>
+            <p><strong data-i18n="lbl.signs">Признаки:</strong> <span data-i18n="w2.signs">Бедра шире плеч, плечи узкие, талия выражена.</span></p>
+            <p class="rule-why"><strong data-i18n="lbl.goal">Цель:</strong> <span data-i18n="w2.goal">Добавить визуального объема верхней части, вытянуть силуэт вниз и уравновесить нижнюю часть.</span></p>
+            <div class="rule-do">
+              <p><strong data-i18n="lbl.do">Делай:</strong></p>
+              <p data-i18n-html="w2.do"><strong>Вырезы:</strong> лодочка, открытые плечи, квадратный - визуально расширяют плечи; украшения у шеи.<br><strong>Верх:</strong> светлые и яркие тона, структурированные плечи, укороченные жакеты до талии, воланы и рукава-фонарики.<br><strong>Низ:</strong> темные прямые брюки, wide-leg, bootcut; высокая посадка.<br><strong>Платья:</strong> А-силуэт, fit-and-flare; детали сверху, спокойный темный низ.</p>
+            </div>
+            <p class="rule-avoid"><strong data-i18n="lbl.avoid">Избегай:</strong> <span data-i18n="w2.avoid">Светлые и блестящие ткани на бедрах; карманы, вышивка и аппликации на бедрах; заниженная посадка; крупный принт на бедрах.</span></p>
+            <p class="rule-ex"><strong data-i18n="lbl.err">Типичные ошибки:</strong> <span data-i18n="w2.err">Темный «скучный» верх при ярком низе - переворачивает баланс; топ, заканчивающийся на самой широкой точке бедер; светлые скинни без объемного верха.</span></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rule-card" id="type-apple">
+        <div class="type-layout">
+          <div class="type-svg">
+            <svg viewBox="0 0 120 170" role="img" stroke="var(--ink)" stroke-width="2" fill="none">
+              <title data-i18n="w3.name">Яблоко</title>
+              <circle cx="60" cy="16" r="9"/>
+              <path d="M60 25 L60 34"/>
+              <path d="M48 38 C46 58 42 74 41 92 C40 110 44 122 46 132 L46 142 L74 142 L74 132 C76 122 80 110 79 92 C78 74 74 58 72 38 Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="rule-tag" data-i18n="lbl.tagW">Женский типаж</span>
+            <h3 data-i18n="w3.name">Яблоко</h3>
+            <p><strong data-i18n="lbl.signs">Признаки:</strong> <span data-i18n="w3.signs">Объем сосредоточен в области талии, талия слабо выражена, ноги стройные.</span></p>
+            <p class="rule-why"><strong data-i18n="lbl.goal">Цель:</strong> <span data-i18n="w3.goal">Создать вертикальную линию, удлинить торс и направить внимание на ноги, декольте и лицо.</span></p>
+            <div class="rule-do">
+              <p><strong data-i18n="lbl.do">Делай:</strong></p>
+              <p data-i18n-html="w3.do"><strong>Вырезы:</strong> V-вырез - главный инструмент, глубокий овал.<br><strong>Верх:</strong> топы с запахом, туники, струящиеся ткани; завышенная талия (ампир); удлиненные жакеты и кардиганы нараспашку.<br><strong>Низ:</strong> прямые темные брюки со средней или высокой посадкой и гладким поясом.<br><strong>Платья:</strong> А-силуэт до колена, ампир, трапеция; длина открывает ноги; длинные колье.</p>
+            </div>
+            <p class="rule-avoid"><strong data-i18n="lbl.avoid">Избегай:</strong> <span data-i18n="w3.avoid">Обтягивающий трикотаж на животе; широкие ремни на талии; кроп-топы; горизонтальное деление цветом на уровне живота; водолазки; бесформенные балахоны.</span></p>
+            <p class="rule-ex"><strong data-i18n="lbl.err">Типичные ошибки:</strong> <span data-i18n="w3.err">Пытаться «затянуть» талию ремнем - это подчеркивает ее отсутствие; короткие жакеты, заканчивающиеся на животе; тесные джинсы с низкой посадкой.</span></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rule-card" id="type-rectangle">
+        <div class="type-layout">
+          <div class="type-svg">
+            <svg viewBox="0 0 120 170" role="img" stroke="var(--ink)" stroke-width="2" fill="none">
+              <title data-i18n="w4.name">Прямоугольник</title>
+              <circle cx="60" cy="16" r="9"/>
+              <path d="M60 25 L60 34"/>
+              <path d="M46 38 C45 60 44 80 44 100 L44 142 L76 142 L76 100 C76 80 75 60 74 38 Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="rule-tag" data-i18n="lbl.tagW">Женский типаж</span>
+            <h3 data-i18n="w4.name">Прямоугольник</h3>
+            <p><strong data-i18n="lbl.signs">Признаки:</strong> <span data-i18n="w4.signs">Плечи, талия и бедра примерно одной ширины, талия слабо выражена. Самый распространенный типаж.</span></p>
+            <p class="rule-why"><strong data-i18n="lbl.goal">Цель:</strong> <span data-i18n="w4.goal">Создать иллюзию талии и изгибов: добавить объем в бюст и бедра, обозначить талию.</span></p>
+            <div class="rule-do">
+              <p><strong data-i18n="lbl.do">Делай:</strong></p>
+              <p data-i18n-html="w4.do"><strong>Верх:</strong> пеплум (волан на талии создает изгиб), топы с рюшами, приталенные жакеты с ремнем; слои - облегающий топ плюс расстегнутый жакет.<br><strong>Низ:</strong> wide-leg, клеш, карго, детали на бедрах; высокая посадка с ремнем.<br><strong>Платья:</strong> fit-and-flare, плиссированные, с воланами, с запахом; ремни на талии.<br><strong>Ткани:</strong> структурные - плотный хлопок, твид, жаккард: они держат объем.</p>
+            </div>
+            <p class="rule-avoid"><strong data-i18n="lbl.avoid">Избегай:</strong> <span data-i18n="w4.avoid">Прямые бесформенные силуэты «трубой»; мешковатый oversize без ремня; обтягивающие платья-футляры без акцента на талии; тонкие липнущие ткани.</span></p>
+            <p class="rule-ex"><strong data-i18n="lbl.err">Типичные ошибки:</strong> <span data-i18n="w4.err">Bodycon-платья, подчеркивающие отсутствие изгибов; одежда «мешком» в надежде скрыть; отказ от ремней и пеплума.</span></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rule-card" id="type-invtri">
+        <div class="type-layout">
+          <div class="type-svg">
+            <svg viewBox="0 0 120 170" role="img" stroke="var(--ink)" stroke-width="2" fill="none">
+              <title data-i18n="w5.name">Перевернутый треугольник</title>
+              <circle cx="60" cy="16" r="9"/>
+              <path d="M60 25 L60 34"/>
+              <path d="M38 38 C44 52 48 66 50 84 C52 100 52 118 52 130 L52 142 L68 142 L68 130 C68 118 68 100 70 84 C72 66 76 52 82 38 Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="rule-tag" data-i18n="lbl.tagW">Женский типаж</span>
+            <h3 data-i18n="w5.name">Перевернутый треугольник</h3>
+            <p><strong data-i18n="lbl.signs">Признаки:</strong> <span data-i18n="w5.signs">Плечи шире бедер, бедра узкие, часто спортивное телосложение.</span></p>
+            <p class="rule-why"><strong data-i18n="lbl.goal">Цель:</strong> <span data-i18n="w5.goal">Смягчить линию плеч, добавить объема и интереса нижней части, выстроить вертикаль сверху.</span></p>
+            <div class="rule-do">
+              <p><strong data-i18n="lbl.do">Делай:</strong></p>
+              <p data-i18n-html="w5.do"><strong>Вырезы:</strong> V-вырез, глубокий овал с мягкими линиями.<br><strong>Верх:</strong> темные однотонные топы, минимум деталей на плечах, рукав реглан; удлиненные жилеты нараспашку.<br><strong>Низ:</strong> светлые и принтованные брюки, wide-leg, клеш, детали и карманы.<br><strong>Юбки и платья:</strong> А-силуэт, плиссе, воланы и принты. Цветовая стратегия: темный верх, светлый низ.</p>
+            </div>
+            <p class="rule-avoid"><strong data-i18n="lbl.avoid">Избегай:</strong> <span data-i18n="w5.avoid">Подплечники, рукава-фонарики, эполеты; вырез лодочка и открытые плечи; узкие темные брюки; крупные украшения на плечах.</span></p>
+            <p class="rule-ex"><strong data-i18n="lbl.err">Типичные ошибки:</strong> <span data-i18n="w5.err">Объемный верх с узким темным низом - усиливает дисбаланс; спортивные топы с широкими бретелями без компенсации низом.</span></p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- MEN -->
+  <section class="section alt" id="menSec">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="secM.eyebrow">Мужские типажи</span>
+        <h2 data-i18n="secM.title">Пять типов мужского телосложения</h2>
+        <p class="lede" data-i18n="secM.lede">Те же принципы баланса работают и для мужчин: наращивай объем там, где его не хватает, и упрощай там, где его достаточно.</p>
+      </div>
+
+      <article class="rule-card" id="type-trapezoid">
+        <div class="type-layout">
+          <div class="type-svg">
+            <svg viewBox="0 0 120 170" role="img" stroke="var(--ink)" stroke-width="2" fill="none">
+              <title data-i18n="m1.name">Трапеция</title>
+              <circle cx="60" cy="16" r="9"/>
+              <path d="M60 25 L60 34"/>
+              <path d="M40 38 C44 54 47 68 48 86 C49 104 47 122 46 134 L46 142 L74 142 L74 134 C73 122 71 104 72 86 C73 68 76 54 80 38 Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="rule-tag" data-i18n="lbl.tagM">Мужской типаж</span>
+            <h3 data-i18n="m1.name">Трапеция</h3>
+            <p><strong data-i18n="lbl.signs">Признаки:</strong> <span data-i18n="m1.signs">Плечи чуть шире талии, атлетичные пропорциональные формы.</span></p>
+            <p class="rule-why"><strong data-i18n="lbl.goal">Цель:</strong> <span data-i18n="m1.goal">Подчеркнуть естественные пропорции и не перегружать образ - база уже идеальна.</span></p>
+            <div class="rule-do">
+              <p><strong data-i18n="lbl.do">Делай:</strong></p>
+              <p data-i18n-html="m1.do"><strong>Верх:</strong> приталенные рубашки и поло; пиджаки точно по фигуре.<br><strong>Низ:</strong> слегка зауженные брюки; классический крой.<br><strong>Костюм:</strong> однобортный, лацкан стандартной ширины, брюки без складок (flat-front).<br><strong>Стиль:</strong> умеренные эксперименты с цветом и фактурой - база все выдержит.</p>
+            </div>
+            <p class="rule-avoid"><strong data-i18n="lbl.avoid">Избегай:</strong> <span data-i18n="m1.avoid">Одежда в обтяжку («вторая кожа»); мешковатый oversize, скрывающий фигуру; кричащие аксессуары.</span></p>
+            <p class="rule-ex"><strong data-i18n="lbl.err">Типичные ошибки:</strong> <span data-i18n="m1.err">Крайности - либо все в обтяжку, либо все мешком; слишком много акцентов в одном образе.</span></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rule-card" id="type-invtri-m">
+        <div class="type-layout">
+          <div class="type-svg">
+            <svg viewBox="0 0 120 170" role="img" stroke="var(--ink)" stroke-width="2" fill="none">
+              <title data-i18n="m2.name">Перевернутый треугольник</title>
+              <circle cx="60" cy="16" r="9"/>
+              <path d="M60 25 L60 34"/>
+              <path d="M34 38 C40 54 45 70 48 88 C50 106 49 122 48 134 L48 142 L72 142 L72 134 C71 122 70 106 72 88 C75 70 80 54 86 38 Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="rule-tag" data-i18n="lbl.tagM">Мужской типаж</span>
+            <h3 data-i18n="m2.name">Перевернутый треугольник</h3>
+            <p><strong data-i18n="lbl.signs">Признаки:</strong> <span data-i18n="m2.signs">Широкие плечи, узкие бедра и талия.</span></p>
+            <p class="rule-why"><strong data-i18n="lbl.goal">Цель:</strong> <span data-i18n="m2.goal">Визуально облегчить верх, добавить веса низу и смягчить переход.</span></p>
+            <div class="rule-do">
+              <p><strong data-i18n="lbl.do">Делай:</strong></p>
+              <p data-i18n-html="m2.do"><strong>Верх:</strong> простые минималистичные топы; V-вырез смягчает массивную грудь; нейтральные тона, мягкие неструктурированные ткани.<br><strong>Пиджак:</strong> однобортный, мягкое плечо без подплечников, узкий лацкан.<br><strong>Низ:</strong> прямые брюки, чинос, карго - добавляют объема ногам.<br><strong>Рубашки:</strong> regular fit, не muscle-fit.</p>
+            </div>
+            <p class="rule-avoid"><strong data-i18n="lbl.avoid">Избегай:</strong> <span data-i18n="m2.avoid">Подплечники и «квадратные» структурированные плечи; двубортные пиджаки; muscle-fit рубашки; скинни; горизонтальные принты на груди.</span></p>
+            <p class="rule-ex"><strong data-i18n="lbl.err">Типичные ошибки:</strong> <span data-i18n="m2.err">Структурированные плечи плюс узкие скинни; многослойность на плечах - верх становится еще массивнее.</span></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rule-card" id="type-rectangle-m">
+        <div class="type-layout">
+          <div class="type-svg">
+            <svg viewBox="0 0 120 170" role="img" stroke="var(--ink)" stroke-width="2" fill="none">
+              <title data-i18n="m3.name">Прямоугольник</title>
+              <circle cx="60" cy="16" r="9"/>
+              <path d="M60 25 L60 34"/>
+              <path d="M44 38 C43 62 42 86 42 110 L42 142 L78 142 L78 110 C78 86 77 62 76 38 Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="rule-tag" data-i18n="lbl.tagM">Мужской типаж</span>
+            <h3 data-i18n="m3.name">Прямоугольник</h3>
+            <p><strong data-i18n="lbl.signs">Признаки:</strong> <span data-i18n="m3.signs">Плечи, талия и бедра на одной линии.</span></p>
+            <p class="rule-why"><strong data-i18n="lbl.goal">Цель:</strong> <span data-i18n="m3.goal">Создать иллюзию V-силуэта: визуально расширить плечи и обозначить талию.</span></p>
+            <div class="rule-do">
+              <p><strong data-i18n="lbl.do">Делай:</strong></p>
+              <p data-i18n-html="m3.do"><strong>Слои</strong> - главный инструмент: пиджак, жилет или свитер поверх рубашки создают форму.<br><strong>Пиджак:</strong> структурированные плечи, приталенный крой с сужением к талии; двубортный добавляет объема груди.<br><strong>Детали сверху:</strong> нагрудные карманы, горизонтальные принты и полоски на груди.<br><strong>Низ:</strong> брюки slim или straight средней посадки.</p>
+            </div>
+            <p class="rule-avoid"><strong data-i18n="lbl.avoid">Избегай:</strong> <span data-i18n="m3.avoid">Бесформенные прямые футболки; мешковатая одежда; спущенное плечо; слишком обтягивающие вещи - подчеркивают отсутствие рельефа.</span></p>
+            <p class="rule-ex"><strong data-i18n="lbl.err">Типичные ошибки:</strong> <span data-i18n="m3.err">Прямые футболки навыпуск без слоев; мешковатость «чтобы скрыть» - она скрывает и достоинства.</span></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rule-card" id="type-triangle">
+        <div class="type-layout">
+          <div class="type-svg">
+            <svg viewBox="0 0 120 170" role="img" stroke="var(--ink)" stroke-width="2" fill="none">
+              <title data-i18n="m4.name">Треугольник</title>
+              <circle cx="60" cy="16" r="9"/>
+              <path d="M60 25 L60 34"/>
+              <path d="M48 38 C48 58 46 76 42 96 C39 112 38 124 38 134 L38 142 L82 142 L82 134 C82 124 81 112 78 96 C74 76 72 58 72 38 Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="rule-tag" data-i18n="lbl.tagM">Мужской типаж</span>
+            <h3 data-i18n="m4.name">Треугольник</h3>
+            <p><strong data-i18n="lbl.signs">Признаки:</strong> <span data-i18n="m4.signs">Бедра и талия шире плеч.</span></p>
+            <p class="rule-why"><strong data-i18n="lbl.goal">Цель:</strong> <span data-i18n="m4.goal">Нарастить визуальный объем сверху, затемнить и упростить низ.</span></p>
+            <div class="rule-do">
+              <p><strong data-i18n="lbl.do">Делай:</strong></p>
+              <p data-i18n-html="m4.do"><strong>Верх:</strong> светлые тона и принты; пиджаки с подплечниками расширяют плечи; многослойность сверху.<br><strong>Костюм:</strong> однобортный пиджак с выраженным плечом; двубортный тоже допустим - добавляет объема середине верха.<br><strong>Низ:</strong> темные простые брюки прямого кроя, ровная штанина.<br><strong>Лацкан:</strong> уже среднего - широкий утяжеляет грудь непропорционально.</p>
+            </div>
+            <p class="rule-avoid"><strong data-i18n="lbl.avoid">Избегай:</strong> <span data-i18n="m4.avoid">Светлые и яркие брюки; скинни и сильно зауженные брюки; обтягивающие топы; принты на бедрах; короткие куртки, заканчивающиеся на бедрах.</span></p>
+            <p class="rule-ex"><strong data-i18n="lbl.err">Типичные ошибки:</strong> <span data-i18n="m4.err">Светлые зауженные брюки - подчеркивают бедра; короткая куртка, «обрезанная» на бедрах.</span></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rule-card" id="type-oval">
+        <div class="type-layout">
+          <div class="type-svg">
+            <svg viewBox="0 0 120 170" role="img" stroke="var(--ink)" stroke-width="2" fill="none">
+              <title data-i18n="m5.name">Овал</title>
+              <circle cx="60" cy="16" r="9"/>
+              <path d="M60 25 L60 34"/>
+              <path d="M46 38 C43 60 39 78 38 96 C37 114 42 126 44 136 L44 142 L76 142 L76 136 C78 126 83 114 82 96 C81 78 77 60 74 38 Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="rule-tag" data-i18n="lbl.tagM">Мужской типаж</span>
+            <h3 data-i18n="m5.name">Овал</h3>
+            <p><strong data-i18n="lbl.signs">Признаки:</strong> <span data-i18n="m5.signs">Талия - самая широкая часть корпуса.</span></p>
+            <p class="rule-why"><strong data-i18n="lbl.goal">Цель:</strong> <span data-i18n="m5.goal">Построить длинную стройную вертикальную линию и отвести внимание от середины корпуса.</span></p>
+            <div class="rule-do">
+              <p><strong data-i18n="lbl.do">Делай:</strong></p>
+              <p data-i18n-html="m5.do"><strong>Вертикали:</strong> полоска, длинные расстегнутые слои, монохромные комплекты.<br><strong>Пиджак:</strong> однобортный, на одну пуговицу, прикрывает живот; мягкое плечо.<br><strong>Рубашки:</strong> regular fit, не в обтяжку; расстегнутый ворот удлиняет шею.<br><strong>Низ:</strong> брюки средней посадки, без складок, прямой крой; темные глубокие тона. Подтяжки - достойная альтернатива ремню.</p>
+            </div>
+            <p class="rule-avoid"><strong data-i18n="lbl.avoid">Избегай:</strong> <span data-i18n="m5.avoid">Заправленные обтягивающие футболки; горизонтальные полоски; крупные принты и логотипы на животе; блестящие ткани; тесная одежда со складками; мешковатые вещи; короткие куртки.</span></p>
+            <p class="rule-ex"><strong data-i18n="lbl.err">Типичные ошибки:</strong> <span data-i18n="m5.err">Покупать костюм «на вырост»: тесно в талии, висит на плечах. Решение - брать по плечам и ушивать талию у портного.</span></p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FIT -->
+  <section class="section" id="fitSec">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="fit.eyebrow">Посадка</span>
+        <h2 data-i18n="fit.title">Посадка важнее бренда</h2>
+        <p class="lede" data-i18n="fit.lede">Вещь за 300 с идеальной посадкой выглядит дороже вещи за 3000, которая висит мешком. Проверь эти точки перед зеркалом.</p>
+      </div>
+      <ol class="steps">
+        <li><strong data-i18n="fit.s1t">Плечевой шов</strong><br><span data-i18n="fit.s1d">Ровно на краю плечевой кости. Главная точка - ее почти невозможно исправить у портного. Шов уехал на бицепс - велико; тянет вверх - мало.</span></li>
+        <li><strong data-i18n="fit.s2t">Воротник пиджака</strong><br><span data-i18n="fit.s2d">Лежит плоско, без зазора между воротником и шеей; сзади - без волн и складок.</span></li>
+        <li><strong data-i18n="fit.s3t">Пуговица пиджака</strong><br><span data-i18n="fit.s3d">Застегивается без натяжения. X-образные заломы у пуговицы - тесно.</span></li>
+        <li><strong data-i18n="fit.s4t">Рукав пиджака</strong><br><span data-i18n="fit.s4d">Заканчивается на кости запястья; из-под него видно 1-1.5 см манжеты рубашки.</span></li>
+        <li><strong data-i18n="fit.s5t">Рубашка</strong><br><span data-i18n="fit.s5d">В воротник проходит один палец; в груди гладко, пуговицы не расходятся; по бокам можно защипнуть около 2 см ткани.</span></li>
+        <li><strong data-i18n="fit.s6t">Брюки</strong><br><span data-i18n="fit.s6d">Сидят без сползания; спереди чисто, сзади гладко; легкий залом над обувью для классики; штанина не волочится по земле.</span></li>
+        <li><strong data-i18n="fit.s7t">Футболка</strong><br><span data-i18n="fit.s7d">Рукав - до середины бицепса, подол - до середины бедра; не обтягивает и не висит.</span></li>
+        <li><strong data-i18n="fit.s8t">Юбка и платье</strong><br><span data-i18n="fit.s8d">Сидят на заявленной талии, не перекручиваются при ходьбе, подол ровный.</span></li>
+      </ol>
+      <div class="callout gold">
+        <p><strong data-i18n="fit.tailorT">Роль портного</strong></p>
+        <p data-i18n="fit.tailorD">Масс-маркет шьется на «среднее тело», которого не существует. Покупай по самой широкой точке и ушивай остальное: подшить брюки, ушить талию, укоротить рукав - недорого, а вещь выглядит сшитой на заказ.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEIGHT -->
+  <section class="section alt" id="heightSec">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="height.eyebrow">Рост</span>
+        <h2 data-i18n="height.title">Коррекция роста</h2>
+        <p class="lede" data-i18n="height.lede">Рост - тоже пропорция, с которой можно работать. Невысокий силуэт вытягиваем, высокий - структурируем.</p>
+      </div>
+      <div class="card-grid two height-grid">
+        <div class="card">
+          <h3 data-i18n="height.shortT">Невысокий рост</h3>
+          <div data-i18n-html="height.shortL"><ul><li><strong>Монохром:</strong> один цвет с головы до ног убирает горизонтальные разрезы и создает непрерывную колонну.</li><li><strong>Вертикали:</strong> тонкие полоски, стрелки на брюках, расстегнутые длинные слои, V-вырезы.</li><li><strong>Высокая посадка:</strong> завышенная талия плюс заправленный верх визуально удлиняют ноги.</li><li><strong>Длины:</strong> укороченные жакеты; юбки выше колена; брюки без избытка ткани внизу; обувь в тон брюк или кожи.</li><li><strong>Пропорции:</strong> зауженные книзу силуэты; тонкие ремни в тон одежды; небольшие сумки и аксессуары.</li><li><strong>Избегай:</strong> крупных принтов, широких горизонтальных полос, оверсайза, контрастной обуви и ремешков на щиколотке.</li></ul></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="height.tallT">Высокий рост</h3>
+          <div data-i18n-html="height.tallL"><ul><li><strong>Объем тебе идет:</strong> длинные пальто, макси-юбки, широкие брюки, oversize - то, что «топит» невысоких.</li><li><strong>Разбивай вертикаль:</strong> контраст верха и низа, ремень, многослойность, горизонтальные детали.</li><li><strong>Принты:</strong> средний масштаб - слишком мелкие теряются, слишком крупные перегружают.</li><li><strong>Длины:</strong> следи, чтобы рукава и брюки не выглядели «выросшими»; примеряй tall-линейки брендов.</li><li><strong>Мужчинам:</strong> пиджак на трех пуговицах вместо двух; можно двубортный; избегай укороченных брюк.</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISUAL TRICKS -->
+  <section class="section" id="tricksSec">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="tricks.eyebrow">Приемы</span>
+        <h2 data-i18n="tricks.title">Визуальные приемы</h2>
+        <p class="lede" data-i18n="tricks.lede">Девять инструментов, которыми пользуются стилисты. Каждый прием - это управление взглядом: куда смотрит глаз, то и кажется больше.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3 data-i18n="tr1t">Вертикальные линии</h3><p><strong data-i18n="lbl.when">Когда применять:</strong> <span data-i18n="tr1u">Удлиняют и стройнят. Используй при невысоком росте и для типажей яблоко и овал: полоски, стрелки, расстегнутые слои, длинные украшения.</span></p></div>
+        <div class="card"><h3 data-i18n="tr2t">Горизонтальные линии</h3><p><strong data-i18n="lbl.when">Когда применять:</strong> <span data-i18n="tr2u">Расширяют зону, где проходят. Добавляй объем узким плечам или бедрам: полоски, колор-блок, ремень.</span></p></div>
+        <div class="card"><h3 data-i18n="tr3t">Светлое и темное</h3><p><strong data-i18n="lbl.when">Когда применять:</strong> <span data-i18n="tr3u">Светлое привлекает взгляд и добавляет объем, темное отводит взгляд и уменьшает. Светлый верх плюс темный низ - для груши; наоборот - для перевернутого треугольника.</span></p></div>
+        <div class="card"><h3 data-i18n="tr4t">Детали = объем</h3><p><strong data-i18n="lbl.when">Когда применять:</strong> <span data-i18n="tr4u">Рюши, карманы, вышивка и принты добавляют визуальный вес туда, где находятся. Размещай детали только на зонах, которые хочешь увеличить.</span></p></div>
+        <div class="card"><h3 data-i18n="tr5t">Акцент на талии</h3><p><strong data-i18n="lbl.when">Когда применять:</strong> <span data-i18n="tr5u">Создает изгиб: ремень, запах, приталенный крой. Работает для песочных часов, прямоугольника и груши. Для яблока и овала талию не акцентируют, а обходят.</span></p></div>
+        <div class="card"><h3 data-i18n="tr6t">V-вырез</h3><p><strong data-i18n="lbl.when">Когда применять:</strong> <span data-i18n="tr6u">Удлиняет шею и торс, разбивает широкую грудь, ведет взгляд к центру. Универсален для яблока, перевернутого треугольника и невысокого роста.</span></p></div>
+        <div class="card"><h3 data-i18n="tr7t">Открытые слои</h3><p><strong data-i18n="lbl.when">Когда применять:</strong> <span data-i18n="tr7u">Расстегнутый жакет или рубашка поверх топа создают две вертикальные линии по бокам и стройнят торс. Прием для яблока и овала.</span></p></div>
+        <div class="card"><h3 data-i18n="tr8t">Монохромная колонна</h3><p><strong data-i18n="lbl.when">Когда применять:</strong> <span data-i18n="tr8u">Один цвет с головы до ног убирает все горизонтальные разрезы. Максимальный эффект удлинения - глубину добавь разными фактурами.</span></p></div>
+        <div class="card"><h3 data-i18n="tr9t">Правило третей</h3><p><strong data-i18n="lbl.when">Когда применять:</strong> <span data-i18n="tr9u">Дели фигуру в пропорции 1/3 к 2/3, а не пополам: деление пополам визуально укорачивает. Приемы: заправка, высокая посадка, укороченный жакет.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISTAKES -->
+  <section class="section alt" id="mistSec">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="mist.eyebrow">Ошибки</span>
+        <h2 data-i18n="mist.title">Типичные ошибки по типажам</h2>
+        <p class="lede" data-i18n="mist.lede">Короткая шпаргалка: самая частая ошибка каждого типажа. Проверь свой образ по одной строке.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="data mist-table">
+          <thead><tr><th data-i18n="mist.h1">Типаж</th><th data-i18n="mist.h2">Частые ошибки</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n="mist.r1t">Песочные часы</td><td data-i18n="mist.r1d">Прятать талию под oversize; заниженная посадка брюк.</td></tr>
+            <tr><td data-i18n="mist.r2t">Груша</td><td data-i18n="mist.r2d">Яркий низ при темном верхе; топ на самой широкой точке бедер; блестящие ткани на бедрах.</td></tr>
+            <tr><td data-i18n="mist.r3t">Яблоко</td><td data-i18n="mist.r3d">Ремень на талии; обтягивающий трикотаж; короткие жакеты до живота.</td></tr>
+            <tr><td data-i18n="mist.r4t">Прямоугольник</td><td data-i18n="mist.r4d">Бесформенные прямые вещи; bodycon без акцента на талии; отказ от ремней.</td></tr>
+            <tr><td data-i18n="mist.r5t">Перевернутый треугольник (Ж)</td><td data-i18n="mist.r5d">Подплечники и объемные рукава; узкий темный низ при объемном верхе.</td></tr>
+            <tr><td data-i18n="mist.r6t">Трапеция (М)</td><td data-i18n="mist.r6d">Крайности: все в обтяжку или все мешком.</td></tr>
+            <tr><td data-i18n="mist.r7t">Перевернутый треугольник (М)</td><td data-i18n="mist.r7d">Структурированные плечи плюс скинни; двубортные пиджаки.</td></tr>
+            <tr><td data-i18n="mist.r8t">Прямоугольник (М)</td><td data-i18n="mist.r8d">Прямые футболки навыпуск без слоев; мешковатость.</td></tr>
+            <tr><td data-i18n="mist.r9t">Треугольник (М)</td><td data-i18n="mist.r9d">Светлые зауженные брюки; короткие куртки до бедер.</td></tr>
+            <tr><td data-i18n="mist.r10t">Овал (М)</td><td data-i18n="mist.r10d">Покупка костюма «на вырост»; обтягивающие футболки; крупные принты на животе.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT STEPS -->
+  <section class="section" id="nextSec">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="next.eyebrow">Что дальше</span>
+        <h2 data-i18n="next.title">Продолжи обучение</h2>
+      </div>
+      <div class="next-steps">
+        <a class="next-card" href="colors.html">
+          <span class="eyebrow" data-i18n="next.n1e">Цвет</span>
+          <h3 data-i18n="next.n1t">Палитра под твой типаж</h3>
+          <p data-i18n="next.n1d">Узнай свой подтон кожи и собери цвета, которые освежают лицо.</p>
+        </a>
+        <a class="next-card" href="combinations.html">
+          <span class="eyebrow" data-i18n="next.n2e">Сочетания</span>
+          <h3 data-i18n="next.n2t">Собери образ целиком</h3>
+          <p data-i18n="next.n2d">Аксессуары, принты и фактуры: как соединить вещи в цельный образ.</p>
+        </a>
+        <a class="next-card" href="quiz.html">
+          <span class="eyebrow" data-i18n="next.n3e">Квизы</span>
+          <h3 data-i18n="next.n3t">Проверь себя</h3>
+          <p data-i18n="next.n3d">Короткие квизы по фигуре, цвету и стилю с персональными результатами.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section dark">
+    <div class="wrap" style="text-align:center;max-width:720px;margin:0 auto">
+      <h2 data-i18n="cta.title">Готов собрать свой образ?</h2>
+      <p class="lede" data-i18n="cta.lede" style="margin:0 auto 1.8em">Открой конструктор: выбери модель под свой типаж, собери образ по слоям и получи разбор, почему он работает.</p>
+      <a class="btn btn-light" href="builder.html" data-i18n="cta.btn">Открыть конструктор</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand"><span class="brand-mark">SA</span><div><strong>Style Atelier</strong><p data-i18n="footer.tag">Школа стиля: цвет, фигура, образ</p></div></div>
+    <nav class="footer-nav" data-i18n-aria="a11y.navFooter" aria-label="Дополнительная навигация">
+      <a href="colors.html" data-i18n="nav.colors">Цвет</a>
+      <a href="figure.html" data-i18n="nav.figure" class="active">Фигура</a>
+      <a href="styles.html" data-i18n="nav.styles">Стили</a>
+      <a href="combinations.html" data-i18n="nav.combo">Сочетания</a>
+      <a href="capsule.html" data-i18n="nav.capsule">Капсула</a>
+      <a href="quiz.html" data-i18n="nav.quiz">Квизы</a>
+      <a href="builder.html" data-i18n="nav.builder">Конструктор</a>
+    </nav>
+    <p class="footer-note" data-i18n="footer.note">Образовательный проект. Правила стиля - ориентиры, а не догмы: ваш вкус решает.</p>
+  </div>
+</footer>
+<script>
+window.LANG = {
+ru: {
+  "a11y.skip": "Перейти к содержимому", "a11y.nav": "Основная навигация", "a11y.navFooter": "Дополнительная навигация",
+  "a11y.langLabel": "Выбор языка", "a11y.menu": "Меню",
+"meta.title": "Style Atelier - Фигура: типажи, посадка и пропорции",
+"meta.desc": "Как подбирать одежду по типу фигуры: женские и мужские типажи, правила посадки, коррекция роста и визуальные приемы.",
+"nav.home": "Главная",
+"nav.colors": "Цвет",
+"nav.figure": "Фигура",
+"nav.styles": "Стили",
+"nav.combo": "Сочетания",
+"nav.capsule": "Капсула",
+"nav.quiz": "Квизы",
+"nav.builder": "Конструктор",
+"footer.tag": "Школа стиля: цвет, фигура, образ",
+"footer.note": "Образовательный проект. Правила стиля - ориентиры, а не догмы: ваш вкус решает.",
+"lbl.do": "Делай",
+"lbl.goal": "Цель",
+"lbl.avoid": "Избегай",
+"lbl.err": "Типичные ошибки",
+"lbl.signs": "Признаки",
+"lbl.when": "Когда применять",
+"lbl.tagW": "Женский типаж",
+"lbl.tagM": "Мужской типаж",
+"hero.eyebrow": "Фигура",
+"hero.title": "Одежда под твой тип фигуры",
+"hero.lede": "Плечи, талия, бедра: научись читать свои пропорции и подбирать силуэты, которые создают баланс. Правила ниже - ориентиры, а не догмы: твой вкус решает.",
+"hero.cta1": "Определить свой типаж",
+"hero.cta2": "Конструктор образа",
+"hero.artT": "Три типа женской фигуры: песочные часы, прямоугольник, груша",
+"finder.eyebrow": "Определитель",
+"finder.title": "Узнай свой типаж за минуту",
+"finder.lede": "Ответь на 3-4 вопроса - покажем твой типаж и ключевые рекомендации. Большинство людей - смешанные типажи: ориентируйся на доминирующий признак.",
+"finder.note": "Типажи - это ориентиры для выбора силуэтов, а не ярлыки. Если сомневаешься между двумя - читай оба разбора ниже.",
+"finder.q1": "Выбери силуэт",
+"finder.q1f": "Женский",
+"finder.q1m": "Мужской",
+"finder.q2": "Сравни ширину плеч и бедер",
+"finder.q2wider": "Плечи заметно шире бедер",
+"finder.q2equal": "Примерно равны",
+"finder.q2narrower": "Бедра шире плеч",
+"finder.q3": "Что можешь сказать о талии?",
+"finder.q3defined": "Четко выражена",
+"finder.q3soft": "Слабо выражена",
+"finder.q3widest": "Середина корпуса - самая широкая зона",
+"finder.q4": "Насколько плечи шире бедер?",
+"finder.q4slight": "Немного шире, телосложение атлетичное",
+"finder.q4marked": "Заметно шире, бедра узкие",
+"finder.restart": "Пройти заново",
+"finder.resultTag": "Твой типаж",
+"finder.goto": "Читать полный разбор",
+"types": {
+"hourglass": {"name": "Песочные часы", "tag": "Баланс от природы - подчеркивай талию", "tips": ["V-вырез и запашные топы ведут линию к талии", "Ремни средней ширины на естественной талии", "Ткани со стрейчем повторяют изгибы"], "anchor": "#type-hourglass"},
+"pear": {"name": "Груша", "tag": "Добавь объема сверху и вытяни силуэт", "tips": ["Светлый верх плюс темный низ", "Вырезы лодочка и открытые плечи расширяют плечи", "Акцентные аксессуары - наверх"], "anchor": "#type-pear"},
+"apple": {"name": "Яблоко", "tag": "Строй вертикаль и показывай ноги", "tips": ["V-вырез - главный инструмент", "Удлиненные жакеты нараспашку создают вертикали", "Длина до колена открывает ноги"], "anchor": "#type-apple"},
+"rectangle": {"name": "Прямоугольник", "tag": "Создай иллюзию талии и изгибов", "tips": ["Пеплум и ремни обозначают талию", "Структурные ткани держат объем", "Слои добавляют форму"], "anchor": "#type-rectangle"},
+"invtri": {"name": "Перевернутый треугольник", "tag": "Смягчи плечи и добавь объема низу", "tips": ["Темный однотонный верх", "Светлый низ с деталями и принтами", "V-вырез вместо лодочки"], "anchor": "#type-invtri"},
+"trapezoid": {"name": "Трапеция", "tag": "Пропорции от природы - не перегружай", "tips": ["Приталенные рубашки и пиджаки по фигуре", "Классический крой", "Умеренные эксперименты с цветом"], "anchor": "#type-trapezoid"},
+"invtri_m": {"name": "Перевернутый треугольник", "tag": "Облегчи верх и добавь веса низу", "tips": ["Мягкое плечо пиджака без подплечников", "Прямые брюки и карго добавляют объем ногам", "Нейтральные тона сверху"], "anchor": "#type-invtri-m"},
+"rectangle_m": {"name": "Прямоугольник", "tag": "Построй V-силуэт слоями", "tips": ["Слои - главный инструмент", "Структурированные плечи пиджака", "Детали на груди: карманы, принты"], "anchor": "#type-rectangle-m"},
+"triangle": {"name": "Треугольник", "tag": "Нарасти объем сверху, затемни низ", "tips": ["Светлые тона и принты сверху", "Пиджаки с подплечниками", "Темные прямые брюки"], "anchor": "#type-triangle"},
+"oval": {"name": "Овал", "tag": "Одна длинная вертикальная линия", "tips": ["Вертикальная полоска и монохром", "Однобортный пиджак прикрывает живот", "Костюм бери по плечам, талию ушивай"], "anchor": "#type-oval"}
+},
+"secW.eyebrow": "Женские типажи",
+"secW.title": "Пять женских типажей",
+"secW.lede": "Для каждого типажа - признаки, цель коррекции и конкретные рекомендации по категориям одежды. Начни с определителя выше, если еще не знаешь свой типаж.",
+"w1.name": "Песочные часы",
+"w1.signs": "Плечи и бедра примерно равны, талия четко выражена.",
+"w1.goal": "Сохранить естественный баланс и подчеркнуть талию - фигура уже сбалансирована, главное не прятать пропорции.",
+"w1.do": "<strong>Вырезы:</strong> V-вырез, глубокий овальный, «сердечком» - ведут линию к талии.<br><strong>Верх:</strong> приталенные жакеты с вытачками, топы с запахом, трикотаж со стрейчем.<br><strong>Низ:</strong> высокая посадка, прямой или слегка зауженный крой, bootcut.<br><strong>Платья:</strong> с запахом, футляр, юбка-карандаш; ремень средней ширины на естественной талии.",
+"w1.avoid": "Бесформенные балахоны и «коробчатые» жакеты; жесткие ткани без эластичности; объемные слои сверху и снизу одновременно.",
+"w1.err": "Прятать талию под oversize - фигура выглядит крупнее; заниженная посадка брюк; слишком тесная одежда со складками.",
+"w2.name": "Груша",
+"w2.signs": "Бедра шире плеч, плечи узкие, талия выражена.",
+"w2.goal": "Добавить визуального объема верхней части, вытянуть силуэт вниз и уравновесить нижнюю часть.",
+"w2.do": "<strong>Вырезы:</strong> лодочка, открытые плечи, квадратный - визуально расширяют плечи; украшения у шеи.<br><strong>Верх:</strong> светлые и яркие тона, структурированные плечи, укороченные жакеты до талии, воланы и рукава-фонарики.<br><strong>Низ:</strong> темные прямые брюки, wide-leg, bootcut; высокая посадка.<br><strong>Платья:</strong> А-силуэт, fit-and-flare; детали сверху, спокойный темный низ.",
+"w2.avoid": "Светлые и блестящие ткани на бедрах; карманы, вышивка и аппликации на бедрах; заниженная посадка; крупный принт на бедрах.",
+"w2.err": "Темный «скучный» верх при ярком низе - переворачивает баланс; топ, заканчивающийся на самой широкой точке бедер; светлые скинни без объемного верха.",
+"w3.name": "Яблоко",
+"w3.signs": "Объем сосредоточен в области талии, талия слабо выражена, ноги стройные.",
+"w3.goal": "Создать вертикальную линию, удлинить торс и направить внимание на ноги, декольте и лицо.",
+"w3.do": "<strong>Вырезы:</strong> V-вырез - главный инструмент, глубокий овал.<br><strong>Верх:</strong> топы с запахом, туники, струящиеся ткани; завышенная талия (ампир); удлиненные жакеты и кардиганы нараспашку.<br><strong>Низ:</strong> прямые темные брюки со средней или высокой посадкой и гладким поясом.<br><strong>Платья:</strong> А-силуэт до колена, ампир, трапеция; длина открывает ноги; длинные колье.",
+"w3.avoid": "Обтягивающий трикотаж на животе; широкие ремни на талии; кроп-топы; горизонтальное деление цветом на уровне живота; водолазки; бесформенные балахоны.",
+"w3.err": "Пытаться «затянуть» талию ремнем - это подчеркивает ее отсутствие; короткие жакеты, заканчивающиеся на животе; тесные джинсы с низкой посадкой.",
+"w4.name": "Прямоугольник",
+"w4.signs": "Плечи, талия и бедра примерно одной ширины, талия слабо выражена. Самый распространенный типаж.",
+"w4.goal": "Создать иллюзию талии и изгибов: добавить объем в бюст и бедра, обозначить талию.",
+"w4.do": "<strong>Верх:</strong> пеплум (волан на талии создает изгиб), топы с рюшами, приталенные жакеты с ремнем; слои - облегающий топ плюс расстегнутый жакет.<br><strong>Низ:</strong> wide-leg, клеш, карго, детали на бедрах; высокая посадка с ремнем.<br><strong>Платья:</strong> fit-and-flare, плиссированные, с воланами, с запахом; ремни на талии.<br><strong>Ткани:</strong> структурные - плотный хлопок, твид, жаккард: они держат объем.",
+"w4.avoid": "Прямые бесформенные силуэты «трубой»; мешковатый oversize без ремня; обтягивающие платья-футляры без акцента на талии; тонкие липнущие ткани.",
+"w4.err": "Bodycon-платья, подчеркивающие отсутствие изгибов; одежда «мешком» в надежде скрыть; отказ от ремней и пеплума.",
+"w5.name": "Перевернутый треугольник",
+"w5.signs": "Плечи шире бедер, бедра узкие, часто спортивное телосложение.",
+"w5.goal": "Смягчить линию плеч, добавить объема и интереса нижней части, выстроить вертикаль сверху.",
+"w5.do": "<strong>Вырезы:</strong> V-вырез, глубокий овал с мягкими линиями.<br><strong>Верх:</strong> темные однотонные топы, минимум деталей на плечах, рукав реглан; удлиненные жилеты нараспашку.<br><strong>Низ:</strong> светлые и принтованные брюки, wide-leg, клеш, детали и карманы.<br><strong>Юбки и платья:</strong> А-силуэт, плиссе, воланы и принты. Цветовая стратегия: темный верх, светлый низ.",
+"w5.avoid": "Подплечники, рукава-фонарики, эполеты; вырез лодочка и открытые плечи; узкие темные брюки; крупные украшения на плечах.",
+"w5.err": "Объемный верх с узким темным низом - усиливает дисбаланс; спортивные топы с широкими бретелями без компенсации низом.",
+"secM.eyebrow": "Мужские типажи",
+"secM.title": "Пять типов мужского телосложения",
+"secM.lede": "Те же принципы баланса работают и для мужчин: наращивай объем там, где его не хватает, и упрощай там, где его достаточно.",
+"m1.name": "Трапеция",
+"m1.signs": "Плечи чуть шире талии, атлетичные пропорциональные формы.",
+"m1.goal": "Подчеркнуть естественные пропорции и не перегружать образ - база уже идеальна.",
+"m1.do": "<strong>Верх:</strong> приталенные рубашки и поло; пиджаки точно по фигуре.<br><strong>Низ:</strong> слегка зауженные брюки; классический крой.<br><strong>Костюм:</strong> однобортный, лацкан стандартной ширины, брюки без складок (flat-front).<br><strong>Стиль:</strong> умеренные эксперименты с цветом и фактурой - база все выдержит.",
+"m1.avoid": "Одежда в обтяжку («вторая кожа»); мешковатый oversize, скрывающий фигуру; кричащие аксессуары.",
+"m1.err": "Крайности - либо все в обтяжку, либо все мешком; слишком много акцентов в одном образе.",
+"m2.name": "Перевернутый треугольник",
+"m2.signs": "Широкие плечи, узкие бедра и талия.",
+"m2.goal": "Визуально облегчить верх, добавить веса низу и смягчить переход.",
+"m2.do": "<strong>Верх:</strong> простые минималистичные топы; V-вырез смягчает массивную грудь; нейтральные тона, мягкие неструктурированные ткани.<br><strong>Пиджак:</strong> однобортный, мягкое плечо без подплечников, узкий лацкан.<br><strong>Низ:</strong> прямые брюки, чинос, карго - добавляют объема ногам.<br><strong>Рубашки:</strong> regular fit, не muscle-fit.",
+"m2.avoid": "Подплечники и «квадратные» структурированные плечи; двубортные пиджаки; muscle-fit рубашки; скинни; горизонтальные принты на груди.",
+"m2.err": "Структурированные плечи плюс узкие скинни; многослойность на плечах - верх становится еще массивнее.",
+"m3.name": "Прямоугольник",
+"m3.signs": "Плечи, талия и бедра на одной линии.",
+"m3.goal": "Создать иллюзию V-силуэта: визуально расширить плечи и обозначить талию.",
+"m3.do": "<strong>Слои</strong> - главный инструмент: пиджак, жилет или свитер поверх рубашки создают форму.<br><strong>Пиджак:</strong> структурированные плечи, приталенный крой с сужением к талии; двубортный добавляет объема груди.<br><strong>Детали сверху:</strong> нагрудные карманы, горизонтальные принты и полоски на груди.<br><strong>Низ:</strong> брюки slim или straight средней посадки.",
+"m3.avoid": "Бесформенные прямые футболки; мешковатая одежда; спущенное плечо; слишком обтягивающие вещи - подчеркивают отсутствие рельефа.",
+"m3.err": "Прямые футболки навыпуск без слоев; мешковатость «чтобы скрыть» - она скрывает и достоинства.",
+"m4.name": "Треугольник",
+"m4.signs": "Бедра и талия шире плеч.",
+"m4.goal": "Нарастить визуальный объем сверху, затемнить и упростить низ.",
+"m4.do": "<strong>Верх:</strong> светлые тона и принты; пиджаки с подплечниками расширяют плечи; многослойность сверху.<br><strong>Костюм:</strong> однобортный пиджак с выраженным плечом; двубортный тоже допустим - добавляет объема середине верха.<br><strong>Низ:</strong> темные простые брюки прямого кроя, ровная штанина.<br><strong>Лацкан:</strong> уже среднего - широкий утяжеляет грудь непропорционально.",
+"m4.avoid": "Светлые и яркие брюки; скинни и сильно зауженные брюки; обтягивающие топы; принты на бедрах; короткие куртки, заканчивающиеся на бедрах.",
+"m4.err": "Светлые зауженные брюки - подчеркивают бедра; короткая куртка, «обрезанная» на бедрах.",
+"m5.name": "Овал",
+"m5.signs": "Талия - самая широкая часть корпуса.",
+"m5.goal": "Построить длинную стройную вертикальную линию и отвести внимание от середины корпуса.",
+"m5.do": "<strong>Вертикали:</strong> полоска, длинные расстегнутые слои, монохромные комплекты.<br><strong>Пиджак:</strong> однобортный, на одну пуговицу, прикрывает живот; мягкое плечо.<br><strong>Рубашки:</strong> regular fit, не в обтяжку; расстегнутый ворот удлиняет шею.<br><strong>Низ:</strong> брюки средней посадки, без складок, прямой крой; темные глубокие тона. Подтяжки - достойная альтернатива ремню.",
+"m5.avoid": "Заправленные обтягивающие футболки; горизонтальные полоски; крупные принты и логотипы на животе; блестящие ткани; тесная одежда со складками; мешковатые вещи; короткие куртки.",
+"m5.err": "Покупать костюм «на вырост»: тесно в талии, висит на плечах. Решение - брать по плечам и ушивать талию у портного.",
+"fit.eyebrow": "Посадка",
+"fit.title": "Посадка важнее бренда",
+"fit.lede": "Вещь за 300 с идеальной посадкой выглядит дороже вещи за 3000, которая висит мешком. Проверь эти точки перед зеркалом.",
+"fit.s1t": "Плечевой шов",
+"fit.s1d": "Ровно на краю плечевой кости. Главная точка - ее почти невозможно исправить у портного. Шов уехал на бицепс - велико; тянет вверх - мало.",
+"fit.s2t": "Воротник пиджака",
+"fit.s2d": "Лежит плоско, без зазора между воротником и шеей; сзади - без волн и складок.",
+"fit.s3t": "Пуговица пиджака",
+"fit.s3d": "Застегивается без натяжения. X-образные заломы у пуговицы - тесно.",
+"fit.s4t": "Рукав пиджака",
+"fit.s4d": "Заканчивается на кости запястья; из-под него видно 1-1.5 см манжеты рубашки.",
+"fit.s5t": "Рубашка",
+"fit.s5d": "В воротник проходит один палец; в груди гладко, пуговицы не расходятся; по бокам можно защипнуть около 2 см ткани.",
+"fit.s6t": "Брюки",
+"fit.s6d": "Сидят без сползания; спереди чисто, сзади гладко; легкий залом над обувью для классики; штанина не волочится по земле.",
+"fit.s7t": "Футболка",
+"fit.s7d": "Рукав - до середины бицепса, подол - до середины бедра; не обтягивает и не висит.",
+"fit.s8t": "Юбка и платье",
+"fit.s8d": "Сидят на заявленной талии, не перекручиваются при ходьбе, подол ровный.",
+"fit.tailorT": "Роль портного",
+"fit.tailorD": "Масс-маркет шьется на «среднее тело», которого не существует. Покупай по самой широкой точке и ушивай остальное: подшить брюки, ушить талию, укоротить рукав - недорого, а вещь выглядит сшитой на заказ.",
+"height.eyebrow": "Рост",
+"height.title": "Коррекция роста",
+"height.lede": "Рост - тоже пропорция, с которой можно работать. Невысокий силуэт вытягиваем, высокий - структурируем.",
+"height.shortT": "Невысокий рост",
+"height.shortL": "<ul><li><strong>Монохром:</strong> один цвет с головы до ног убирает горизонтальные разрезы и создает непрерывную колонну.</li><li><strong>Вертикали:</strong> тонкие полоски, стрелки на брюках, расстегнутые длинные слои, V-вырезы.</li><li><strong>Высокая посадка:</strong> завышенная талия плюс заправленный верх визуально удлиняют ноги.</li><li><strong>Длины:</strong> укороченные жакеты; юбки выше колена; брюки без избытка ткани внизу; обувь в тон брюк или кожи.</li><li><strong>Пропорции:</strong> зауженные книзу силуэты; тонкие ремни в тон одежды; небольшие сумки и аксессуары.</li><li><strong>Избегай:</strong> крупных принтов, широких горизонтальных полос, оверсайза, контрастной обуви и ремешков на щиколотке.</li></ul>",
+"height.tallT": "Высокий рост",
+"height.tallL": "<ul><li><strong>Объем тебе идет:</strong> длинные пальто, макси-юбки, широкие брюки, oversize - то, что «топит» невысоких.</li><li><strong>Разбивай вертикаль:</strong> контраст верха и низа, ремень, многослойность, горизонтальные детали.</li><li><strong>Принты:</strong> средний масштаб - слишком мелкие теряются, слишком крупные перегружают.</li><li><strong>Длины:</strong> следи, чтобы рукава и брюки не выглядели «выросшими»; примеряй tall-линейки брендов.</li><li><strong>Мужчинам:</strong> пиджак на трех пуговицах вместо двух; можно двубортный; избегай укороченных брюк.</li></ul>",
+"tricks.eyebrow": "Приемы",
+"tricks.title": "Визуальные приемы",
+"tricks.lede": "Девять инструментов, которыми пользуются стилисты. Каждый прием - это управление взглядом: куда смотрит глаз, то и кажется больше.",
+"tr1t": "Вертикальные линии",
+"tr1u": "Удлиняют и стройнят. Используй при невысоком росте и для типажей яблоко и овал: полоски, стрелки, расстегнутые слои, длинные украшения.",
+"tr2t": "Горизонтальные линии",
+"tr2u": "Расширяют зону, где проходят. Добавляй объем узким плечам или бедрам: полоски, колор-блок, ремень.",
+"tr3t": "Светлое и темное",
+"tr3u": "Светлое привлекает взгляд и добавляет объем, темное отводит взгляд и уменьшает. Светлый верх плюс темный низ - для груши; наоборот - для перевернутого треугольника.",
+"tr4t": "Детали = объем",
+"tr4u": "Рюши, карманы, вышивка и принты добавляют визуальный вес туда, где находятся. Размещай детали только на зонах, которые хочешь увеличить.",
+"tr5t": "Акцент на талии",
+"tr5u": "Создает изгиб: ремень, запах, приталенный крой. Работает для песочных часов, прямоугольника и груши. Для яблока и овала талию не акцентируют, а обходят.",
+"tr6t": "V-вырез",
+"tr6u": "Удлиняет шею и торс, разбивает широкую грудь, ведет взгляд к центру. Универсален для яблока, перевернутого треугольника и невысокого роста.",
+"tr7t": "Открытые слои",
+"tr7u": "Расстегнутый жакет или рубашка поверх топа создают две вертикальные линии по бокам и стройнят торс. Прием для яблока и овала.",
+"tr8t": "Монохромная колонна",
+"tr8u": "Один цвет с головы до ног убирает все горизонтальные разрезы. Максимальный эффект удлинения - глубину добавь разными фактурами.",
+"tr9t": "Правило третей",
+"tr9u": "Дели фигуру в пропорции 1/3 к 2/3, а не пополам: деление пополам визуально укорачивает. Приемы: заправка, высокая посадка, укороченный жакет.",
+"mist.eyebrow": "Ошибки",
+"mist.title": "Типичные ошибки по типажам",
+"mist.lede": "Короткая шпаргалка: самая частая ошибка каждого типажа. Проверь свой образ по одной строке.",
+"mist.h1": "Типаж",
+"mist.h2": "Частые ошибки",
+"mist.r1t": "Песочные часы",
+"mist.r1d": "Прятать талию под oversize; заниженная посадка брюк.",
+"mist.r2t": "Груша",
+"mist.r2d": "Яркий низ при темном верхе; топ на самой широкой точке бедер; блестящие ткани на бедрах.",
+"mist.r3t": "Яблоко",
+"mist.r3d": "Ремень на талии; обтягивающий трикотаж; короткие жакеты до живота.",
+"mist.r4t": "Прямоугольник",
+"mist.r4d": "Бесформенные прямые вещи; bodycon без акцента на талии; отказ от ремней.",
+"mist.r5t": "Перевернутый треугольник (Ж)",
+"mist.r5d": "Подплечники и объемные рукава; узкий темный низ при объемном верхе.",
+"mist.r6t": "Трапеция (М)",
+"mist.r6d": "Крайности: все в обтяжку или все мешком.",
+"mist.r7t": "Перевернутый треугольник (М)",
+"mist.r7d": "Структурированные плечи плюс скинни; двубортные пиджаки.",
+"mist.r8t": "Прямоугольник (М)",
+"mist.r8d": "Прямые футболки навыпуск без слоев; мешковатость.",
+"mist.r9t": "Треугольник (М)",
+"mist.r9d": "Светлые зауженные брюки; короткие куртки до бедер.",
+"mist.r10t": "Овал (М)",
+"mist.r10d": "Покупка костюма «на вырост»; обтягивающие футболки; крупные принты на животе.",
+"next.eyebrow": "Что дальше",
+"next.title": "Продолжи обучение",
+"next.n1e": "Цвет",
+"next.n1t": "Палитра под твой типаж",
+"next.n1d": "Узнай свой подтон кожи и собери цвета, которые освежают лицо.",
+"next.n2e": "Сочетания",
+"next.n2t": "Собери образ целиком",
+"next.n2d": "Аксессуары, принты и фактуры: как соединить вещи в цельный образ.",
+"next.n3e": "Квизы",
+"next.n3t": "Проверь себя",
+"next.n3d": "Короткие квизы по фигуре, цвету и стилю с персональными результатами.",
+"cta.title": "Готов собрать свой образ?",
+"cta.lede": "Открой конструктор: выбери модель под свой типаж, собери образ по слоям и получи разбор, почему он работает.",
+"cta.btn": "Открыть конструктор"
+},
+en: {
+  "a11y.skip": "Skip to content", "a11y.nav": "Main navigation", "a11y.navFooter": "Footer navigation",
+  "a11y.langLabel": "Language selection", "a11y.menu": "Menu",
+"meta.title": "Style Atelier - Figure: body types, fit and proportions",
+"meta.desc": "How to dress for your body type: women's and men's body types, fit rules, height styling and visual techniques.",
+"nav.home": "Home",
+"nav.colors": "Color",
+"nav.figure": "Figure",
+"nav.styles": "Styles",
+"nav.combo": "Combinations",
+"nav.capsule": "Capsule",
+"nav.quiz": "Quizzes",
+"nav.builder": "Builder",
+"footer.tag": "The school of style: color, figure, outfit",
+"footer.note": "An educational project. Style rules are guidelines, not dogma: your taste decides.",
+"lbl.do": "Do",
+"lbl.goal": "Goal",
+"lbl.avoid": "Avoid",
+"lbl.err": "Common mistakes",
+"lbl.signs": "Key traits",
+"lbl.when": "When to use",
+"lbl.tagW": "Women's body type",
+"lbl.tagM": "Men's body type",
+"hero.eyebrow": "Figure",
+"hero.title": "Dress for your body type",
+"hero.lede": "Shoulders, waist, hips: discover how to read your proportions and choose silhouettes that create balance. Treat the rules below as guidelines, not dogma: your taste decides.",
+"hero.cta1": "Find your body type",
+"hero.cta2": "Outfit builder",
+"hero.artT": "Three women's body types: hourglass, rectangle, pear",
+"finder.eyebrow": "Finder",
+"finder.title": "Find your body type in a minute",
+"finder.lede": "Answer 3-4 questions to reveal your body type and key tips. Most people are a blend of types: go with your dominant trait.",
+"finder.note": "Body types are guidelines for choosing silhouettes, not labels. If you are torn between two, read both breakdowns below.",
+"finder.q1": "Choose your frame",
+"finder.q1f": "Women's",
+"finder.q1m": "Men's",
+"finder.q2": "Compare your shoulders and hips",
+"finder.q2wider": "Shoulders clearly wider than hips",
+"finder.q2equal": "About equal",
+"finder.q2narrower": "Hips wider than shoulders",
+"finder.q3": "How would you describe your waist?",
+"finder.q3defined": "Clearly defined",
+"finder.q3soft": "Not very defined",
+"finder.q3widest": "My midsection is the widest part",
+"finder.q4": "How much wider are your shoulders?",
+"finder.q4slight": "Slightly wider, athletic build",
+"finder.q4marked": "Markedly wider, narrow hips",
+"finder.restart": "Retake",
+"finder.resultTag": "Your body type",
+"finder.goto": "Read the full breakdown",
+"types": {
+"hourglass": {"name": "Hourglass", "tag": "Naturally balanced - highlight your waist", "tips": ["V-necks and wrap tops lead the eye to the waist", "Medium-width belts at the natural waist", "Stretch fabrics follow your curves"], "anchor": "#type-hourglass"},
+"pear": {"name": "Pear", "tag": "Add volume up top and elongate the line", "tips": ["Light top with a dark bottom", "Boat necks and off-shoulder tops widen the shoulders", "Keep statement accessories up top"], "anchor": "#type-pear"},
+"apple": {"name": "Apple", "tag": "Build vertical lines and show off your legs", "tips": ["The V-neck is your best tool", "Long open jackets create vertical lines", "Knee length opens up the legs"], "anchor": "#type-apple"},
+"rectangle": {"name": "Rectangle", "tag": "Create the illusion of a waist and curves", "tips": ["Peplum and belts define the waist", "Structured fabrics hold volume", "Layers add shape"], "anchor": "#type-rectangle"},
+"invtri": {"name": "Inverted triangle", "tag": "Soften the shoulders, add volume below", "tips": ["Dark solid tops", "Light bottoms with details and prints", "Choose V-necks over boat necks"], "anchor": "#type-invtri"},
+"trapezoid": {"name": "Trapezoid", "tag": "Natural proportions - keep it clean", "tips": ["Fitted shirts and jackets cut close to the body", "Classic cuts", "Play with color in moderation - your frame can handle it"], "anchor": "#type-trapezoid"},
+"invtri_m": {"name": "Inverted triangle", "tag": "Lighten the top, add weight below", "tips": ["Soft unpadded jacket shoulders", "Straight trousers and cargo add volume to the legs", "Neutral tones up top"], "anchor": "#type-invtri-m"},
+"rectangle_m": {"name": "Rectangle", "tag": "Build a V-silhouette with layers", "tips": ["Layers are your main tool", "Structured jacket shoulders", "Details at the chest: pockets, prints"], "anchor": "#type-rectangle-m"},
+"triangle": {"name": "Triangle", "tag": "Add volume on top, keep it dark below", "tips": ["Light tones and prints up top", "Jackets with shoulder padding", "Dark straight trousers"], "anchor": "#type-triangle"},
+"oval": {"name": "Oval", "tag": "One long vertical line", "tips": ["Pinstripes and monochrome", "A single-breasted jacket covers the stomach", "Buy the suit for your shoulders, tailor the waist"], "anchor": "#type-oval"}
+},
+"secW.eyebrow": "Women's body types",
+"secW.title": "Five women's body types",
+"secW.lede": "For each body type: key traits, the styling goal and concrete tips by clothing category. Start with the finder above if you do not know your type yet.",
+"w1.name": "Hourglass",
+"w1.signs": "Shoulders and hips roughly equal, waist clearly defined.",
+"w1.goal": "Preserve your natural balance and highlight the waist - your figure is already balanced, so the key is not to hide your proportions.",
+"w1.do": "<strong>Necklines:</strong> V-neck, deep scoop, sweetheart - they lead the eye to the waist.<br><strong>Tops:</strong> fitted jackets with darts, wrap tops, stretch knits.<br><strong>Bottoms:</strong> high rise, straight or slightly tapered cuts, bootcut.<br><strong>Dresses:</strong> wrap, sheath, pencil skirt; a medium-width belt at the natural waist.",
+"w1.avoid": "Shapeless oversized pieces and boxy jackets; rigid fabrics with no stretch; volume on top and bottom at the same time.",
+"w1.err": "Hiding the waist under oversized clothes makes the figure look larger; low-rise trousers; clothes so tight they pull and wrinkle.",
+"w2.name": "Pear",
+"w2.signs": "Hips wider than shoulders, narrow shoulders, defined waist.",
+"w2.goal": "Add visual volume to the upper body, elongate the silhouette and balance the lower half.",
+"w2.do": "<strong>Necklines:</strong> boat neck, off-shoulder, square - they visually widen the shoulders; statement necklaces.<br><strong>Tops:</strong> light and bright tones, structured shoulders, cropped jackets ending at the waist, ruffles and puff sleeves.<br><strong>Bottoms:</strong> dark straight trousers, wide-leg, bootcut; high rise.<br><strong>Dresses:</strong> A-line, fit-and-flare; details up top, calm dark lower half.",
+"w2.avoid": "Light or shiny fabrics on the hips; pockets, embroidery and appliques on the hips; low rise; large prints on the hips.",
+"w2.err": "A dark plain top with a bright bottom flips the balance; tops ending at the widest point of the hips; light skinnies with no volume on top.",
+"w3.name": "Apple",
+"w3.signs": "Fullness around the midsection, softly defined waist, slim legs.",
+"w3.goal": "Create a long vertical line, lengthen the torso and draw the eye to your legs, neckline and face.",
+"w3.do": "<strong>Necklines:</strong> the V-neck is your best tool, plus deep scoops.<br><strong>Tops:</strong> wrap tops, tunics, fluid fabrics; empire waist; long open jackets and cardigans.<br><strong>Bottoms:</strong> straight dark trousers with a mid or high rise and a smooth waistband.<br><strong>Dresses:</strong> knee-length A-line, empire, trapeze; hemlines that show the legs; long necklaces.",
+"w3.avoid": "Clingy knits over the stomach; wide belts at the waist; crop tops; horizontal color-blocking at stomach level; turtlenecks; shapeless oversized layers.",
+"w3.err": "Trying to cinch the waist with a belt only highlights its absence; short jackets ending at the stomach; tight low-rise jeans.",
+"w4.name": "Rectangle",
+"w4.signs": "Shoulders, waist and hips roughly the same width, softly defined waist. The most common body type.",
+"w4.goal": "Create the illusion of a waist and curves: add volume to the bust and hips, define the waist.",
+"w4.do": "<strong>Tops:</strong> peplum tops (the flounce at the waist creates curves), ruffled tops, fitted jackets with a belt; layers - a sleek top under an open jacket.<br><strong>Bottoms:</strong> wide-leg, flared, cargo, details at the hips; high rise with a belt.<br><strong>Dresses:</strong> fit-and-flare, pleated, ruffled, wrap; belts at the waist.<br><strong>Fabrics:</strong> structured - crisp cotton, tweed, jacquard: they hold volume.",
+"w4.avoid": "Straight shapeless tube silhouettes; baggy oversized pieces with no belt; bodycon dresses with no waist accent; thin clingy fabrics.",
+"w4.err": "Sheath dresses that highlight the lack of curves; dressing in a shapeless sack; skipping belts and peplum.",
+"w5.name": "Inverted triangle",
+"w5.signs": "Shoulders wider than hips, narrow hips, often an athletic build.",
+"w5.goal": "Soften the shoulder line, add volume and interest to the lower half, build a vertical line from the top.",
+"w5.do": "<strong>Necklines:</strong> V-neck, deep scoop with soft lines.<br><strong>Tops:</strong> dark solid tops, minimal shoulder detail, raglan sleeves; long open vests.<br><strong>Bottoms:</strong> light or printed trousers, wide-leg, flared, details and pockets.<br><strong>Skirts and dresses:</strong> A-line, pleated, ruffles and prints. Color strategy: dark top, light bottom.",
+"w5.avoid": "Shoulder pads, puff sleeves, epaulettes; boat necks and off-shoulder tops; narrow dark trousers; chunky jewelry at the shoulders.",
+"w5.err": "A voluminous top with a narrow dark bottom deepens the imbalance; sporty wide-strap tops with nothing to balance below.",
+"secM.eyebrow": "Men's body types",
+"secM.title": "Five men's body types",
+"secM.lede": "The same balance principles work for men: add volume where it is missing and keep it simple where there is plenty.",
+"m1.name": "Trapezoid",
+"m1.signs": "Shoulders slightly wider than the waist, athletic proportional build.",
+"m1.goal": "Highlight your natural proportions without overloading the outfit - your proportions are already ideal.",
+"m1.do": "<strong>Tops:</strong> fitted shirts and polos; jackets cut close to the body.<br><strong>Bottoms:</strong> slightly tapered trousers; classic cuts.<br><strong>Suit:</strong> single-breasted, standard lapel width, flat-front trousers.<br><strong>Style:</strong> moderate experiments with color and texture - your frame can handle it.",
+"m1.avoid": "Skin-tight clothes that look like a second skin; baggy oversized fits that hide the figure; loud accessories.",
+"m1.err": "Going to extremes - everything skin-tight or everything baggy; too many statement pieces in one outfit.",
+"m2.name": "Inverted triangle",
+"m2.signs": "Broad shoulders, narrow hips and waist.",
+"m2.goal": "Visually lighten the upper body, add weight to the lower half and soften the transition.",
+"m2.do": "<strong>Tops:</strong> simple minimal tops; a V-neck softens a heavy chest; neutral tones, soft unstructured fabrics.<br><strong>Jacket:</strong> single-breasted, soft shoulder with no padding, narrow lapel.<br><strong>Bottoms:</strong> straight trousers, chinos, cargo - they add volume to the legs.<br><strong>Shirts:</strong> regular fit, never muscle-fit.",
+"m2.avoid": "Shoulder pads and squared structured shoulders; double-breasted jackets; muscle-fit shirts; skinnies; horizontal prints across the chest.",
+"m2.err": "Structured shoulders paired with skinny jeans; layering bulk at the shoulders only adds weight up top.",
+"m3.name": "Rectangle",
+"m3.signs": "Shoulders, waist and hips in one straight line.",
+"m3.goal": "Create the illusion of a V-silhouette: visually broaden the shoulders and define the waist.",
+"m3.do": "<strong>Layers</strong> are your main tool: a jacket, vest or sweater over a shirt creates shape.<br><strong>Jacket:</strong> structured shoulders, fitted cut narrowing at the waist; double-breasted adds chest volume.<br><strong>Details up top:</strong> chest pockets, horizontal prints and stripes on the chest.<br><strong>Bottoms:</strong> slim or straight trousers with a mid rise.",
+"m3.avoid": "Shapeless straight-cut tees; baggy clothes; dropped shoulders; overly tight pieces that highlight the lack of definition.",
+"m3.err": "Straight tees worn untucked with no layers; baggy clothes meant to hide - they hide the good stuff too.",
+"m4.name": "Triangle",
+"m4.signs": "Hips and waist wider than the shoulders.",
+"m4.goal": "Build visual volume on top, keep the lower half dark and simple.",
+"m4.do": "<strong>Tops:</strong> light tones and prints; jackets with shoulder padding broaden the shoulders; layering above the waist.<br><strong>Suit:</strong> single-breasted jacket with a defined shoulder; double-breasted works too - it adds volume to the upper torso.<br><strong>Bottoms:</strong> dark simple trousers with a straight cut and an even leg.<br><strong>Lapel:</strong> narrower than average - a wide lapel weighs down the chest disproportionately.",
+"m4.avoid": "Light or bright trousers; skinnies and heavily tapered trousers; tight tops; prints on the hips; short jackets ending at the hips.",
+"m4.err": "Light tapered trousers highlight the hips; a short jacket cut off right at the hips.",
+"m5.name": "Oval",
+"m5.signs": "The waist is the widest part of the torso.",
+"m5.goal": "Build one long, lean vertical line and draw attention away from the midsection.",
+"m5.do": "<strong>Verticals:</strong> pinstripes, long open layers, monochrome outfits.<br><strong>Jacket:</strong> single-breasted, one button, covering the stomach; soft shoulder.<br><strong>Shirts:</strong> regular fit, never skin-tight; an open collar lengthens the neck.<br><strong>Bottoms:</strong> mid-rise trousers, flat front, straight cut; deep dark tones. Suspenders are a worthy alternative to a belt.",
+"m5.avoid": "Tucked-in tight tees; horizontal stripes; large prints and logos across the stomach; shiny fabrics; tight clothes that pull; baggy shapeless pieces; short jackets.",
+"m5.err": "Buying a suit to grow into: tight at the waist, hanging off the shoulders. Buy for the shoulders and have the waist taken in.",
+"fit.eyebrow": "Fit",
+"fit.title": "Fit beats the label",
+"fit.lede": "A $300 piece with a perfect fit looks richer than a $3,000 piece hanging off you. Check these points in the mirror.",
+"fit.s1t": "Shoulder seam",
+"fit.s1d": "Sits right at the edge of your shoulder bone. The key checkpoint - a tailor can barely fix it. Seam sliding onto the bicep means too big; pulling upward means too small.",
+"fit.s2t": "Jacket collar",
+"fit.s2d": "Lies flat with no gap between collar and neck; no ripples or folds at the back.",
+"fit.s3t": "Jacket button",
+"fit.s3d": "Fastens without pulling. X-shaped creases at the button mean it is too tight.",
+"fit.s4t": "Jacket sleeve",
+"fit.s4d": "Ends at the wrist bone, showing 1-1.5 cm of shirt cuff.",
+"fit.s5t": "Shirt",
+"fit.s5d": "One finger fits inside the collar; smooth across the chest with no gaping buttons; about 2 cm of fabric can be pinched at the sides.",
+"fit.s6t": "Trousers",
+"fit.s6d": "Stay up with no sagging; clean in front, smooth at the back; a slight break over the shoe for classic cuts; hems never drag on the ground.",
+"fit.s7t": "T-shirt",
+"fit.s7d": "Sleeve reaches mid-bicep, hem reaches mid-thigh; neither clinging nor hanging.",
+"fit.s8t": "Skirt and dress",
+"fit.s8d": "Sit at the intended waist, do not twist as you walk, keep an even hemline.",
+"fit.tailorT": "Why a tailor matters",
+"fit.tailorD": "Mass-market clothes are cut for an average body that does not exist. Buy for your widest point and tailor the rest: hemming trousers, taking in a waist, shortening sleeves costs little and makes any piece look made-to-measure.",
+"height.eyebrow": "Height",
+"height.title": "Dressing your height",
+"height.lede": "Height is another proportion you can work with. Elongate a petite frame, structure a tall one.",
+"height.shortT": "Petite frames",
+"height.shortL": "<ul><li><strong>Monochrome:</strong> one color head to toe removes horizontal breaks and builds one continuous column.</li><li><strong>Verticals:</strong> fine stripes, creased trousers, long open layers, V-necks.</li><li><strong>High rise:</strong> a raised waistline plus a tucked-in top visually lengthens the legs.</li><li><strong>Lengths:</strong> cropped jackets; skirts above the knee; trousers with no excess fabric; shoes matching the trousers or skin tone.</li><li><strong>Proportions:</strong> tapered silhouettes; slim belts matching the outfit; smaller bags and accessories.</li><li><strong>Avoid:</strong> large prints, wide horizontal stripes, oversized fits, contrasting shoes and ankle straps.</li></ul>",
+"height.tallT": "Tall frames",
+"height.tallL": "<ul><li><strong>Volume suits you:</strong> long coats, maxi skirts, wide trousers, oversized fits - the things that overwhelm petite frames.</li><li><strong>Break the vertical:</strong> contrast between top and bottom, a belt, layering, horizontal details.</li><li><strong>Prints:</strong> medium scale - tiny prints get lost, huge ones overwhelm.</li><li><strong>Lengths:</strong> watch sleeves and trouser hems; try tall lines from brands.</li><li><strong>For men:</strong> a three-button jacket instead of two; double-breasted works; skip cropped trousers.</li></ul>",
+"tricks.eyebrow": "Techniques",
+"tricks.title": "Visual styling techniques",
+"tricks.lede": "Nine tools stylists use. Each one directs the eye: wherever the gaze lands looks bigger.",
+"tr1t": "Vertical lines",
+"tr1u": "They lengthen and slim. Use for petite frames and apple or oval types: stripes, creases, open layers, long necklaces.",
+"tr2t": "Horizontal lines",
+"tr2u": "They widen wherever they fall. Add volume to narrow shoulders or hips: stripes, color-blocking, belts.",
+"tr3t": "Light vs dark",
+"tr3u": "Light attracts the eye and adds volume; dark recedes and minimizes. A light top with a dark bottom suits pear shapes; flip it for inverted triangles.",
+"tr4t": "Details add volume",
+"tr4u": "Ruffles, pockets, embroidery and prints add visual weight where they sit. Place details only where you want more volume.",
+"tr5t": "Waist emphasis",
+"tr5u": "Creates curves: belts, wrap cuts, fitted tailoring. Works for hourglass, rectangle and pear. For apple and oval, skip the waist accent and work around it.",
+"tr6t": "The V-neck",
+"tr6u": "Lengthens the neck and torso, breaks up a broad chest, draws the eye inward. A universal tool for apple and inverted-triangle shapes and petite frames.",
+"tr7t": "Open layers",
+"tr7u": "An open jacket or shirt over a top draws two vertical lines down the sides and slims the torso. A go-to for apple and oval.",
+"tr8t": "The monochrome column",
+"tr8u": "One color head to toe removes every horizontal break. The strongest elongating effect - add depth with different textures.",
+"tr9t": "The rule of thirds",
+"tr9u": "Divide your frame 1/3 to 2/3, never in half: a 50/50 split visually shortens you. Tools: tucking, high rise, cropped jackets.",
+"mist.eyebrow": "Mistakes",
+"mist.title": "Common mistakes by body type",
+"mist.lede": "A quick cheat sheet: each body type's most frequent mistake. Check your outfit against one line.",
+"mist.h1": "Body type",
+"mist.h2": "Common mistakes",
+"mist.r1t": "Hourglass",
+"mist.r1d": "Hiding the waist under oversized clothes; low-rise trousers.",
+"mist.r2t": "Pear",
+"mist.r2d": "Bright bottom with a dark top; tops ending at the widest point of the hips; shiny fabrics on the hips.",
+"mist.r3t": "Apple",
+"mist.r3d": "A belt at the waist; clingy knits; short jackets ending at the stomach.",
+"mist.r4t": "Rectangle",
+"mist.r4d": "Shapeless straight pieces; bodycon with no waist accent; skipping belts.",
+"mist.r5t": "Inverted triangle (W)",
+"mist.r5d": "Shoulder pads and puff sleeves; a narrow dark bottom with a voluminous top.",
+"mist.r6t": "Trapezoid (M)",
+"mist.r6d": "Extremes: everything skin-tight or everything baggy.",
+"mist.r7t": "Inverted triangle (M)",
+"mist.r7d": "Structured shoulders with skinny jeans; double-breasted jackets.",
+"mist.r8t": "Rectangle (M)",
+"mist.r8d": "Straight tees worn untucked with no layers; baggy fits.",
+"mist.r9t": "Triangle (M)",
+"mist.r9d": "Light tapered trousers; short jackets ending at the hips.",
+"mist.r10t": "Oval (M)",
+"mist.r10d": "Buying a suit to grow into; tight tees; large prints across the stomach.",
+"next.eyebrow": "Next steps",
+"next.title": "Keep learning",
+"next.n1e": "Color",
+"next.n1t": "A palette for your frame",
+"next.n1d": "Discover your undertone and build colors that light up your face.",
+"next.n2e": "Combinations",
+"next.n2t": "Build the full outfit",
+"next.n2d": "Accessories, prints and textures: how to tie pieces into one coherent outfit.",
+"next.n3e": "Quizzes",
+"next.n3t": "Test yourself",
+"next.n3d": "Short quizzes on figure, color and style with personal results.",
+"cta.title": "Ready to build your outfit?",
+"cta.lede": "Open the builder: pick a model that matches your body type, layer an outfit and get a breakdown of why it works.",
+"cta.btn": "Open the builder"
+}
+};
+</script>
+<script>
+(function(){
+  function init(){
+    var mount = document.getElementById('figureFinder');
+    if(!mount || !window.SA || !window.LANG) return;
+    var state = { step: 0, sex: null, shoulders: null, waist: null, degree: null };
+    function lang(){ return window.SA.getLang(); }
+    function T(k){ return window.SA.t(k, lang()); }
+    function esc(s){ return window.SA.esc(s); }
+    function typeInfo(id){
+      var L = window.LANG, l = lang();
+      return ((L[l] && L[l].types && L[l].types[id]) || (L.ru && L.ru.types && L.ru.types[id]) || {});
+    }
+    function flow(){
+      var f = ['sex', 'shoulders', 'waist'];
+      if(state.sex === 'm' && state.shoulders === 'wider') f.push('degree');
+      return f;
+    }
+    function questions(){
+      return {
+        sex: { title: T('finder.q1'), opts: [['f', T('finder.q1f')], ['m', T('finder.q1m')]] },
+        shoulders: { title: T('finder.q2'), opts: [['wider', T('finder.q2wider')], ['equal', T('finder.q2equal')], ['narrower', T('finder.q2narrower')]] },
+        waist: { title: T('finder.q3'), opts: [['defined', T('finder.q3defined')], ['soft', T('finder.q3soft')], ['widest', T('finder.q3widest')]] },
+        degree: { title: T('finder.q4'), opts: [['slight', T('finder.q4slight')], ['marked', T('finder.q4marked')]] }
+      };
+    }
+    function resolveType(){
+      var s = state;
+      if(s.sex === 'f'){
+        if(s.waist === 'widest') return 'apple';
+        if(s.shoulders === 'wider') return 'invtri';
+        if(s.shoulders === 'narrower') return 'pear';
+        return s.waist === 'defined' ? 'hourglass' : 'rectangle';
+      }
+      if(s.waist === 'widest') return 'oval';
+      if(s.shoulders === 'narrower') return 'triangle';
+      if(s.shoulders === 'wider') return s.degree === 'marked' ? 'invtri_m' : 'trapezoid';
+      return s.waist === 'defined' ? 'trapezoid' : 'rectangle_m';
+    }
+    function render(){
+      var f = flow();
+      if(state.step >= f.length){ renderResult(); return; }
+      var key = f[state.step];
+      var q = questions()[key];
+      var pct = Math.round(state.step / f.length * 100);
+      var h = '<div class="quiz"><div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><i style="width:' + pct + '%"></i></div>';
+      h += '<div class="quiz-q"><h3>' + esc(q.title) + '</h3><div class="quiz-opts">';
+      q.opts.forEach(function(o){
+        h += '<button type="button" class="quiz-opt" data-q="' + key + '" data-v="' + o[0] + '">' + esc(o[1]) + '</button>';
+      });
+      h += '</div></div></div>';
+      mount.innerHTML = h;
+    }
+    function renderResult(){
+      var d = typeInfo(resolveType());
+      var tips = '';
+      (d.tips || []).forEach(function(x){ tips += '<li>' + esc(x) + '</li>'; });
+      var h = '<div class="quiz"><div class="quiz-result">';
+      h += '<span class="rule-tag">' + esc(T('finder.resultTag')) + '</span>';
+      h += '<h3>' + esc(d.name || '') + '</h3>';
+      h += '<p class="lede" style="margin-left:auto;margin-right:auto">' + esc(d.tag || '') + '</p>';
+      h += '<ul>' + tips + '</ul>';
+      h += '<div class="finder-actions">';
+      h += '<a class="btn btn-primary" href="' + esc(d.anchor || '#') + '">' + esc(T('finder.goto')) + '</a>';
+      h += '<button type="button" class="btn btn-ghost" id="finderRestart">' + esc(T('finder.restart')) + '</button>';
+      h += '</div></div></div>';
+      mount.innerHTML = h;
+      var rb = document.getElementById('finderRestart');
+      if(rb) rb.addEventListener('click', function(){
+        state = { step: 0, sex: null, shoulders: null, waist: null, degree: null };
+        render();
+      });
+    }
+    mount.addEventListener('click', function(e){
+      var b = e.target.closest('.quiz-opt');
+      if(!b) return;
+      state[b.getAttribute('data-q')] = b.getAttribute('data-v');
+      state.step++;
+      render();
+    });
+    document.addEventListener('sa:lang', function(){ render(); });
+    render();
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+<script src="js/common.js"></script>
+</body>
+</html>

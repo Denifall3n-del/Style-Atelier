@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title">Style Atelier - Капсульный гардероб</title>
+<meta name="description" data-i18n-content="meta.desc" content="Как собрать капсульный гардероб: принципы, конструктор 4x4 и аудит шкафа. Школа стиля Style Atelier.">
+<meta property="og:type" content="website">
+<meta property="og:title" data-i18n-content="meta.title" content="Style Atelier - Капсульный гардероб">
+<meta property="og:description" data-i18n-content="meta.desc" content="Как собрать капсульный гардероб: принципы, конструктор 4x4 и аудит шкафа. Школа стиля Style Atelier.">
+<meta name="theme-color" content="#FAF7F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+main.page-capsule .cap-palettes{display:flex;gap:12px;flex-wrap:wrap;margin:1.4em 0}
+main.page-capsule .pal-btn{display:flex;align-items:center;gap:10px;background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:10px 18px 10px 12px;cursor:pointer;font-family:var(--sans);font-size:.95rem;font-weight:500;color:var(--ink);min-height:48px}
+main.page-capsule .pal-btn:hover{border-color:var(--accent-ink)}
+main.page-capsule .pal-btn.active{border-color:var(--accent-ink);background:var(--accent-soft)}
+main.page-capsule .pal-dots{display:flex}
+main.page-capsule .pal-dots i{width:22px;height:22px;border-radius:50%;border:1px solid rgba(0,0,0,.15);margin-left:-7px}
+main.page-capsule .pal-dots i:first-child{margin-left:0}
+main.page-capsule .cap-catalog{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:12px;margin:1em 0 2.4em}
+main.page-capsule .cap-item{background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:12px 6px;display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;font-family:var(--sans);font-size:.82rem;line-height:1.3;color:var(--ink);min-height:118px}
+main.page-capsule .cap-item:hover{border-color:var(--accent-ink);transform:translateY(-2px)}
+main.page-capsule .cap-item svg{width:54px;height:54px}
+main.page-capsule .cap-item.in-grid{opacity:.32;pointer-events:none}
+main.page-capsule .cap-board-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:1em}
+main.page-capsule .cap-board-head h3{margin:0}
+main.page-capsule .cap-count{font-weight:600;color:var(--accent-ink);margin-right:12px}
+main.page-capsule .cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:600px}
+main.page-capsule .cap-slot{aspect-ratio:.92;border:1.5px dashed var(--line);border-radius:12px;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px;cursor:default}
+main.page-capsule .cap-slot.filled{border-style:solid;border-color:var(--line);cursor:pointer}
+main.page-capsule .cap-slot.filled:hover{border-color:var(--accent-ink)}
+main.page-capsule .cap-slot svg{width:56px;height:56px}
+main.page-capsule .cap-slot .cap-name{font-size:.68rem;color:var(--muted);text-align:center;line-height:1.25}
+main.page-capsule .cap-rule{margin-top:1.4em;max-width:600px}
+main.page-capsule .audit-list{display:grid;gap:10px;max-width:640px;margin:1.4em 0}
+main.page-capsule .audit-list label{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 18px;cursor:pointer;font-size:1rem}
+main.page-capsule .audit-list input{width:22px;height:22px;margin-top:2px;accent-color:var(--accent-ink);flex-shrink:0;cursor:pointer}
+main.page-capsule .audit-out{font-weight:600;color:var(--accent-ink);font-size:1.05rem}
+main.page-capsule .cta-band{background:var(--ink);color:var(--cream);border-radius:18px;padding:44px 36px;text-align:center;margin-top:3em}
+main.page-capsule .cta-band h2{color:var(--cream)}
+main.page-capsule .cta-band .lede{color:#C9C2B4;margin:0 auto 1.6em}
+@media(max-width:560px){
+  main.page-capsule .cap-grid{gap:8px}
+  main.page-capsule .cap-slot svg{width:44px;height:44px}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Перейти к содержимому</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">SA</span><span class="brand-name">Style Atelier</span></a>
+    <nav class="main-nav" id="mainNav" data-i18n-aria="a11y.nav" aria-label="Основная навигация">
+      <a href="index.html" data-i18n="nav.home">Главная</a>
+      <a href="colors.html" data-i18n="nav.colors">Цвет</a>
+      <a href="figure.html" data-i18n="nav.figure">Фигура</a>
+      <a href="styles.html" data-i18n="nav.styles">Стили</a>
+      <a href="combinations.html" data-i18n="nav.combo">Сочетания</a>
+      <a href="capsule.html" data-i18n="nav.capsule" class="active">Капсула</a>
+      <a href="builder.html" data-i18n="nav.builder" class="nav-cta">Конструктор</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" data-i18n-aria="a11y.langLabel" aria-label="Выбор языка">
+        <button data-lang="ru" class="active">RU</button><button data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" data-i18n-aria="a11y.menu" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1" class="page-capsule">
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Капсульный гардероб</span>
+      <h1 data-i18n="hero.title">Меньше вещей - больше образов</h1>
+      <p class="lede" data-i18n="hero.lede">Капсула - это набор вещей, где каждая сочетается почти с каждой. 16 продуманных предметов дают десятки комплектов - без утреннего хаоса у шкафа.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="builder.html" data-i18n="hero.cta1">Открыть конструктор</a>
+        <a class="btn btn-ghost" href="#principles" data-i18n="hero.cta2">Принципы капсулы</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 320 260" role="img" aria-labelledby="capArtT" style="width:100%;max-width:340px">
+        <title id="capArtT" data-i18n="hero.art">Иллюстрация: шкаф с капсульным гардеробом</title>
+        <rect x="62" y="14" width="196" height="232" rx="10" fill="#FFFFFF" stroke="#1E1B16" stroke-width="2"/>
+        <line x1="86" y1="46" x2="234" y2="46" stroke="#1E1B16" stroke-width="2"/>
+        <g stroke="#1E1B16" stroke-width="2" stroke-linejoin="round">
+          <path d="M100 52v8m-2 0l8 6 8-6 9 5-4 7-3-2v30h-24V70l-3 2-4-7z" fill="#C2A878"/>
+          <circle cx="106" cy="52" r="2.5" fill="none"/>
+          <path d="M150 52v8m-2 0l9 7 9-7 8 5-3 34h-30l-3-34z" fill="#3E4A5A"/>
+          <circle cx="157" cy="52" r="2.5" fill="none"/>
+          <path d="M198 52v8m-14 0h28l3 44h-11l-3-22-3 22h-11z" fill="#8C2F39"/>
+          <circle cx="205" cy="52" r="2.5" fill="none"/>
+        </g>
+        <line x1="86" y1="168" x2="234" y2="168" stroke="#1E1B16" stroke-width="2"/>
+        <g stroke="#1E1B16" stroke-width="2">
+          <rect x="96" y="146" width="52" height="10" rx="2" fill="#EDEFF2"/>
+          <rect x="100" y="134" width="52" height="10" rx="2" fill="#9AA3AF"/>
+          <rect x="96" y="122" width="52" height="10" rx="2" fill="#C2A878"/>
+          <rect x="170" y="128" width="56" height="40" rx="4" fill="#F5E7E4"/>
+          <path d="M182 128v-6a8 8 0 0116 0v6" fill="none"/>
+        </g>
+        <g stroke="#1E1B16" stroke-width="2" stroke-linejoin="round">
+          <path d="M96 214c0-8 8-12 18-12h10c8 0 14 4 16 10v10H96z" fill="#4A3A28"/>
+          <path d="M176 214c0-8 8-12 18-12h10c8 0 14 4 16 10v10h-44z" fill="#4A3A28"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="principles">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="princ.eyebrow">Основы</span>
+      <h2 data-i18n="princ.title">8 принципов капсулы</h2>
+      <p class="lede" data-i18n="princ.lede">Правила, на которых держится любой капсульный гардероб - от минимализма до old money.</p>
+    </div>
+    <ol class="steps">
+      <li><strong data-i18n="p1t">Палитра прежде всего</strong><br><span data-i18n="p1d">Выбери 3-4 нейтральных цвета и 1-2 акцента. Все вещи капсулы должны сочетаться между собой - тогда 16 вещей дают десятки комплектов.</span></li>
+      <li><strong data-i18n="p2t">Качество важнее количества</strong><br><span data-i18n="p2d">Натуральные ткани, чистая строчка, добротная фурнитура. Правило покупки: вещь должна сочетаться минимум с тремя вещами, которые у тебя уже есть.</span></li>
+      <li><strong data-i18n="p3t">Посадка решает</strong><br><span data-i18n="p3d">Заложи 15-20% бюджета на портного. Хорошо сидящая вещь среднего сегмента выглядит дороже, чем плохо сидящий люкс.</span></li>
+      <li><strong data-i18n="p4t">Структура гардероба</strong><br><span data-i18n="p4d">Ориентир: около 40% - верх, 30% - низ, 30% - верхняя одежда. Обуви и сумок - меньше пар, но лучших.</span></li>
+      <li><strong data-i18n="p5t">Инвестируй в видимое</strong><br><span data-i18n="p5d">Пальто, обувь, сумка и блейзер формируют впечатление. На них экономят в последнюю очередь.</span></li>
+      <li><strong data-i18n="p6t">Силуэт и пропорции</strong><br><span data-i18n="p6d">Объемный верх - приталенный низ, или наоборот. Монохромный комплект визуально вытягивает силуэт.</span></li>
+      <li><strong data-i18n="p7t">Гардероб под реальную жизнь</strong><br><span data-i18n="p7d">Строй капсулу под свою неделю - работа, быт, встречи, климат, - а не под воображаемую жизнь.</span></li>
+      <li><strong data-i18n="p8t">Сезонное ядро</strong><br><span data-i18n="p8d">База постоянна весь год. Обновляй 1-2 сезонные вещи, не перестраивая весь шкаф.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section alt" id="lab">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="lab.eyebrow">Практика</span>
+      <h2 data-i18n="lab.title">Конструктор капсулы 4x4</h2>
+      <p class="lede" data-i18n="lab.lede">Выбери палитру-базу и собери свою капсулу из 16 вещей. Кликай по вещам в каталоге, чтобы добавить их в сетку.</p>
+    </div>
+    <p><strong data-i18n="pal.label">Палитра-база</strong></p>
+    <div class="cap-palettes" role="group" id="capPalettes">
+      <button class="pal-btn active" data-pal="warm">
+        <span class="pal-dots"><i style="background:#F3EAD9"></i><i style="background:#C2A878"></i><i style="background:#4A3A28"></i><i style="background:#8C2F39"></i></span>
+        <span data-i18n="pal.warm">Теплая</span>
+      </button>
+      <button class="pal-btn" data-pal="cool">
+        <span class="pal-dots"><i style="background:#F0F1F3"></i><i style="background:#9AA3AF"></i><i style="background:#232B36"></i><i style="background:#8C2F39"></i></span>
+        <span data-i18n="pal.cool">Холодная</span>
+      </button>
+      <button class="pal-btn" data-pal="dark">
+        <span class="pal-dots"><i style="background:#3A3A38"></i><i style="background:#6B6B66"></i><i style="background:#141412"></i><i style="background:#A98B54"></i></span>
+        <span data-i18n="pal.dark">Темная</span>
+      </button>
+    </div>
+    <h3 data-i18n="lab.cat">Каталог вещей</h3>
+    <p class="lede" data-i18n="lab.hint" style="font-size:.95rem">Клик - добавить в капсулу. Клик по ячейке сетки - убрать вещь.</p>
+    <div class="cap-catalog" id="capCatalog"></div>
+    <div class="cap-board-head">
+      <h3 data-i18n="lab.board">Твоя капсула</h3>
+      <div>
+        <span class="cap-count" id="capCount"></span>
+        <button class="btn btn-ghost btn-small" id="capClear" data-i18n="lab.clear">Очистить</button>
+      </div>
+    </div>
+    <div class="cap-grid" id="capGrid"></div>
+    <div class="callout gold cap-rule">
+      <p data-i18n="lab.rule">Правило капсулы: каждая вещь должна сочетаться минимум с тремя другими. Единая палитра делает это возможным.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="audit">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="audit.eyebrow">Аудит</span>
+      <h2 data-i18n="audit.title">Проверь свой шкаф</h2>
+      <p class="lede" data-i18n="audit.lede">Отметь пункты, которые подходят твоим вещам. Отмеченное - кандидаты на выход из капсулы.</p>
+    </div>
+    <div class="audit-list" id="auditList">
+      <label><input type="checkbox"><span data-i18n="a1">Не надевалась больше года</span></label>
+      <label><input type="checkbox"><span data-i18n="a2">Не сидит по фигуре и не подлежит подгонке</span></label>
+      <label><input type="checkbox"><span data-i18n="a3">Не вписывается в палитру капсулы</span></label>
+      <label><input type="checkbox"><span data-i18n="a4">Изношена: катышки, пятна, потеря формы</span></label>
+      <label><input type="checkbox"><span data-i18n="a5">Дублирует другую вещь один в один</span></label>
+      <label><input type="checkbox"><span data-i18n="a6">Куплена импульсивно и ни с чем не сочетается</span></label>
+    </div>
+    <p class="audit-out" id="auditOut"></p>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="next.eyebrow">Дальше</span>
+      <h2 data-i18n="next.title">Куда двигаться дальше</h2>
+    </div>
+    <div class="next-steps">
+      <a class="next-card" href="colors.html">
+        <span class="eyebrow" data-i18n="n1e">Цвет</span>
+        <h3 data-i18n="n1t">Твоя палитра</h3>
+        <p data-i18n="n1d">Цветовой круг, правило 60-30-10 и 12 сезонов.</p>
+      </a>
+      <a class="next-card" href="styles.html">
+        <span class="eyebrow" data-i18n="n2e">Стили</span>
+        <h3 data-i18n="n2t">Семь стилей</h3>
+        <p data-i18n="n2d">От casual до old money: выбери свой.</p>
+      </a>
+      <a class="next-card" href="quiz.html">
+        <span class="eyebrow" data-i18n="n3e">Квизы</span>
+        <h3 data-i18n="n3t">Узнай свой профиль</h3>
+        <p data-i18n="n3d">Подтон кожи, тип фигуры и стиль за 5 минут.</p>
+      </a>
+    </div>
+    <div class="cta-band">
+      <h2 data-i18n="cta.title">Капсула готова? Собери образ</h2>
+      <p class="lede" data-i18n="cta.lede">Открой конструктор и составь комплекты из своей капсулы - с разбором, почему каждый работает.</p>
+      <a class="btn btn-light" href="builder.html" data-i18n="cta.btn">Открыть конструктор образов</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand"><span class="brand-mark">SA</span><div><strong>Style Atelier</strong><p data-i18n="footer.tag">Школа стиля: цвет, фигура, образ</p></div></div>
+    <nav class="footer-nav" data-i18n-aria="a11y.navFooter" aria-label="Дополнительная навигация">
+      <a href="colors.html" data-i18n="nav.colors">Цвет</a>
+      <a href="figure.html" data-i18n="nav.figure">Фигура</a>
+      <a href="styles.html" data-i18n="nav.styles">Стили</a>
+      <a href="combinations.html" data-i18n="nav.combo">Сочетания</a>
+      <a href="capsule.html" data-i18n="nav.capsule" class="active">Капсула</a>
+      <a href="quiz.html" data-i18n="nav.quiz">Квизы</a>
+      <a href="builder.html" data-i18n="nav.builder">Конструктор</a>
+    </nav>
+    <p class="footer-note" data-i18n="footer.note">Образовательный проект. Правила стиля - ориентиры, а не догмы: ваш вкус решает.</p>
+  </div>
+</footer>
+<script>
+window.LANG = {
+ru: {
+  "a11y.skip": "Перейти к содержимому", "a11y.nav": "Основная навигация", "a11y.navFooter": "Дополнительная навигация",
+  "a11y.langLabel": "Выбор языка", "a11y.menu": "Меню",
+  "meta.title": "Style Atelier - Капсульный гардероб",
+  "meta.desc": "Как собрать капсульный гардероб: принципы, конструктор 4x4 и аудит шкафа. Школа стиля Style Atelier.",
+  "nav.home": "Главная", "nav.colors": "Цвет", "nav.figure": "Фигура", "nav.styles": "Стили",
+  "nav.combo": "Сочетания", "nav.capsule": "Капсула", "nav.quiz": "Квизы", "nav.builder": "Конструктор",
+  "footer.tag": "Школа стиля: цвет, фигура, образ",
+  "footer.note": "Образовательный проект. Правила стиля - ориентиры, а не догмы: ваш вкус решает.",
+  "hero.eyebrow": "Капсульный гардероб",
+  "hero.title": "Меньше вещей - больше образов",
+  "hero.lede": "Капсула - это набор вещей, где каждая сочетается почти с каждой. 16 продуманных предметов дают десятки комплектов - без утреннего хаоса у шкафа.",
+  "hero.cta1": "Открыть конструктор",
+  "hero.cta2": "Принципы капсулы",
+  "hero.art": "Иллюстрация: шкаф с капсульным гардеробом",
+  "princ.eyebrow": "Основы",
+  "princ.title": "8 принципов капсулы",
+  "princ.lede": "Правила, на которых держится любой капсульный гардероб - от минимализма до old money.",
+  "p1t": "Палитра прежде всего",
+  "p1d": "Выбери 3-4 нейтральных цвета и 1-2 акцента. Все вещи капсулы должны сочетаться между собой - тогда 16 вещей дают десятки комплектов.",
+  "p2t": "Качество важнее количества",
+  "p2d": "Натуральные ткани, чистая строчка, добротная фурнитура. Правило покупки: вещь должна сочетаться минимум с тремя вещами, которые у тебя уже есть.",
+  "p3t": "Посадка решает",
+  "p3d": "Заложи 15-20% бюджета на портного. Хорошо сидящая вещь среднего сегмента выглядит дороже, чем плохо сидящий люкс.",
+  "p4t": "Структура гардероба",
+  "p4d": "Ориентир: около 40% - верх, 30% - низ, 30% - верхняя одежда. Обуви и сумок - меньше пар, но лучших.",
+  "p5t": "Инвестируй в видимое",
+  "p5d": "Пальто, обувь, сумка и блейзер формируют впечатление. На них экономят в последнюю очередь.",
+  "p6t": "Силуэт и пропорции",
+  "p6d": "Объемный верх - приталенный низ, или наоборот. Монохромный комплект визуально вытягивает силуэт.",
+  "p7t": "Гардероб под реальную жизнь",
+  "p7d": "Строй капсулу под свою неделю - работа, быт, встречи, климат, - а не под воображаемую жизнь.",
+  "p8t": "Сезонное ядро",
+  "p8d": "База постоянна весь год. Обновляй 1-2 сезонные вещи, не перестраивая весь шкаф.",
+  "lab.eyebrow": "Практика",
+  "lab.title": "Конструктор капсулы 4x4",
+  "lab.lede": "Выбери палитру-базу и собери свою капсулу из 16 вещей. Кликай по вещам в каталоге, чтобы добавить их в сетку.",
+  "pal.label": "Палитра-база",
+  "pal.warm": "Теплая", "pal.cool": "Холодная", "pal.dark": "Темная",
+  "lab.cat": "Каталог вещей",
+  "lab.hint": "Клик - добавить в капсулу. Клик по ячейке сетки - убрать вещь.",
+  "cap.i.shirt": "Рубашка", "cap.i.tshirt": "Футболка", "cap.i.turtle": "Водолазка",
+  "cap.i.sweater": "Пуловер", "cap.i.breton": "Бретонка", "cap.i.jeans": "Джинсы",
+  "cap.i.chinos": "Чиносы", "cap.i.trousers": "Брюки", "cap.i.skirt": "Юбка-карандаш",
+  "cap.i.loafers": "Лоферы", "cap.i.sneakers": "Кеды", "cap.i.boots": "Ботинки",
+  "cap.i.trench": "Тренч", "cap.i.blazer": "Блейзер", "cap.i.coat": "Пальто",
+  "cap.i.bag": "Сумка", "cap.i.scarf": "Шарф", "cap.i.belt": "Ремень",
+  "lab.board": "Твоя капсула",
+  "lab.count": "В капсуле: {n} из 16",
+  "lab.clear": "Очистить",
+  "lab.full": "Капсула заполнена: 16 вещей. Убери что-то, чтобы добавить новое.",
+  "lab.rule": "Правило капсулы: каждая вещь должна сочетаться минимум с тремя другими. Единая палитра делает это возможным.",
+  "audit.eyebrow": "Аудит",
+  "audit.title": "Проверь свой шкаф",
+  "audit.lede": "Отметь пункты, которые подходят твоим вещам. Отмеченное - кандидаты на выход из капсулы.",
+  "a1": "Не надевалась больше года",
+  "a2": "Не сидит по фигуре и не подлежит подгонке",
+  "a3": "Не вписывается в палитру капсулы",
+  "a4": "Изношена: катышки, пятна, потеря формы",
+  "a5": "Дублирует другую вещь один в один",
+  "a6": "Куплена импульсивно и ни с чем не сочетается",
+  "audit.out": "Кандидатов на выход: {n}",
+  "next.eyebrow": "Дальше",
+  "next.title": "Куда двигаться дальше",
+  "n1e": "Цвет", "n1t": "Твоя палитра", "n1d": "Цветовой круг, правило 60-30-10 и 12 сезонов.",
+  "n2e": "Стили", "n2t": "Семь стилей", "n2d": "От casual до old money: выбери свой.",
+  "n3e": "Квизы", "n3t": "Узнай свой профиль", "n3d": "Подтон кожи, тип фигуры и стиль за 5 минут.",
+  "cta.title": "Капсула готова? Собери образ",
+  "cta.lede": "Открой конструктор и составь комплекты из своей капсулы - с разбором, почему каждый работает.",
+  "cta.btn": "Открыть конструктор образов"
+},
+en: {
+  "a11y.skip": "Skip to content", "a11y.nav": "Main navigation", "a11y.navFooter": "Footer navigation",
+  "a11y.langLabel": "Language selection", "a11y.menu": "Menu",
+  "meta.title": "Style Atelier - Capsule Wardrobe",
+  "meta.desc": "How to build a capsule wardrobe: principles, a 4x4 builder and a closet audit. Style Atelier school of style.",
+  "nav.home": "Home", "nav.colors": "Color", "nav.figure": "Figure", "nav.styles": "Styles",
+  "nav.combo": "Combinations", "nav.capsule": "Capsule", "nav.quiz": "Quizzes", "nav.builder": "Builder",
+  "footer.tag": "The school of style: color, figure, outfit",
+  "footer.note": "An educational project. Style rules are guidelines, not dogma: your taste decides.",
+  "hero.eyebrow": "Capsule wardrobe",
+  "hero.title": "Fewer pieces, more outfits",
+  "hero.lede": "A capsule is a set of pieces where almost everything goes with everything. 16 well-chosen items create dozens of outfits - no more morning chaos in front of the closet.",
+  "hero.cta1": "Open the builder",
+  "hero.cta2": "Capsule principles",
+  "hero.art": "Illustration: a closet with a capsule wardrobe",
+  "princ.eyebrow": "Basics",
+  "princ.title": "8 capsule principles",
+  "princ.lede": "The rules behind every capsule wardrobe - from minimalism to old money.",
+  "p1t": "Palette first",
+  "p1d": "Pick 3-4 neutrals and 1-2 accents. Every piece should work with the rest - then 16 items make dozens of outfits.",
+  "p2t": "Quality over quantity",
+  "p2d": "Natural fabrics, clean stitching, solid hardware. The buying rule: a piece must match at least three things you already own.",
+  "p3t": "Fit decides",
+  "p3d": "Keep 15-20% of your budget for a tailor. A well-fitting mid-range piece looks more expensive than an ill-fitting luxury one.",
+  "p4t": "Wardrobe structure",
+  "p4d": "A guide: about 40% tops, 30% bottoms, 30% outerwear. Fewer pairs of shoes and bags, but the best ones.",
+  "p5t": "Invest in the visible",
+  "p5d": "Coat, shoes, bag and blazer shape the impression. Save on them last.",
+  "p6t": "Silhouette and proportion",
+  "p6d": "Voluminous top with a fitted bottom, or the reverse. A monochrome outfit visually elongates the silhouette.",
+  "p7t": "Dress your real life",
+  "p7d": "Build the capsule around your week - work, errands, meetings, climate - not an imaginary life.",
+  "p8t": "Seasonal core",
+  "p8d": "The base stays all year round. Refresh 1-2 seasonal pieces without rebuilding the closet.",
+  "lab.eyebrow": "Practice",
+  "lab.title": "Capsule builder 4x4",
+  "lab.lede": "Pick a base palette and build your 16-piece capsule. Click items in the catalog to add them to the grid.",
+  "pal.label": "Base palette",
+  "pal.warm": "Warm", "pal.cool": "Cool", "pal.dark": "Dark",
+  "lab.cat": "Item catalog",
+  "lab.hint": "Click to add to the capsule. Click a grid cell to remove an item.",
+  "cap.i.shirt": "Shirt", "cap.i.tshirt": "T-shirt", "cap.i.turtle": "Turtleneck",
+  "cap.i.sweater": "Sweater", "cap.i.breton": "Breton top", "cap.i.jeans": "Jeans",
+  "cap.i.chinos": "Chinos", "cap.i.trousers": "Trousers", "cap.i.skirt": "Pencil skirt",
+  "cap.i.loafers": "Loafers", "cap.i.sneakers": "Sneakers", "cap.i.boots": "Boots",
+  "cap.i.trench": "Trench", "cap.i.blazer": "Blazer", "cap.i.coat": "Coat",
+  "cap.i.bag": "Bag", "cap.i.scarf": "Scarf", "cap.i.belt": "Belt",
+  "lab.board": "Your capsule",
+  "lab.count": "In the capsule: {n} of 16",
+  "lab.clear": "Clear",
+  "lab.full": "Capsule is full: 16 pieces. Remove something to add a new one.",
+  "lab.rule": "The capsule rule: every piece should match at least three others. One shared palette makes it possible.",
+  "audit.eyebrow": "Audit",
+  "audit.title": "Audit your closet",
+  "audit.lede": "Tick the items that apply. Ticked pieces are candidates to leave the capsule.",
+  "a1": "Not worn for over a year",
+  "a2": "Does not fit and cannot be tailored",
+  "a3": "Does not fit the capsule palette",
+  "a4": "Worn out: pilling, stains, lost shape",
+  "a5": "Duplicates another piece exactly",
+  "a6": "An impulse buy that matches nothing",
+  "audit.out": "Candidates to let go: {n}",
+  "next.eyebrow": "Next",
+  "next.title": "Where to go next",
+  "n1e": "Color", "n1t": "Your palette", "n1d": "Color wheel, the 60-30-10 rule and 12 seasons.",
+  "n2e": "Styles", "n2t": "Seven styles", "n2d": "From casual to old money: find yours.",
+  "n3e": "Quizzes", "n3t": "Discover your profile", "n3d": "Skin undertone, body type and style in 5 minutes.",
+  "cta.title": "Capsule ready? Build an outfit",
+  "cta.lede": "Open the builder and compose outfits from your capsule - with notes on why each one works.",
+  "cta.btn": "Open the outfit builder"
+}
+};
+</script>
+<script src="js/common.js"></script>
+<script>
+(function(){
+"use strict";
+var INK = "#1E1B16";
+var ICONS = {
+  shirt: '<path d="M17 10l7 5 7-5 7 4-3 6-2-1v20H15V20l-2 1-3-6z"/><path d="M24 15v6" fill="none"/>',
+  tshirt: '<path d="M13 14l7-5 4 3 4-3 7 5-4 7-3-2v20H20V20l-3 2z"/>',
+  turtle: '<path d="M19 5h10v9H19z"/><path d="M15 14h18l3 26H12z"/>',
+  sweater: '<path d="M15 12h18l5 28h-7l-2-13-5 4-5-4-2 13h-7z"/>',
+  breton: '<path d="M13 14l7-5 4 3 4-3 7 5-4 7-3-2v20H20V20l-3 2z"/><g fill="none" stroke="var(--gf2)" stroke-width="2"><path d="M20 24h8M20 29h8M20 34h8"/></g>',
+  jeans: '<path d="M17 8h14l3 32h-8l-2-18-2 18h-8z"/><path d="M17 13h14" fill="none"/>',
+  chinos: '<path d="M19 8h10l2 32h-6l-1-20-1 20h-6z"/>',
+  trousers: '<path d="M18 8h12l2 32h-7l-1-20-1 20h-7z"/><path d="M24 13v24" fill="none"/>',
+  skirt: '<path d="M19 8h10l4 32H15z"/><path d="M19 13h10" fill="none"/>',
+  loafers: '<path d="M8 32c0-4 4-6 10-6h12c4 0 8 2 10 6v4H8z"/><path d="M8 36h32" fill="none"/>',
+  sneakers: '<path d="M8 32c0-4 4-6 10-6h8l10 4c2 1 4 3 4 5v1H8z"/><path d="M23 26l2 3M27 26l2 3" fill="none"/>',
+  boots: '<path d="M16 8h10v18l8 6v8H16z"/><path d="M16 32h18" fill="none"/>',
+  trench: '<path d="M17 8l7 4 7-4 7 4-2 30H14z"/><path d="M14 26h22M24 12v7" fill="none"/>',
+  blazer: '<path d="M16 8l8 6 8-6 6 4-3 30H13z"/><path d="M24 14l-4 5 4 11 4-11z" fill="none"/>',
+  coat: '<path d="M17 6l7 4 7-4 6 4-3 34H14z"/><path d="M24 10v9" fill="none"/>',
+  bag: '<path d="M14 20h20l-2 20H16z"/><path d="M19 20v-3a5 5 0 0110 0v3" fill="none"/>',
+  scarf: '<path d="M14 13h20v17H14z"/><path d="M14 30v7M19 30v7M24 30v7M29 30v7M34 30v7" fill="none"/>',
+  belt: '<rect x="6" y="20" width="32" height="8" rx="4"/><rect x="29" y="18" width="8" height="12" rx="1.5" fill="none"/>'
+};
+var ITEMS = [
+  {id:"shirt", tone:"n1"}, {id:"tshirt", tone:"n1"}, {id:"turtle", tone:"n2"},
+  {id:"sweater", tone:"n2"}, {id:"breton", tone:"n1"}, {id:"jeans", tone:"n3"},
+  {id:"chinos", tone:"n2"}, {id:"trousers", tone:"n3"}, {id:"skirt", tone:"n3"},
+  {id:"loafers", tone:"n3"}, {id:"sneakers", tone:"n1"}, {id:"boots", tone:"n3"},
+  {id:"trench", tone:"n2"}, {id:"blazer", tone:"n3"}, {id:"coat", tone:"n3"},
+  {id:"bag", tone:"acc"}, {id:"scarf", tone:"acc"}, {id:"belt", tone:"n3"}
+];
+var PALETTES = {
+  warm: {n1:"#F3EAD9", n2:"#C2A878", n3:"#4A3A28", acc:"#8C2F39"},
+  cool: {n1:"#F0F1F3", n2:"#9AA3AF", n3:"#232B36", acc:"#8C2F39"},
+  dark: {n1:"#3A3A38", n2:"#6B6B66", n3:"#141412", acc:"#A98B54"}
+};
+var palette = "warm";
+var slots = new Array(16).fill(null);
+var catalogEl = document.getElementById("capCatalog");
+var gridEl = document.getElementById("capGrid");
+var countEl = document.getElementById("capCount");
+
+function iconSVG(item){
+  var pal = PALETTES[palette];
+  var gf = pal[item.tone];
+  var gf2 = (item.tone === "n1") ? pal.n2 : pal.n1;
+  return '<svg viewBox="0 0 48 48" aria-hidden="true" style="--gf:' + gf + ';--gf2:' + gf2 + '">' +
+    '<g fill="var(--gf)" stroke="' + INK + '" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">' +
+    ICONS[item.id] + '</g></svg>';
+}
+function inGrid(id){ return slots.indexOf(id) !== -1; }
+function renderCatalog(){
+  var lang = SA.getLang();
+  catalogEl.innerHTML = "";
+  ITEMS.forEach(function(item){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "cap-item" + (inGrid(item.id) ? " in-grid" : "");
+    b.setAttribute("aria-label", SA.t("cap.i." + item.id, lang));
+    b.innerHTML = iconSVG(item) + "<span>" + SA.esc(SA.t("cap.i." + item.id, lang)) + "</span>";
+    b.addEventListener("click", function(){ addItem(item.id); });
+    catalogEl.appendChild(b);
+  });
+}
+function renderGrid(){
+  var lang = SA.getLang();
+  gridEl.innerHTML = "";
+  slots.forEach(function(id, i){
+    var d = document.createElement("div");
+    d.className = "cap-slot" + (id ? " filled" : "");
+    if(id){
+      var item = ITEMS.filter(function(x){ return x.id === id; })[0];
+      d.innerHTML = iconSVG(item) + '<span class="cap-name">' + SA.esc(SA.t("cap.i." + id, lang)) + "</span>";
+      d.setAttribute("role", "button");
+      d.setAttribute("tabindex", "0");
+      d.setAttribute("aria-label", SA.t("cap.i." + id, lang));
+      var rm = function(){ slots[i] = null; renderAll(); };
+      d.addEventListener("click", rm);
+      d.addEventListener("keydown", function(e){ if(e.key === "Enter" || e.key === " "){ e.preventDefault(); rm(); } });
+    }
+    gridEl.appendChild(d);
+  });
+  var n = slots.filter(Boolean).length;
+  countEl.textContent = SA.t("lab.count", lang).replace("{n}", n);
+}
+function addItem(id){
+  var empty = slots.indexOf(null);
+  if(empty === -1){
+    countEl.textContent = SA.t("lab.full", SA.getLang());
+    return;
+  }
+  slots[empty] = id;
+  renderAll();
+}
+function renderAll(){ renderCatalog(); renderGrid(); }
+document.getElementById("capPalettes").addEventListener("click", function(e){
+  var b = e.target.closest(".pal-btn");
+  if(!b) return;
+  palette = b.getAttribute("data-pal");
+  this.querySelectorAll(".pal-btn").forEach(function(x){ x.classList.toggle("active", x === b); });
+  renderAll();
+});
+document.getElementById("capClear").addEventListener("click", function(){
+  slots = new Array(16).fill(null);
+  renderAll();
+});
+function renderAudit(){
+  var n = document.querySelectorAll("#auditList input:checked").length;
+  document.getElementById("auditOut").textContent = SA.t("audit.out", SA.getLang()).replace("{n}", n);
+}
+document.getElementById("auditList").addEventListener("change", renderAudit);
+document.addEventListener("sa:lang", function(){ renderAll(); renderAudit(); });
+document.addEventListener("DOMContentLoaded", function(){ renderAll(); renderAudit(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title">Style Atelier - Квизы: узнай свой профиль</title>
+<meta name="description" data-i18n-content="meta.desc" content="Три квиза школы стиля: подтон кожи, тип фигуры и твой стиль. Результат сразу, без регистрации. Style Atelier.">
+<meta property="og:type" content="website">
+<meta property="og:title" data-i18n-content="meta.title" content="Style Atelier - Квизы: узнай свой профиль">
+<meta property="og:description" data-i18n-content="meta.desc" content="Три квиза школы стиля: подтон кожи, тип фигуры и твой стиль. Результат сразу, без регистрации. Style Atelier.">
+<meta name="theme-color" content="#FAF7F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+main.page-quiz .quiz-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:2em}
+main.page-quiz .quiz-card{display:block;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .15s ease,box-shadow .15s ease}
+main.page-quiz .quiz-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(30,27,22,.1)}
+main.page-quiz .quiz-num{font-family:var(--serif);font-size:2rem;color:var(--gold);display:block;margin-bottom:.3em}
+main.page-quiz .quiz-card h3{margin-bottom:.3em}
+main.page-quiz .quiz-card p{color:var(--muted);font-size:.95rem;margin-bottom:1em}
+main.page-quiz .quiz-link{font-weight:600;color:var(--accent-ink);font-size:.95rem}
+main.page-quiz .quiz-meta{font-size:.82rem;color:var(--muted);margin-top:1.2em}
+main.page-quiz .quiz-result .btn{margin:.4em .3em 0}
+main.page-quiz .quiz-result .res-link{display:block;margin-top:1.2em}
+main.page-quiz .prof-rows{display:grid;gap:12px;max-width:640px;margin:1.6em 0}
+main.page-quiz .prof-row{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+main.page-quiz .prof-row .k{font-weight:600}
+main.page-quiz .prof-row .v{color:var(--accent-ink);font-weight:600;text-align:right}
+main.page-quiz .prof-row .v.empty{color:var(--muted);font-weight:400}
+main.page-quiz .prof-row .v a{font-size:.85rem;font-weight:500}
+@media(max-width:900px){ main.page-quiz .quiz-cards{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Перейти к содержимому</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">SA</span><span class="brand-name">Style Atelier</span></a>
+    <nav class="main-nav" id="mainNav" data-i18n-aria="a11y.nav" aria-label="Основная навигация">
+      <a href="index.html" data-i18n="nav.home">Главная</a>
+      <a href="colors.html" data-i18n="nav.colors">Цвет</a>
+      <a href="figure.html" data-i18n="nav.figure">Фигура</a>
+      <a href="styles.html" data-i18n="nav.styles">Стили</a>
+      <a href="combinations.html" data-i18n="nav.combo">Сочетания</a>
+      <a href="capsule.html" data-i18n="nav.capsule">Капсула</a>
+      <a href="builder.html" data-i18n="nav.builder" class="nav-cta">Конструктор</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" data-i18n-aria="a11y.langLabel" aria-label="Выбор языка">
+        <button data-lang="ru" class="active">RU</button><button data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" data-i18n-aria="a11y.menu" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1" class="page-quiz">
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Квизы</span>
+      <h1 data-i18n="hero.title">Узнай свой профиль</h1>
+      <p class="lede" data-i18n="hero.lede">Три коротких квиза - и ты знаешь свой подтон кожи, тип фигуры и стиль. Результат сразу, без регистрации. Профиль соберется внизу страницы.</p>
+      <div class="quiz-cards">
+        <a class="quiz-card" href="#quiz1">
+          <span class="quiz-num">01</span>
+          <h3 data-i18n="qc1t">Подтон кожи</h3>
+          <p data-i18n="qc1d">5 вопросов - и ты знаешь, теплые или холодные цвета твои.</p>
+          <span class="quiz-link" data-i18n="qc.btn">Пройти</span>
+        </a>
+        <a class="quiz-card" href="#quiz2">
+          <span class="quiz-num">02</span>
+          <h3 data-i18n="qc2t">Тип фигуры</h3>
+          <p data-i18n="qc2d">Определи свой типаж и получи точные правила.</p>
+          <span class="quiz-link" data-i18n="qc.btn">Пройти</span>
+        </a>
+        <a class="quiz-card" href="#quiz3">
+          <span class="quiz-num">03</span>
+          <h3 data-i18n="qc3t">Твой стиль</h3>
+          <p data-i18n="qc3d">10 вопросов - и один из семи стилей твой.</p>
+          <span class="quiz-link" data-i18n="qc.btn">Пройти</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 320 220" role="img" aria-labelledby="quizArtT" style="width:100%;max-width:320px">
+        <title id="quizArtT" data-i18n="hero.art">Иллюстрация: три карточки квизов</title>
+        <g stroke="#1E1B16" stroke-width="2">
+          <rect x="40" y="40" width="130" height="150" rx="10" fill="#FFFFFF" transform="rotate(-8 105 115)"/>
+          <rect x="105" y="30" width="130" height="150" rx="10" fill="#F5E7E4" transform="rotate(2 170 105)"/>
+          <rect x="160" y="45" width="130" height="150" rx="10" fill="#FFFFFF" transform="rotate(9 225 120)"/>
+        </g>
+        <g font-family="Cormorant Garamond, Georgia, serif" font-size="30" fill="#A98B54" text-anchor="middle">
+          <text x="100" y="115" transform="rotate(-8 100 115)">01</text>
+          <text x="172" y="105" transform="rotate(2 172 105)">02</text>
+          <text x="232" y="125" transform="rotate(9 232 125)">03</text>
+        </g>
+        <g stroke="#1E1B16" stroke-width="2" fill="none">
+          <circle cx="100" cy="150" r="12" transform="rotate(-8 100 150)"/>
+          <path d="M162 140l10 5 10-5 8 4-3 26h-30z" transform="rotate(2 172 155)"/>
+          <path d="M222 145h20l4 20h-28z" transform="rotate(9 232 155)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="quiz1">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="eyebrow">01</span>
+      <h2 data-i18n="q1.title">Квиз: подтон кожи</h2>
+      <p class="lede" style="margin:0 auto" data-i18n="q1.lede">Отвечай при дневном свете, без макияжа. Каждый вопрос - один из классических тестов стилистов.</p>
+    </div>
+    <div class="quiz" id="qz1"></div>
+  </div>
+</section>
+
+<section class="section alt" id="quiz2">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="eyebrow">02</span>
+      <h2 data-i18n="q2.title">Квиз: тип фигуры</h2>
+      <p class="lede" style="margin:0 auto" data-i18n="q2.lede">Сначала выбери типаж, затем ответь на 5 вопросов о пропорциях. Это ориентир, а не диагноз: большинство людей - смешанные типажи.</p>
+    </div>
+    <div class="quiz" id="qz2"></div>
+  </div>
+</section>
+
+<section class="section" id="quiz3">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="eyebrow">03</span>
+      <h2 data-i18n="q3.title">Квиз: твой стиль</h2>
+      <p class="lede" style="margin:0 auto" data-i18n="q3.lede">10 вопросов о сценариях, палитре и привычках. Стили могут пересекаться - результат покажет твое ядро, а детали можно заимствовать.</p>
+    </div>
+    <div class="quiz" id="qz3"></div>
+  </div>
+</section>
+
+<section class="section alt" id="profile">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="prof.eyebrow">Итог</span>
+      <h2 data-i18n="prof.title">Твой профиль</h2>
+      <p class="lede" data-i18n="prof.lede">Сводка результатов трех квизов. Результаты сохраняются в этом браузере: пройди каждый квиз один раз и возвращайся к профилю позже.</p>
+    </div>
+    <div class="prof-rows" id="profRows"></div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="builder.html" data-i18n="prof.btn">Собрать образ под свой профиль</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="next.eyebrow">Дальше</span>
+      <h2 data-i18n="next.title">Примени профиль на практике</h2>
+    </div>
+    <div class="next-steps">
+      <a class="next-card" href="colors.html">
+        <span class="eyebrow" data-i18n="n1e">Цвет</span>
+        <h3 data-i18n="n1t">Твоя палитра</h3>
+        <p data-i18n="n1d">12 сезонов, цветовой круг и правило 60-30-10.</p>
+      </a>
+      <a class="next-card" href="figure.html">
+        <span class="eyebrow" data-i18n="n2e">Фигура</span>
+        <h3 data-i18n="n2t">Правила твоего типажа</h3>
+        <p data-i18n="n2d">Посадка, силуэты и визуальные приемы.</p>
+      </a>
+      <a class="next-card" href="styles.html">
+        <span class="eyebrow" data-i18n="n3e">Стили</span>
+        <h3 data-i18n="n3t">Гардероб твоего стиля</h3>
+        <p data-i18n="n3d">Капсула, палитра и правила твоего стиля.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand"><span class="brand-mark">SA</span><div><strong>Style Atelier</strong><p data-i18n="footer.tag">Школа стиля: цвет, фигура, образ</p></div></div>
+    <nav class="footer-nav" data-i18n-aria="a11y.navFooter" aria-label="Дополнительная навигация">
+      <a href="colors.html" data-i18n="nav.colors">Цвет</a>
+      <a href="figure.html" data-i18n="nav.figure">Фигура</a>
+      <a href="styles.html" data-i18n="nav.styles">Стили</a>
+      <a href="combinations.html" data-i18n="nav.combo">Сочетания</a>
+      <a href="capsule.html" data-i18n="nav.capsule">Капсула</a>
+      <a href="quiz.html" data-i18n="nav.quiz" class="active">Квизы</a>
+      <a href="builder.html" data-i18n="nav.builder">Конструктор</a>
+    </nav>
+    <p class="footer-note" data-i18n="footer.note">Образовательный проект. Правила стиля - ориентиры, а не догмы: ваш вкус решает.</p>
+  </div>
+</footer>
+
+<script>
+window.LANG = {
+ru: {
+  "a11y.skip": "Перейти к содержимому", "a11y.nav": "Основная навигация", "a11y.navFooter": "Дополнительная навигация",
+  "a11y.langLabel": "Выбор языка", "a11y.menu": "Меню",
+  "meta.title": "Style Atelier - Квизы: узнай свой профиль",
+  "meta.desc": "Три квиза школы стиля: подтон кожи, тип фигуры и твой стиль. Результат сразу, без регистрации. Style Atelier.",
+  "nav.home": "Главная", "nav.colors": "Цвет", "nav.figure": "Фигура", "nav.styles": "Стили",
+  "nav.combo": "Сочетания", "nav.capsule": "Капсула", "nav.quiz": "Квизы", "nav.builder": "Конструктор",
+  "footer.tag": "Школа стиля: цвет, фигура, образ",
+  "footer.note": "Образовательный проект. Правила стиля - ориентиры, а не догмы: ваш вкус решает.",
+  "hero.eyebrow": "Квизы",
+  "hero.title": "Узнай свой профиль",
+  "hero.lede": "Три коротких квиза - и ты знаешь свой подтон кожи, тип фигуры и стиль. Результат сразу, без регистрации. Профиль соберется внизу страницы.",
+  "hero.art": "Иллюстрация: три карточки квизов",
+  "qc1t": "Подтон кожи", "qc1d": "5 вопросов - и ты знаешь, теплые или холодные цвета твои.",
+  "qc2t": "Тип фигуры", "qc2d": "Определи свой типаж и получи точные правила.",
+  "qc3t": "Твой стиль", "qc3d": "10 вопросов - и один из семи стилей твой.",
+  "qc.btn": "Пройти",
+  "q1.title": "Квиз: подтон кожи",
+  "q1.lede": "Отвечай при дневном свете, без макияжа. Каждый вопрос - один из классических тестов стилистов.",
+  "q1.q1": "Посмотри на вены на внутренней стороне запястья. Какого они цвета?",
+  "q1.q1o1": "Синие или фиолетовые", "q1.q1o2": "Зеленые или оливковые", "q1.q1o3": "Смесь, трудно определить",
+  "q1.q2": "Какие украшения тебе идут больше?",
+  "q1.q2o1": "Серебро и белое золото", "q1.q2o2": "Желтое золото и медь", "q1.q2o3": "И то, и другое одинаково",
+  "q1.q3": "Приложи белый лист бумаги к лицу. Кожа рядом с ним выглядит...",
+  "q1.q3o1": "Розоватой или голубоватой", "q1.q3o2": "Желтоватой или персиковой", "q1.q3o3": "Без явного оттенка",
+  "q1.q4": "Как твоя кожа реагирует на солнце?",
+  "q1.q4o1": "Легко сгорает, почти не загорает", "q1.q4o2": "Легко загорает, редко сгорает", "q1.q4o3": "Сначала сгорает, потом загорает",
+  "q1.q5": "Какие цвета у лица тебе идут больше?",
+  "q1.q5o1": "Изумруд, сапфир, фуксия, холодный розовый", "q1.q5o2": "Горчица, терракота, оливковый, кремовый", "q1.q5o3": "Приглушенные, мягкие тона",
+  "q1.r.warm.t": "Теплый подтон",
+  "q1.r.warm.d": "Твои цвета - теплые и насыщенные: горчица, терракота, оливковый, кэмел, кремовый, шоколадный. Металлы - желтое золото и медь. Избегай ледяных пастелей и снежно-белого у лица.",
+  "q1.r.cool.t": "Холодный подтон",
+  "q1.r.cool.d": "Твои цвета - холодные и чистые: изумруд, сапфир, кобальт, фуксия, лаванда, графит, чистый белый. Металлы - серебро и белое золото. Осторожно с оранжевым и теплыми коричневыми у лица.",
+  "q1.r.neutral.t": "Нейтральный подтон",
+  "q1.r.neutral.d": "Тебе идет широкий диапазон - выбирай смягченные, сбалансированные тона. Металлы можно смешивать. В системе 12 сезонов смотри мягкие подсезоны.",
+  "q1.link": "Моя палитра: 12 сезонов",
+  "q2.title": "Квиз: тип фигуры",
+  "q2.lede": "Сначала выбери типаж, затем ответь на 5 вопросов о пропорциях. Это ориентир, а не диагноз: большинство людей - смешанные типажи.",
+  "q2.gq": "Для кого подбираем образ?",
+  "q2.go1": "Женский типаж", "q2.go2": "Мужской типаж",
+  "q2.fq1": "Сравни ширину плеч и бедер",
+  "q2.fq1o1": "Плечи шире бедер", "q2.fq1o2": "Бедра шире плеч", "q2.fq1o3": "Примерно равны",
+  "q2.fq2": "Твоя талия",
+  "q2.fq2o1": "Выраженная, заметная", "q2.fq2o2": "Слабая, почти прямая", "q2.fq2o3": "Объем сосредоточен в области живота",
+  "q2.fq3": "Где больше объема?",
+  "q2.fq3o1": "Плечи и бюст", "q2.fq3o2": "Живот и талия", "q2.fq3o3": "Бедра", "q2.fq3o4": "Распределен равномерно",
+  "q2.fq4": "Твои ноги",
+  "q2.fq4o1": "Стройные", "q2.fq4o2": "Полные в бедрах", "q2.fq4o3": "Пропорциональные",
+  "q2.fq5": "Что хочется подчеркнуть?",
+  "q2.fq5o1": "Талию", "q2.fq5o2": "Плечи и верх", "q2.fq5o3": "Ноги", "q2.fq5o4": "Создать изгибы",
+  "q2.mq1": "Сравни ширину плеч и бедер",
+  "q2.mq1o1": "Плечи заметно шире", "q2.mq1o2": "Бедра шире плеч или равны им", "q2.mq1o3": "Примерно равны",
+  "q2.mq2": "Твоя талия",
+  "q2.mq2o1": "Уже плеч, выражена", "q2.mq2o2": "На одной линии с плечами и бедрами", "q2.mq2o3": "Самая широкая часть корпуса",
+  "q2.mq3": "Где больше объема?",
+  "q2.mq3o1": "Плечи и грудь", "q2.mq3o2": "Живот", "q2.mq3o3": "Бедра и низ", "q2.mq3o4": "Распределен равномерно",
+  "q2.mq4": "Как сидят пиджаки?",
+  "q2.mq4o1": "Жмут в плечах, свободны в талии", "q2.mq4o2": "Сидят как влитые", "q2.mq4o3": "Тесны в животе", "q2.mq4o4": "Везде немного велики",
+  "q2.mq5": "Что хочется скорректировать?",
+  "q2.mq5o1": "Облегчить верх", "q2.mq5o2": "Обозначить талию", "q2.mq5o3": "Добавить объем плечам", "q2.mq5o4": "Вытянуть силуэт", "q2.mq5o5": "Ничего, все пропорционально",
+  "q2.r.hourglass.t": "Песочные часы",
+  "q2.r.hourglass.d": "Плечи и бедра равны, талия выражена. Подчеркивай талию: приталенные силуэты, запахи, ремни на естественной талии.",
+  "q2.r.pear.t": "Груша",
+  "q2.r.pear.d": "Бедра шире плеч. Добавляй объем сверху: светлый верх, структурированные плечи, акцентные рукава. Низ - темный и спокойный.",
+  "q2.r.apple.t": "Яблоко",
+  "q2.r.apple.d": "Объем в области талии, стройные ноги. Создавай вертикаль: V-вырез, удлиненные слои нараспашку, длина до колена.",
+  "q2.r.rectangle.t": "Прямоугольник",
+  "q2.r.rectangle.d": "Плечи, талия и бедра на одной линии. Создавай изгибы: пеплум, ремни, слои, структурные ткани.",
+  "q2.r.invtri.t": "Перевернутый треугольник",
+  "q2.r.invtri.d": "Плечи шире бедер. Смягчай верх: темные однотонные топы, V-вырез. Добавляй объем низу: светлые брюки, принты, клеш.",
+  "q2.r.trapezoid.t": "Трапеция",
+  "q2.r.trapezoid.d": "Атлетичные пропорции. Подчеркивай их: приталенные рубашки, пиджаки по фигуре, классический крой.",
+  "q2.r.minvtri.t": "Перевернутый треугольник",
+  "q2.r.minvtri.d": "Широкие плечи, узкие бедра. Облегчай верх: мягкие ткани, V-вырез, нейтральные тона. Низ - прямее и свободнее.",
+  "q2.r.mrect.t": "Прямоугольник",
+  "q2.r.mrect.d": "Плечи, талия и бедра на одной линии. Создавай V-силуэт слоями: пиджак со структурированным плечом, детали сверху.",
+  "q2.r.mtri.t": "Треугольник",
+  "q2.r.mtri.d": "Бедра шире плеч. Наращивай верх: светлые тона и принты сверху, подплечники. Низ - темный и прямой.",
+  "q2.r.moval.t": "Овал",
+  "q2.r.moval.d": "Талия - самая широкая часть. Строй вертикаль: монохром, расстегнутые слои, однобортный пиджак, темные тона.",
+  "q2.link": "Правила для моего типажа",
+  "q3.title": "Квиз: твой стиль",
+  "q3.lede": "10 вопросов о сценариях, палитре и привычках. Стили могут пересекаться - результат покажет твое ядро, а детали можно заимствовать.",
+  "q3.sq1": "Идеальный вечер пятницы",
+  "q3.sq1o1": "Дома: удобная одежда и отдых", "q3.sq1o2": "Ужин в хорошем ресторане", "q3.sq1o3": "Деловое мероприятие",
+  "q3.sq1o4": "Загородный клуб: гольф, теннис", "q3.sq1o5": "Галерея современного искусства",
+  "q3.sq2": "Твоя палитра",
+  "q3.sq2o1": "Яркие цвета и принты", "q3.sq2o2": "Нейтрали с одним акцентом", "q3.sq2o3": "Navy, белый, хаки плюс пастель",
+  "q3.sq2o4": "Navy, camel, крем плюс бордо", "q3.sq2o5": "Черный, белый, серый", "q3.sq2o6": "Приглушенные деловые тона",
+  "q3.sq3": "Логотипы на одежде",
+  "q3.sq3o1": "Люблю видимые бренды", "q3.sq3o2": "Никаких логотипов", "q3.sq3o3": "Только мелкая геральдика",
+  "q3.sq3o4": "Все равно, главное - крой", "q3.sq3o5": "Сдержанные, почти незаметные",
+  "q3.sq4": "Любимая обувь",
+  "q3.sq4o1": "Кроссовки", "q3.sq4o2": "Лоферы", "q3.sq4o3": "Оксфорды или дерби",
+  "q3.sq4o4": "Белые кеды из кожи", "q3.sq4o5": "Топсайдеры", "q3.sq4o6": "Броги",
+  "q3.sq5": "Дресс-код твоей идеальной работы",
+  "q3.sq5o1": "Никакого", "q3.sq5o2": "Smart casual", "q3.sq5o3": "Деловой", "q3.sq5o4": "Классика без срока давности",
+  "q3.sq5o5": "Университетский преппи", "q3.sq5o6": "Тихая роскошь", "q3.sq5o7": "Минимализм",
+  "q3.sq6": "Фактуры, которые любишь",
+  "q3.sq6o1": "Деним и флис", "q3.sq6o2": "Твид и вельвет", "q3.sq6o3": "Кашемир и шелк",
+  "q3.sq6o4": "Хлопок и лен", "q3.sq6o5": "Шерсть и габардин",
+  "q3.sq7": "Твой главный аксессуар",
+  "q3.sq7o1": "Рюкзак", "q3.sq7o2": "Кожаный ремень и часы", "q3.sq7o3": "Портфель",
+  "q3.sq7o4": "Жемчуг или тонкая цепочка", "q3.sq7o5": "Ничего лишнего", "q3.sq7o6": "Шелковый шарф",
+  "q3.sq8": "Принты",
+  "q3.sq8o1": "Любые, чем ярче - тем лучше", "q3.sq8o2": "Тонкая полоска", "q3.sq8o3": "Гингем и аргайл",
+  "q3.sq8o4": "Гусиная лапка и елочка", "q3.sq8o5": "Без принтов", "q3.sq8o6": "Сдержанные, едва заметные",
+  "q3.sq9": "Посадка",
+  "q3.sq9o1": "Свободная, relaxed", "q3.sq9o2": "Аккуратная, структурированная", "q3.sq9o3": "Деловая, четкая",
+  "q3.sq9o4": "Спокойная классическая", "q3.sq9o5": "Чистая, слегка oversize",
+  "q3.sq10": "Твоя формула стиля",
+  "q3.sq10o1": "Удобно", "q3.sq10o2": "Повседневное плюс структура", "q3.sq10o3": "Костюм минус галстук",
+  "q3.sq10o4": "Проверенное временем", "q3.sq10o5": "Опрятный спорт-шик", "q3.sq10o6": "Качество вместо логотипа", "q3.sq10o7": "Меньше, но лучше",
+  "q3.r.casual.t": "Casual",
+  "q3.r.casual.d": "Твой стиль - расслабленная повседневность: деним, джерси, кеды. Главное правило - аккуратность: свободное не значит бесформенное.",
+  "q3.r.smart.t": "Smart casual",
+  "q3.r.smart.d": "Ты балансируешь между офисом и отдыхом: рубашка Oxford, чиносы, лоферы, блейзер. Каждая вещь выглядит выбранной осознанно.",
+  "q3.r.business.t": "Business casual",
+  "q3.r.business.d": "Твоя территория - офис: рубашки, брюки, лоферы и оксфорды. Посадка решает все: подгоняй вещи по фигуре.",
+  "q3.r.classic.t": "Классика",
+  "q3.r.classic.d": "Ты выбираешь вещи вне трендов: белая рубашка, тренч, лоферы, бретонка. Стиль, который уместен всегда и везде.",
+  "q3.r.preppy.t": "Preppy",
+  "q3.r.preppy.d": "Опрятность и спортивный шик: Oxford, поло, чиносы, топсайдеры, аргайл. Один акцент за раз - и никакого костюмирования.",
+  "q3.r.oldmoney.t": "Old money",
+  "q3.r.oldmoney.d": "Тихая роскошь: кашемир, navy и camel, лоферы, ноль логотипов. Качество ткани говорит за тебя.",
+  "q3.r.minimal.t": "Минимализм",
+  "q3.r.minimal.d": "Меньше, но лучше: чистые линии, 2-3 нейтрали, игра фактур. Одежда - фон для тебя, а не наоборот.",
+  "q3.link": "Гардероб моего стиля",
+  "quiz.progress": "Вопрос {n} из {t}",
+  "quiz.retake": "Пройти заново",
+  "prof.eyebrow": "Итог",
+  "prof.title": "Твой профиль",
+  "prof.lede": "Сводка результатов трех квизов. Результаты сохраняются в этом браузере: пройди каждый квиз один раз и возвращайся к профилю позже.",
+  "prof.k1": "Подтон кожи", "prof.k2": "Тип фигуры", "prof.k3": "Стиль",
+  "prof.empty": "Пока не пройден",
+  "prof.go": "пройти",
+  "prof.btn": "Собрать образ под свой профиль",
+  "next.eyebrow": "Дальше",
+  "next.title": "Примени профиль на практике",
+  "n1e": "Цвет", "n1t": "Твоя палитра", "n1d": "12 сезонов, цветовой круг и правило 60-30-10.",
+  "n2e": "Фигура", "n2t": "Правила твоего типажа", "n2d": "Посадка, силуэты и визуальные приемы.",
+  "n3e": "Стили", "n3t": "Гардероб твоего стиля", "n3d": "Капсула, палитра и правила твоего стиля."
+},
+en: {
+  "a11y.skip": "Skip to content", "a11y.nav": "Main navigation", "a11y.navFooter": "Footer navigation",
+  "a11y.langLabel": "Language selection", "a11y.menu": "Menu",
+  "meta.title": "Style Atelier - Quizzes: discover your profile",
+  "meta.desc": "Three quizzes from the school of style: skin undertone, body type and your style. Instant result, no sign-up. Style Atelier.",
+  "nav.home": "Home", "nav.colors": "Color", "nav.figure": "Figure", "nav.styles": "Styles",
+  "nav.combo": "Combinations", "nav.capsule": "Capsule", "nav.quiz": "Quizzes", "nav.builder": "Builder",
+  "footer.tag": "The school of style: color, figure, outfit",
+  "footer.note": "An educational project. Style rules are guidelines, not dogma: your taste decides.",
+  "hero.eyebrow": "Quizzes",
+  "hero.title": "Discover your profile",
+  "hero.lede": "Three short quizzes to uncover your skin undertone, body type and style. Instant result, no sign-up. Your profile comes together at the bottom of the page.",
+  "hero.art": "Illustration: three quiz cards",
+  "qc1t": "Skin undertone", "qc1d": "5 questions to find out whether warm or cool colors suit you.",
+  "qc2t": "Body type", "qc2d": "Find your archetype and get precise rules.",
+  "qc3t": "Your style", "qc3d": "10 questions - and one of seven styles is yours.",
+  "qc.btn": "Take it",
+  "q1.title": "Quiz: skin undertone",
+  "q1.lede": "Answer in daylight, without makeup. Each question is one of the classic stylist tests.",
+  "q1.q1": "Look at the veins on the inside of your wrist. What color are they?",
+  "q1.q1o1": "Blue or purple", "q1.q1o2": "Green or olive", "q1.q1o3": "A mix, hard to tell",
+  "q1.q2": "Which jewelry suits you more?",
+  "q1.q2o1": "Silver and white gold", "q1.q2o2": "Yellow gold and copper", "q1.q2o3": "Both equally",
+  "q1.q3": "Hold a white sheet of paper next to your face. Your skin next to it looks...",
+  "q1.q3o1": "Pinkish or bluish", "q1.q3o2": "Yellowish or peachy", "q1.q3o3": "With no obvious tint",
+  "q1.q4": "How does your skin react to the sun?",
+  "q1.q4o1": "Burns easily, barely tans", "q1.q4o2": "Tans easily, rarely burns", "q1.q4o3": "Burns first, then tans",
+  "q1.q5": "Which colors flatter your face most?",
+  "q1.q5o1": "Emerald, sapphire, fuchsia, cool pink", "q1.q5o2": "Mustard, terracotta, olive, cream", "q1.q5o3": "Soft, muted tones",
+  "q1.r.warm.t": "Warm undertone",
+  "q1.r.warm.d": "Your colors are warm and rich: mustard, terracotta, olive, camel, cream, chocolate. Your metals are yellow gold and copper. Go easy on icy pastels and snow-white near your face.",
+  "q1.r.cool.t": "Cool undertone",
+  "q1.r.cool.d": "Your colors are cool and clear: emerald, sapphire, cobalt, fuchsia, lavender, graphite, pure white. Your metals are silver and white gold. Be careful with orange and warm browns near your face.",
+  "q1.r.neutral.t": "Neutral undertone",
+  "q1.r.neutral.d": "A wide range suits you - lean toward softened, balanced tones. You can mix metals freely. In the 12-season system, explore the soft sub-seasons.",
+  "q1.link": "My palette: 12 seasons",
+  "q2.title": "Quiz: body type",
+  "q2.lede": "Pick your branch first, then answer 5 questions about proportions. This is a guide, not a verdict: most people are a mix of types.",
+  "q2.gq": "Who are we styling?",
+  "q2.go1": "Female archetypes", "q2.go2": "Male archetypes",
+  "q2.fq1": "Compare your shoulder and hip width",
+  "q2.fq1o1": "Shoulders wider than hips", "q2.fq1o2": "Hips wider than shoulders", "q2.fq1o3": "About equal",
+  "q2.fq2": "Your waist",
+  "q2.fq2o1": "Defined and noticeable", "q2.fq2o2": "Softly defined, almost straight", "q2.fq2o3": "Volume sits around the tummy",
+  "q2.fq3": "Where is most of the volume?",
+  "q2.fq3o1": "Shoulders and bust", "q2.fq3o2": "Tummy and waist", "q2.fq3o3": "Hips", "q2.fq3o4": "Evenly distributed",
+  "q2.fq4": "Your legs",
+  "q2.fq4o1": "Slim", "q2.fq4o2": "Fuller at the hips", "q2.fq4o3": "Proportioned",
+  "q2.fq5": "What would you like to highlight?",
+  "q2.fq5o1": "The waist", "q2.fq5o2": "Shoulders and upper body", "q2.fq5o3": "The legs", "q2.fq5o4": "Creating curves",
+  "q2.mq1": "Compare your shoulder and hip width",
+  "q2.mq1o1": "Shoulders clearly wider", "q2.mq1o2": "Hips wider than or equal to shoulders", "q2.mq1o3": "About equal",
+  "q2.mq2": "Your waist",
+  "q2.mq2o1": "Narrower than shoulders, defined", "q2.mq2o2": "In line with shoulders and hips", "q2.mq2o3": "The widest part of the torso",
+  "q2.mq3": "Where is most of the volume?",
+  "q2.mq3o1": "Shoulders and chest", "q2.mq3o2": "The stomach", "q2.mq3o3": "Hips and lower body", "q2.mq3o4": "Evenly distributed",
+  "q2.mq4": "How do jackets fit you?",
+  "q2.mq4o1": "Tight at the shoulders, loose at the waist", "q2.mq4o2": "Fit like they were made for me", "q2.mq4o3": "Tight around the stomach", "q2.mq4o4": "A bit roomy everywhere",
+  "q2.mq5": "What would you like to balance?",
+  "q2.mq5o1": "Lighten the upper body", "q2.mq5o2": "Define the waist", "q2.mq5o3": "Add volume to the shoulders", "q2.mq5o4": "Elongate the silhouette", "q2.mq5o5": "Nothing, everything is proportioned",
+  "q2.r.hourglass.t": "Hourglass",
+  "q2.r.hourglass.d": "Shoulders and hips match, waist is defined. Celebrate the waist: fitted silhouettes, wrap styles, belts at the natural waistline.",
+  "q2.r.pear.t": "Pear",
+  "q2.r.pear.d": "Hips wider than shoulders. Add volume up top: lighter tops, structured shoulders, statement sleeves. Keep the bottom dark and calm.",
+  "q2.r.apple.t": "Apple",
+  "q2.r.apple.d": "Volume around the waist, slim legs. Build vertical lines: V-necks, long open layers, knee-length hems.",
+  "q2.r.rectangle.t": "Rectangle",
+  "q2.r.rectangle.d": "Shoulders, waist and hips in one line. Create curves: peplum, belts, layering, structured fabrics.",
+  "q2.r.invtri.t": "Inverted triangle",
+  "q2.r.invtri.d": "Shoulders wider than hips. Soften the top: dark solid tops, V-necks. Add volume below: light trousers, prints, flare.",
+  "q2.r.trapezoid.t": "Trapezoid",
+  "q2.r.trapezoid.d": "Athletic, balanced proportions. Show them off: fitted shirts, tailored jackets, classic cuts.",
+  "q2.r.minvtri.t": "Inverted triangle",
+  "q2.r.minvtri.d": "Broad shoulders, narrow hips. Lighten the top: soft fabrics, V-necks, neutral tones. Keep the bottom straighter and roomier.",
+  "q2.r.mrect.t": "Rectangle",
+  "q2.r.mrect.d": "Shoulders, waist and hips in one line. Build a V-silhouette with layers: a structured-shoulder jacket, details up top.",
+  "q2.r.mtri.t": "Triangle",
+  "q2.r.mtri.d": "Hips wider than shoulders. Build the top: light tones and prints above, shoulder padding. Keep the bottom dark and straight.",
+  "q2.r.moval.t": "Oval",
+  "q2.r.moval.d": "The waist is the widest part. Build a long vertical line: monochrome, open layers, a single-breasted jacket, dark tones.",
+  "q2.link": "Rules for my body type",
+  "q3.title": "Quiz: your style",
+  "q3.lede": "10 questions about scenarios, palettes and habits. Styles can overlap - your result shows your core, and you can borrow details from the rest.",
+  "q3.sq1": "Your ideal Friday evening",
+  "q3.sq1o1": "At home: comfy clothes and rest", "q3.sq1o2": "Dinner at a good restaurant", "q3.sq1o3": "A business event",
+  "q3.sq1o4": "A country club: golf, tennis", "q3.sq1o5": "A contemporary art gallery",
+  "q3.sq2": "Your palette",
+  "q3.sq2o1": "Bright colors and prints", "q3.sq2o2": "Neutrals with one accent", "q3.sq2o3": "Navy, white, khaki plus pastels",
+  "q3.sq2o4": "Navy, camel, cream plus bordeaux", "q3.sq2o5": "Black, white, gray", "q3.sq2o6": "Muted business tones",
+  "q3.sq3": "Logos on clothing",
+  "q3.sq3o1": "I like visible brands", "q3.sq3o2": "No logos at all", "q3.sq3o3": "Only small heraldry",
+  "q3.sq3o4": "Does not matter, cut is what counts", "q3.sq3o5": "Understated, barely visible",
+  "q3.sq4": "Your favorite shoes",
+  "q3.sq4o1": "Sneakers", "q3.sq4o2": "Loafers", "q3.sq4o3": "Oxfords or derbies",
+  "q3.sq4o4": "White leather sneakers", "q3.sq4o5": "Boat shoes", "q3.sq4o6": "Brogues",
+  "q3.sq5": "The dress code of your dream job",
+  "q3.sq5o1": "None at all", "q3.sq5o2": "Smart casual", "q3.sq5o3": "Business", "q3.sq5o4": "Timeless classics",
+  "q3.sq5o5": "Ivy preppy", "q3.sq5o6": "Quiet luxury", "q3.sq5o7": "Minimalism",
+  "q3.sq6": "Textures you love",
+  "q3.sq6o1": "Denim and fleece", "q3.sq6o2": "Tweed and velvet", "q3.sq6o3": "Cashmere and silk",
+  "q3.sq6o4": "Cotton and linen", "q3.sq6o5": "Wool and gabardine",
+  "q3.sq7": "Your signature accessory",
+  "q3.sq7o1": "A backpack", "q3.sq7o2": "A leather belt and watch", "q3.sq7o3": "A briefcase",
+  "q3.sq7o4": "Pearls or a delicate chain", "q3.sq7o5": "Nothing extra", "q3.sq7o6": "A silk scarf",
+  "q3.sq8": "Prints",
+  "q3.sq8o1": "Any, the bolder the better", "q3.sq8o2": "Fine stripes", "q3.sq8o3": "Gingham and argyle",
+  "q3.sq8o4": "Houndstooth and herringbone", "q3.sq8o5": "No prints", "q3.sq8o6": "Understated, barely there",
+  "q3.sq9": "Fit",
+  "q3.sq9o1": "Relaxed and roomy", "q3.sq9o2": "Neat and structured", "q3.sq9o3": "Sharp and businesslike",
+  "q3.sq9o4": "Calm and classic", "q3.sq9o5": "Clean, slightly oversized",
+  "q3.sq10": "Your style formula",
+  "q3.sq10o1": "Comfort first", "q3.sq10o2": "Everyday plus structure", "q3.sq10o3": "A suit minus the tie",
+  "q3.sq10o4": "Time-tested", "q3.sq10o5": "Neat sporty chic", "q3.sq10o6": "Quality over logos", "q3.sq10o7": "Less, but better",
+  "q3.r.casual.t": "Casual",
+  "q3.r.casual.d": "Your style is relaxed everyday dressing: denim, jersey, sneakers. The golden rule is tidiness: relaxed never means shapeless.",
+  "q3.r.smart.t": "Smart casual",
+  "q3.r.smart.d": "You balance office and leisure: an Oxford shirt, chinos, loafers, a blazer. Every piece looks deliberately chosen.",
+  "q3.r.business.t": "Business casual",
+  "q3.r.business.d": "Your territory is the office: shirts, trousers, loafers and Oxfords. Fit is everything: tailor your pieces.",
+  "q3.r.classic.t": "Classic",
+  "q3.r.classic.d": "You choose pieces beyond trends: a white shirt, a trench, loafers, a Breton top. A style that always fits, everywhere.",
+  "q3.r.preppy.t": "Preppy",
+  "q3.r.preppy.d": "Neatness and sporty chic: Oxfords, polos, chinos, boat shoes, argyle. One accent at a time - never a costume.",
+  "q3.r.oldmoney.t": "Old money",
+  "q3.r.oldmoney.d": "Quiet luxury: cashmere, navy and camel, loafers, zero logos. The fabric quality speaks for you.",
+  "q3.r.minimal.t": "Minimalism",
+  "q3.r.minimal.d": "Less, but better: clean lines, 2-3 neutrals, a play of textures. Clothes are your backdrop, not the other way round.",
+  "q3.link": "Wardrobe for my style",
+  "quiz.progress": "Question {n} of {t}",
+  "quiz.retake": "Retake the quiz",
+  "prof.eyebrow": "Summary",
+  "prof.title": "Your profile",
+  "prof.lede": "A summary of your three quiz results. Saved in this browser: take each quiz once, then come back to your profile anytime.",
+  "prof.k1": "Skin undertone", "prof.k2": "Body type", "prof.k3": "Style",
+  "prof.empty": "Not taken yet",
+  "prof.go": "take it",
+  "prof.btn": "Build an outfit for my profile",
+  "next.eyebrow": "Next",
+  "next.title": "Put your profile to work",
+  "n1e": "Color", "n1t": "Your palette", "n1d": "12 seasons, the color wheel and the 60-30-10 rule.",
+  "n2e": "Figure", "n2t": "Rules for your type", "n2d": "Fit, silhouettes and visual techniques.",
+  "n3e": "Styles", "n3t": "Wardrobe for your style", "n3d": "The capsule, palette and rules of your style."
+}
+};
+</script>
+<script src="js/common.js"></script>
+
+<script>
+(function(){
+"use strict";
+
+// Quiz results: saved in this browser, restored on the next visit
+var PROFILE_KEY = "sa-quiz-profile";
+var PROFILE = { undertone: null, body: null, style: null };
+function profileSave(){
+  try{
+    var data = {};
+    ["undertone", "body", "style"].forEach(function(k){
+      data[k] = PROFILE[k] ? PROFILE[k].result : null;
+    });
+    localStorage.setItem(PROFILE_KEY, JSON.stringify(data));
+  }catch(e){}
+}
+function profileLoad(){
+  try{
+    var raw = localStorage.getItem(PROFILE_KEY);
+    if(!raw) return null;
+    var data = JSON.parse(raw);
+    return (data && typeof data === "object") ? data : null;
+  }catch(e){ return null; }
+}
+
+var QUIZZES = [
+  {
+    root: "qz1", profileKey: "undertone", resPrefix: "q1.r",
+    link: { href: "colors.html#seasons", key: "q1.link" },
+    order: ["warm", "cool", "neutral"],
+    questions: [
+      { q: "q1.q1", opts: ["q1.q1o1", "q1.q1o2", "q1.q1o3"] },
+      { q: "q1.q2", opts: ["q1.q2o1", "q1.q2o2", "q1.q2o3"] },
+      { q: "q1.q3", opts: ["q1.q3o1", "q1.q3o2", "q1.q3o3"] },
+      { q: "q1.q4", opts: ["q1.q4o1", "q1.q4o2", "q1.q4o3"] },
+      { q: "q1.q5", opts: ["q1.q5o1", "q1.q5o2", "q1.q5o3"] }
+    ],
+    scores: [
+      [{cool:2}, {warm:2}, {neutral:2}],
+      [{cool:2}, {warm:2}, {neutral:2}],
+      [{cool:2}, {warm:2}, {neutral:2}],
+      [{cool:2}, {warm:2}, {neutral:2}],
+      [{cool:2}, {warm:2}, {neutral:2}]
+    ]
+  },
+  {
+    root: "qz2", profileKey: "body", resPrefix: "q2.r",
+    link: { href: "figure.html", key: "q2.link" },
+    branch: true,
+    genderQ: { q: "q2.gq", opts: ["q2.go1", "q2.go2"], branches: ["f", "m"] },
+    orderF: ["hourglass", "pear", "apple", "rectangle", "invtri"],
+    orderM: ["trapezoid", "minvtri", "mrect", "mtri", "moval"],
+    qF: [
+      { q: "q2.fq1", opts: ["q2.fq1o1", "q2.fq1o2", "q2.fq1o3"] },
+      { q: "q2.fq2", opts: ["q2.fq2o1", "q2.fq2o2", "q2.fq2o3"] },
+      { q: "q2.fq3", opts: ["q2.fq3o1", "q2.fq3o2", "q2.fq3o3", "q2.fq3o4"] },
+      { q: "q2.fq4", opts: ["q2.fq4o1", "q2.fq4o2", "q2.fq4o3"] },
+      { q: "q2.fq5", opts: ["q2.fq5o1", "q2.fq5o2", "q2.fq5o3", "q2.fq5o4"] }
+    ],
+    scoresF: [
+      [{invtri:2}, {pear:2}, {hourglass:1, rectangle:1}],
+      [{hourglass:2, pear:1}, {rectangle:2}, {apple:2}],
+      [{invtri:2}, {apple:2}, {pear:2}, {hourglass:1, rectangle:1}],
+      [{apple:1, hourglass:1}, {pear:1}, {rectangle:1, invtri:1}],
+      [{hourglass:2}, {pear:1, invtri:1}, {apple:1}, {rectangle:2}]
+    ],
+    qM: [
+      { q: "q2.mq1", opts: ["q2.mq1o1", "q2.mq1o2", "q2.mq1o3"] },
+      { q: "q2.mq2", opts: ["q2.mq2o1", "q2.mq2o2", "q2.mq2o3"] },
+      { q: "q2.mq3", opts: ["q2.mq3o1", "q2.mq3o2", "q2.mq3o3", "q2.mq3o4"] },
+      { q: "q2.mq4", opts: ["q2.mq4o1", "q2.mq4o2", "q2.mq4o3", "q2.mq4o4"] },
+      { q: "q2.mq5", opts: ["q2.mq5o1", "q2.mq5o2", "q2.mq5o3", "q2.mq5o4", "q2.mq5o5"] }
+    ],
+    scoresM: [
+      [{minvtri:2, trapezoid:1}, {mtri:2}, {mrect:1, trapezoid:1}],
+      [{trapezoid:2}, {mrect:2}, {moval:2}],
+      [{minvtri:2}, {moval:2}, {mtri:2}, {trapezoid:1, mrect:1}],
+      [{minvtri:2}, {trapezoid:2}, {moval:2}, {mrect:1, mtri:1}],
+      [{minvtri:2}, {mrect:2}, {mtri:2}, {moval:2}, {trapezoid:2}]
+    ]
+  },
+  {
+    root: "qz3", profileKey: "style", resPrefix: "q3.r",
+    link: { href: "styles.html", key: "q3.link" },
+    order: ["casual", "smart", "business", "classic", "preppy", "oldmoney", "minimal"],
+    questions: [
+      { q: "q3.sq1", opts: ["q3.sq1o1", "q3.sq1o2", "q3.sq1o3", "q3.sq1o4", "q3.sq1o5"] },
+      { q: "q3.sq2", opts: ["q3.sq2o1", "q3.sq2o2", "q3.sq2o3", "q3.sq2o4", "q3.sq2o5", "q3.sq2o6"] },
+      { q: "q3.sq3", opts: ["q3.sq3o1", "q3.sq3o2", "q3.sq3o3", "q3.sq3o4", "q3.sq3o5"] },
+      { q: "q3.sq4", opts: ["q3.sq4o1", "q3.sq4o2", "q3.sq4o3", "q3.sq4o4", "q3.sq4o5", "q3.sq4o6"] },
+      { q: "q3.sq5", opts: ["q3.sq5o1", "q3.sq5o2", "q3.sq5o3", "q3.sq5o4", "q3.sq5o5", "q3.sq5o6", "q3.sq5o7"] },
+      { q: "q3.sq6", opts: ["q3.sq6o1", "q3.sq6o2", "q3.sq6o3", "q3.sq6o4", "q3.sq6o5"] },
+      { q: "q3.sq7", opts: ["q3.sq7o1", "q3.sq7o2", "q3.sq7o3", "q3.sq7o4", "q3.sq7o5", "q3.sq7o6"] },
+      { q: "q3.sq8", opts: ["q3.sq8o1", "q3.sq8o2", "q3.sq8o3", "q3.sq8o4", "q3.sq8o5", "q3.sq8o6"] },
+      { q: "q3.sq9", opts: ["q3.sq9o1", "q3.sq9o2", "q3.sq9o3", "q3.sq9o4", "q3.sq9o5"] },
+      { q: "q3.sq10", opts: ["q3.sq10o1", "q3.sq10o2", "q3.sq10o3", "q3.sq10o4", "q3.sq10o5", "q3.sq10o6", "q3.sq10o7"] }
+    ],
+    scores: [
+      [{casual:2}, {smart:2}, {business:2}, {preppy:2}, {minimal:2}],
+      [{casual:2}, {smart:1, minimal:1}, {preppy:2}, {oldmoney:2}, {minimal:2}, {business:2}],
+      [{casual:2}, {oldmoney:2, minimal:1}, {preppy:2}, {classic:2}, {smart:1, business:1}],
+      [{casual:2}, {smart:2, oldmoney:1}, {business:2}, {minimal:2}, {preppy:2}, {oldmoney:1, classic:1}],
+      [{casual:2}, {smart:2}, {business:2}, {classic:2}, {preppy:2}, {oldmoney:2}, {minimal:2}],
+      [{casual:2}, {smart:1, oldmoney:1}, {oldmoney:2}, {minimal:1, classic:1}, {business:2}],
+      [{casual:2}, {smart:2}, {business:2}, {oldmoney:2, preppy:1}, {minimal:2}, {classic:1, oldmoney:1}],
+      [{casual:2}, {classic:2}, {preppy:2}, {oldmoney:2}, {minimal:2}, {smart:1, business:1}],
+      [{casual:2}, {smart:2}, {business:2}, {classic:2, oldmoney:1}, {minimal:2}],
+      [{casual:2}, {smart:2}, {business:2}, {classic:2}, {preppy:2}, {oldmoney:2}, {minimal:2}]
+    ]
+  }
+];
+
+function makeQuiz(def){
+  var root = document.getElementById(def.root);
+  var state = { i: 0, scores: {}, branch: null, done: false, result: null };
+
+  function total(){ return def.branch ? 6 : def.questions.length; }
+  function qlist(){ return def.branch ? (state.branch === "m" ? def.qM : def.qF) : def.questions; }
+  function slist(){ return def.branch ? (state.branch === "m" ? def.scoresM : def.scoresF) : def.scores; }
+  function order(){ return def.branch ? (state.branch === "m" ? def.orderM : def.orderF) : def.order; }
+
+  function render(){
+    var lang = SA.getLang();
+    root.innerHTML = "";
+    if(state.done){ renderResult(lang); return; }
+    var t = total();
+    var meta = document.createElement("div");
+    meta.className = "quiz-meta";
+    meta.textContent = SA.t("quiz.progress", lang).replace("{n}", state.i + 1).replace("{t}", t);
+    var prog = document.createElement("div");
+    prog.className = "quiz-progress";
+    var bar = document.createElement("i");
+    bar.style.width = Math.round(state.i / t * 100) + "%";
+    prog.appendChild(bar);
+    var qbox = document.createElement("div");
+    qbox.className = "quiz-q";
+    var h = document.createElement("h3");
+    var optsBox = document.createElement("div");
+    optsBox.className = "quiz-opts";
+    var qkey, optKeys, scArr, isGender;
+    if(def.branch && state.i === 0){
+      isGender = true;
+      qkey = def.genderQ.q;
+      optKeys = def.genderQ.opts;
+      scArr = null;
+    } else {
+      isGender = false;
+      var qi = def.branch ? state.i - 1 : state.i;
+      var qd = qlist()[qi];
+      qkey = qd.q;
+      optKeys = qd.opts;
+      scArr = slist()[qi];
+    }
+    h.textContent = SA.t(qkey, lang);
+    optKeys.forEach(function(ok, oi){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "quiz-opt";
+      b.textContent = SA.t(ok, lang);
+      b.addEventListener("click", function(){ answer(oi, isGender, scArr); });
+      optsBox.appendChild(b);
+    });
+    qbox.appendChild(h);
+    qbox.appendChild(optsBox);
+    root.appendChild(meta);
+    root.appendChild(prog);
+    root.appendChild(qbox);
+  }
+
+  function answer(oi, isGender, scArr){
+    if(isGender){
+      state.branch = def.genderQ.branches[oi];
+      state.i = 1;
+      render();
+      return;
+    }
+    var pts = scArr[oi] || {};
+    Object.keys(pts).forEach(function(k){
+      state.scores[k] = (state.scores[k] || 0) + pts[k];
+    });
+    state.i++;
+    if(state.i >= total()){ finish(); }
+    else { render(); }
+  }
+
+  function finish(){
+    var ord = order();
+    var best = ord[0], bestScore = -1;
+    ord.forEach(function(k){
+      var s = state.scores[k] || 0;
+      if(s > bestScore){ bestScore = s; best = k; }
+    });
+    state.done = true;
+    state.result = best;
+    PROFILE[def.profileKey] = { titleKey: def.resPrefix + "." + best + ".t", result: best };
+    profileSave();
+    render();
+    renderProfile();
+  }
+
+  function renderResult(lang){
+    var box = document.createElement("div");
+    box.className = "quiz-result";
+    var h = document.createElement("h3");
+    h.textContent = SA.t(def.resPrefix + "." + state.result + ".t", lang);
+    var p = document.createElement("p");
+    p.textContent = SA.t(def.resPrefix + "." + state.result + ".d", lang);
+    box.appendChild(h);
+    box.appendChild(p);
+    var linkWrap = document.createElement("div");
+    linkWrap.className = "res-link";
+    var a = document.createElement("a");
+    a.className = "btn btn-primary btn-small";
+    a.href = def.link.href;
+    a.textContent = SA.t(def.link.key, lang);
+    linkWrap.appendChild(a);
+    box.appendChild(linkWrap);
+    var rb = document.createElement("button");
+    rb.type = "button";
+    rb.className = "btn btn-ghost btn-small";
+    rb.textContent = SA.t("quiz.retake", lang);
+    rb.addEventListener("click", function(){
+      state.i = 0; state.scores = {}; state.branch = null;
+      state.done = false; state.result = null;
+      PROFILE[def.profileKey] = null;
+      profileSave();
+      render();
+      renderProfile();
+    });
+    box.appendChild(rb);
+    root.appendChild(box);
+  }
+
+  return {
+    render: render,
+    profileKey: def.profileKey,
+    restore: function(result){
+      var tk = def.resPrefix + "." + result + ".t";
+      if(!result || !SA.t(tk, "ru")) return false;
+      state.done = true;
+      state.result = result;
+      PROFILE[def.profileKey] = { titleKey: tk, result: result };
+      return true;
+    }
+  };
+}
+
+var runners = QUIZZES.map(makeQuiz);
+
+// Restore quiz results saved during a previous visit
+(function(){
+  var saved = profileLoad();
+  if(!saved) return;
+  runners.forEach(function(r){
+    var res = saved[r.profileKey];
+    if(typeof res === "string" && res) r.restore(res);
+  });
+})();
+
+function renderProfile(){
+  var lang = SA.getLang();
+  var wrap = document.getElementById("profRows");
+  if(!wrap) return;
+  wrap.innerHTML = "";
+  var rows = [
+    { k: "prof.k1", p: "undertone", anchor: "#quiz1" },
+    { k: "prof.k2", p: "body", anchor: "#quiz2" },
+    { k: "prof.k3", p: "style", anchor: "#quiz3" }
+  ];
+  rows.forEach(function(r){
+    var div = document.createElement("div");
+    div.className = "prof-row";
+    var k = document.createElement("span");
+    k.className = "k";
+    k.textContent = SA.t(r.k, lang);
+    var v = document.createElement("span");
+    v.className = "v" + (PROFILE[r.p] ? "" : " empty");
+    if(PROFILE[r.p]){
+      v.textContent = SA.t(PROFILE[r.p].titleKey, lang);
+    } else {
+      v.innerHTML = SA.esc(SA.t("prof.empty", lang)) + ' - <a href="' + r.anchor + '">' + SA.esc(SA.t("prof.go", lang)) + "</a>";
+    }
+    div.appendChild(k);
+    div.appendChild(v);
+    wrap.appendChild(div);
+  });
+}
+
+function renderAll(){
+  runners.forEach(function(r){ r.render(); });
+  renderProfile();
+}
+document.addEventListener("sa:lang", renderAll);
+document.addEventListener("DOMContentLoaded", renderAll);
+})();
+</script>
+</body>
+</html>
