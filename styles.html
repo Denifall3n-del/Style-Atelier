@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title">Style Atelier - Стили одежды: гид по 7 стилям</title>
+<meta name="description" data-i18n-content="meta.desc" content="Smart casual, casual, old money, классика и другие стили: философия, капсула вещей, палитры и правила. Двуязычная школа стиля.">
+<meta property="og:type" content="website">
+<meta property="og:title" data-i18n-content="meta.title" content="Style Atelier - Стили одежды: гид по 7 стилям">
+<meta property="og:description" data-i18n-content="meta.desc" content="Smart casual, casual, old money, классика и другие стили: философия, капсула вещей, палитры и правила. Двуязычная школа стиля.">
+<meta name="theme-color" content="#FAF7F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.page-styles .jump-wrap{padding:30px 0 0}
+.page-styles .jump-nav{display:flex;flex-wrap:wrap;gap:10px}
+.page-styles .style-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
+.page-styles .style-art{position:sticky;top:96px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.page-styles .style-art figcaption{font-size:.82rem;color:var(--muted);text-align:center;margin-top:10px}
+.page-styles .capsule{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:4px 24px;margin:1.2em 0;box-shadow:var(--shadow)}
+.page-styles .capsule-row{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.page-styles .capsule-row:last-child{border-bottom:0}
+.page-styles .capsule-row dt{flex:0 0 128px;font-weight:600;color:var(--accent-ink);font-size:.86rem;letter-spacing:.04em;text-transform:uppercase;padding-top:2px}
+.page-styles .capsule-row dd{margin:0}
+.page-styles h3.block-title{font-size:1.25rem;margin:1.6em 0 .4em}
+.page-styles .sit-line{font-size:1.02rem}
+@media(max-width:900px){
+  .page-styles .style-layout{grid-template-columns:1fr}
+  .page-styles .style-art{position:static;max-width:340px}
+  .page-styles .capsule-row{flex-direction:column;gap:4px}
+  .page-styles .capsule-row dt{flex:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Перейти к содержимому</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">SA</span><span class="brand-name">Style Atelier</span></a>
+    <nav class="main-nav" id="mainNav" data-i18n-aria="a11y.nav" aria-label="Основная навигация">
+      <a href="index.html" data-i18n="nav.home">Главная</a>
+      <a href="colors.html" data-i18n="nav.colors">Цвет</a>
+      <a href="figure.html" data-i18n="nav.figure">Фигура</a>
+      <a href="styles.html" data-i18n="nav.styles" class="active">Стили</a>
+      <a href="combinations.html" data-i18n="nav.combo">Сочетания</a>
+      <a href="capsule.html" data-i18n="nav.capsule">Капсула</a>
+      <a href="builder.html" data-i18n="nav.builder" class="nav-cta">Конструктор</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" data-i18n-aria="a11y.langLabel" aria-label="Выбор языка">
+        <button data-lang="ru" class="active">RU</button><button data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" data-i18n-aria="a11y.menu" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1" class="page-styles">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow" data-i18n="hero.eyebrow">Гид по стилям</span>
+        <h1 data-i18n="hero.title">Семь стилей - один язык вкуса</h1>
+        <p class="lede" data-i18n="hero.lede">Разбираем smart casual, casual, old money, классику и другие стили: философия, капсула вещей, палитра и правила. Найди свой стиль - или собери из них свой собственный.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="builder.html" data-i18n="hero.cta1">Собрать образ</a>
+          <a class="btn btn-ghost" href="quiz.html" data-i18n="hero.cta2">Пройти квиз стиля</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 340 200" role="img">
+          <title data-i18n="hero.artTitle">Вешалка с одеждой трёх стилей</title>
+          <line x1="30" y1="36" x2="310" y2="36" stroke="#1E1B16" stroke-width="3" stroke-linecap="round"/>
+          <g stroke="#1E1B16" stroke-width="2">
+            <g transform="translate(80,36)">
+              <path d="M0 0 C0 -7 -9 -7 -9 -1 C-9 3 -2 3 0 -1" fill="none"/>
+              <path d="M0 4 L-26 22 L26 22 Z" fill="none"/>
+              <g transform="translate(-24,22)">
+                <path d="M4 8 Q24 2 44 8 L41 58 L7 58 Z" fill="#2B3A55"/>
+                <path d="M24 8 L17 26 M24 8 L31 26" fill="none"/>
+                <circle cx="24" cy="36" r="2" fill="#1E1B16"/>
+                <circle cx="24" cy="46" r="2" fill="#1E1B16"/>
+              </g>
+            </g>
+            <g transform="translate(170,36)">
+              <path d="M0 0 C0 -7 -9 -7 -9 -1 C-9 3 -2 3 0 -1" fill="none"/>
+              <path d="M0 4 L-26 22 L26 22 Z" fill="none"/>
+              <g transform="translate(-24,22)">
+                <path d="M9 10 L2 20 L8 26 L10 58 L38 58 L40 26 L46 20 L39 10 Q32 6 24 10 Q16 6 9 10 Z" fill="#F7F4EE"/>
+                <path d="M19 10 L24 17 L29 10" fill="none"/>
+              </g>
+            </g>
+            <g transform="translate(260,36)">
+              <path d="M0 0 C0 -7 -9 -7 -9 -1 C-9 3 -2 3 0 -1" fill="none"/>
+              <path d="M0 4 L-26 22 L26 22 Z" fill="none"/>
+              <g transform="translate(-24,22)">
+                <rect x="10" y="8" width="28" height="7" fill="#D8C7A5"/>
+                <rect x="10" y="15" width="13" height="43" fill="#D8C7A5"/>
+                <rect x="25" y="15" width="13" height="43" fill="#D8C7A5"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUMP NAV -->
+  <div class="jump-wrap">
+    <div class="wrap">
+      <nav class="jump-nav" aria-label="Styles">
+        <a class="btn btn-ghost btn-small" href="#smart-casual" data-i18n="jump.sc">Smart casual</a>
+        <a class="btn btn-ghost btn-small" href="#casual" data-i18n="jump.cs">Casual</a>
+        <a class="btn btn-ghost btn-small" href="#old-money" data-i18n="jump.om">Old money</a>
+        <a class="btn btn-ghost btn-small" href="#classic" data-i18n="jump.cl">Classic</a>
+        <a class="btn btn-ghost btn-small" href="#business-casual" data-i18n="jump.bc">Business casual</a>
+        <a class="btn btn-ghost btn-small" href="#preppy" data-i18n="jump.pr">Preppy</a>
+        <a class="btn btn-ghost btn-small" href="#minimalism" data-i18n="jump.mn">Minimalism</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 01 SMART CASUAL -->
+  <section class="section" id="smart-casual">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="s.sc.eyebrow">Стиль 01</span>
+        <h2 data-i18n="s.sc.name">Smart casual</h2>
+        <p class="lede" data-i18n="s.sc.phil">Золотая середина между строгим офисом и повседневностью. Девиз стиля: casual, но не sloppy - повседневный, но не неряшливый. Образ должен выглядеть намеренным: каждая вещь подобрана осознанно.</p>
+      </div>
+      <div class="style-layout">
+        <div>
+          <p class="sit-line" data-i18n-html="s.sc.sit"><strong>Подходит для:</strong> офиса с расслабленным дресс-кодом, деловых обедов, нетворкинга, ужинов в ресторане, casual friday, полуформальных мероприятий.</p>
+          <h3 class="block-title" data-i18n="s.capTitle">Капсула стиля</h3>
+          <dl class="capsule">
+            <div class="capsule-row"><dt data-i18n="s.cap.top">Верх</dt><dd data-i18n="s.sc.capTop">Рубашка Oxford или шамбре, поло из хлопка или мериноса, тонкий трикотаж (водолазка, пуловер, кардиган), чистая футболка премиум-качества - только под пиджак</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.bottom">Низ</dt><dd data-i18n="s.sc.capBottom">Чиносы, тёмные джинсы без потёртостей прямого или slim кроя, шерстяные брюки</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.shoes">Обувь</dt><dd data-i18n="s.sc.capShoes">Кожаные лоферы, броги, челси, чистые минималистичные кожаные кеды, дезерт-буты</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.outer">Верхняя одежда</dt><dd data-i18n="s.sc.capOuter">Блейзер в фактурной ткани (твид, вельвет), бомбер из замши или шерсти, тренч, полевая куртка</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.acc">Аксессуары</dt><dd data-i18n="s.sc.capAcc">Кожаный ремень, классические часы - минимум и по делу</dd></div>
+          </dl>
+          <h3 class="block-title" data-i18n="s.paletteTitle">Палитра</h3>
+          <div class="swatches">
+            <span class="sw" style="--c:#1E1B16"><i data-i18n="s.sc.sw1">чёрный</i></span>
+            <span class="sw" style="--c:#2B3A55"><i data-i18n="s.sc.sw2">navy</i></span>
+            <span class="sw" style="--c:#8A8D90"><i data-i18n="s.sc.sw3">серый</i></span>
+            <span class="sw" style="--c:#FFFFFF"><i data-i18n="s.sc.sw4">белый</i></span>
+            <span class="sw" style="--c:#D8C7A5"><i data-i18n="s.sc.sw5">бежевый</i></span>
+            <span class="sw" style="--c:#6B4A2F"><i data-i18n="s.sc.sw6">коричневый</i></span>
+          </div>
+          <h3 class="block-title" data-i18n="s.fabricTitle">Ткани и посадка</h3>
+          <p data-i18n="s.sc.fabric">Ткани: хлопок, лён, меринос, шерсть, кашемир. Посадка аккуратная и структурированная, но не обтягивающая. Рукава рубашки можно закатать, манжеты брюк - подвернуть: так формальность смягчается.</p>
+          <div class="do-dont">
+            <div class="do"><h4 data-i18n="s.doTitle">Делай</h4><ul>
+              <li data-i18n="s.sc.do1">Выбирай вещи с чёткой структурой и хорошей посадкой</li>
+              <li data-i18n="s.sc.do2">Держи аксессуары минимальными: кожаный ремень, классические часы</li>
+              <li data-i18n="s.sc.do3">Заправляй рубашку, если сверху блейзер</li>
+            </ul></div>
+            <div class="dont"><h4 data-i18n="s.dontTitle">Не делай</h4><ul>
+              <li data-i18n="s.sc.dont1">Худи, графические футболки, спортивные кроссовки</li>
+              <li data-i18n="s.sc.dont2">Рваные и мешковатые вещи, слишком яркие принты</li>
+              <li data-i18n="s.sc.dont3">Рубашка навыпуск под блейзером</li>
+            </ul></div>
+          </div>
+          <div class="callout">
+            <p data-i18n-html="s.sc.diff"><strong>Smart casual vs business casual:</strong> business casual начинается с костюма и расслабляет его, а smart casual начинается с повседневного комплекта и наряжает его. Практический тест: пиджак и брюки из одного комплекта - это business casual.<br><strong>Smart casual vs casual:</strong> casual - комфорт без полировки, smart casual добавляет структуру: блейзер, чистые туфли, аккуратные брюки.</p>
+          </div>
+        </div>
+        <figure class="style-art">
+          <svg viewBox="0 0 220 120" role="img">
+            <title data-i18n="s.sc.artTitle">Образ smart casual: блейзер, чиносы, лоферы</title>
+            <g stroke="#1E1B16" stroke-width="2">
+              <g transform="translate(6,10)">
+                <path d="M4 10 Q24 2 44 10 L41 64 L7 64 Z" fill="#2B3A55"/>
+                <path d="M24 10 L17 28 M24 10 L31 28" fill="none"/>
+                <circle cx="24" cy="38" r="2" fill="#1E1B16"/>
+                <circle cx="24" cy="48" r="2" fill="#1E1B16"/>
+              </g>
+              <g transform="translate(80,10)">
+                <rect x="8" y="8" width="32" height="8" fill="#D8C7A5"/>
+                <rect x="8" y="16" width="15" height="48" fill="#D8C7A5"/>
+                <rect x="25" y="16" width="15" height="48" fill="#D8C7A5"/>
+                <line x1="9" y1="17" x2="17" y2="25"/>
+                <line x1="39" y1="17" x2="31" y2="25"/>
+                <circle cx="24" cy="12" r="1.8" fill="#1E1B16"/>
+              </g>
+              <g transform="translate(148,34)">
+                <path d="M8 28 L8 16 Q9 10 16 10 L28 10 Q36 10 42 15 L52 20 Q57 22 57 26 L57 28 Z" fill="#6B4A2F"/>
+                <path d="M20 10 Q24 16 23 21" fill="none"/>
+                <line x1="8" y1="28" x2="57" y2="28"/>
+                <rect x="8" y="28" width="10" height="4" fill="#6B4A2F"/>
+              </g>
+            </g>
+          </svg>
+          <figcaption data-i18n="s.sc.artCap">Navy блейзер + бежевые чиносы + коричневые лоферы</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 CASUAL -->
+  <section class="section alt" id="casual">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="s.cs.eyebrow">Стиль 02</span>
+        <h2 data-i18n="s.cs.name">Casual</h2>
+        <p class="lede" data-i18n="s.cs.phil">Комфорт и самовыражение без обязательств дресс-кода. Важно: casual - не "всё что угодно", нижняя граница - аккуратность.</p>
+      </div>
+      <div class="style-layout">
+        <div>
+          <p class="sit-line" data-i18n-html="s.cs.sit"><strong>Подходит для:</strong> выходных, прогулок, неформальных встреч, творческих профессий без дресс-кода.</p>
+          <h3 class="block-title" data-i18n="s.capTitle">Капсула стиля</h3>
+          <dl class="capsule">
+            <div class="capsule-row"><dt data-i18n="s.cap.top">Верх</dt><dd data-i18n="s.cs.capTop">Футболки, рубашки навыпуск, свитшоты, худи</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.bottom">Низ</dt><dd data-i18n="s.cs.capBottom">Джинсы любого оттенка, джоггеры, летом - шорты</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.shoes">Обувь</dt><dd data-i18n="s.cs.capShoes">Кеды, кроссовки, сандалии, повседневные ботинки</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.outer">Верхняя одежда</dt><dd data-i18n="s.cs.capOuter">Джинсовка, бомбер, парка, флиска</dd></div>
+          </dl>
+          <h3 class="block-title" data-i18n="s.paletteTitle">Палитра</h3>
+          <div class="swatches">
+            <span class="sw" style="--c:#5A7A9E"><i data-i18n="s.cs.sw1">деним</i></span>
+            <span class="sw" style="--c:#F2EFE8"><i data-i18n="s.cs.sw2">белый</i></span>
+            <span class="sw" style="--c:#A89B7C"><i data-i18n="s.cs.sw3">хаки</i></span>
+            <span class="sw" style="--c:#B03A2E"><i data-i18n="s.cs.sw4">красный</i></span>
+            <span class="sw" style="--c:#D9A441"><i data-i18n="s.cs.sw5">горчица</i></span>
+            <span class="sw" style="--c:#1E1B16"><i data-i18n="s.cs.sw6">чёрный</i></span>
+          </div>
+          <h3 class="block-title" data-i18n="s.fabricTitle">Ткани и посадка</h3>
+          <p data-i18n="s.cs.fabric">Ткани: деним, джерси, флис, хлопок. Посадка свободная, relaxed, но не мешкообразная. Яркие цвета и принты допустимы - палитра здесь самая свободная из всех стилей.</p>
+          <div class="do-dont">
+            <div class="do"><h4 data-i18n="s.doTitle">Делай</h4><ul>
+              <li data-i18n="s.cs.do1">Держи вещи чистыми и опрятными</li>
+              <li data-i18n="s.cs.do2">Подгоняй размер под фигуру: свободное - не значит бесформенное</li>
+              <li data-i18n="s.cs.do3">Сочетай цвета осознанно</li>
+            </ul></div>
+            <div class="dont"><h4 data-i18n="s.dontTitle">Не делай</h4><ul>
+              <li data-i18n="s.cs.dont1">Мятые и запятнанные вещи, вытянутые колени</li>
+              <li data-i18n="s.cs.dont2">Спортивная форма вне спортзала</li>
+              <li data-i18n="s.cs.dont3">Пляжная одежда в городе</li>
+            </ul></div>
+          </div>
+          <div class="callout">
+            <p data-i18n-html="s.cs.diff"><strong>Casual в иерархии стилей:</strong> это нижняя ступень шкалы. Всё, что добавляет структуру и намеренность - блейзер, чистые кожаные туфли, аккуратные брюки - уже уводит образ в сторону smart casual.</p>
+          </div>
+        </div>
+        <figure class="style-art">
+          <svg viewBox="0 0 220 120" role="img">
+            <title data-i18n="s.cs.artTitle">Образ casual: футболка, джинсы, кеды</title>
+            <g stroke="#1E1B16" stroke-width="2">
+              <g transform="translate(6,10)">
+                <path d="M9 12 L2 22 L8 28 L10 64 L38 64 L40 28 L46 22 L39 12 Q32 8 24 12 Q16 8 9 12 Z" fill="#F2EFE8"/>
+                <path d="M18 11 Q24 18 30 11" fill="none"/>
+              </g>
+              <g transform="translate(80,10)">
+                <rect x="8" y="8" width="32" height="8" fill="#5A7A9E"/>
+                <rect x="8" y="16" width="15" height="48" fill="#5A7A9E"/>
+                <rect x="25" y="16" width="15" height="48" fill="#5A7A9E"/>
+                <g stroke="#C98A3D" stroke-width="1.5" stroke-dasharray="3 2" fill="none">
+                  <line x1="10" y1="18" x2="10" y2="62"/>
+                  <line x1="38" y1="18" x2="38" y2="62"/>
+                  <line x1="21" y1="18" x2="21" y2="62"/>
+                  <line x1="27" y1="18" x2="27" y2="62"/>
+                  <path d="M9 18 Q15 20 16 27"/>
+                  <path d="M39 18 Q33 20 32 27"/>
+                  <line x1="24" y1="16" x2="24" y2="28"/>
+                  <line x1="9" y1="13" x2="39" y2="13"/>
+                </g>
+              </g>
+              <g transform="translate(148,34)">
+                <path d="M8 28 L8 18 Q9 12 16 12 L30 12 Q38 13 44 18 L52 22 Q57 24 57 27 L57 28 Z" fill="#FAF8F4"/>
+                <rect x="6" y="25" width="53" height="5" fill="#F7F4EE"/>
+                <line x1="32" y1="15" x2="38" y2="19"/>
+                <line x1="36" y1="14" x2="42" y2="18"/>
+                <line x1="40" y1="14" x2="46" y2="18"/>
+              </g>
+            </g>
+          </svg>
+          <figcaption data-i18n="s.cs.artCap">Белая футболка + джинсы + кеды</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 OLD MONEY -->
+  <section class="section" id="old-money">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="s.om.eyebrow">Стиль 03</span>
+        <h2 data-i18n="s.om.name">Old money / Quiet luxury</h2>
+        <p class="lede" data-i18n="s.om.phil">Сигнал статуса через отказ его демонстрировать. Девиз: качество ткани важнее количества вещей, сдержанность важнее декора. Корни - традиции Восточного побережья США и британский загородный стиль.</p>
+      </div>
+      <div class="style-layout">
+        <div>
+          <p class="sit-line" data-i18n-html="s.om.sit"><strong>Подходит для:</strong> статусных мероприятий, делового общения высокого уровня, повседневной жизни, где ценится вкус.</p>
+          <h3 class="block-title" data-i18n="s.capTitle">Капсула стиля</h3>
+          <dl class="capsule">
+            <div class="capsule-row"><dt data-i18n="s.cap.top">Верх</dt><dd data-i18n="s.om.capTop">Белая хлопковая рубашка, полосатые рубашки Oxford, водолазки и пуловеры из мериноса и кашемира, шёлковые топы</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.bottom">Низ</dt><dd data-i18n="s.om.capBottom">Широкие шерстяные брюки, чиносы, вельветовые брюки, юбка-карандаш или плиссированная юбка, классические джинсы без потёртостей</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.shoes">Обувь</dt><dd data-i18n="s.om.capShoes">Кожаные лоферы (penny, tassel), броги, классические белые кожаные кеды, жокейские сапоги, элегантные мюли</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.outer">Верхняя одежда</dt><dd data-i18n="s.om.capOuter">Тренч цвета camel, двубортное шерстяное пальто, твидовый блейзер</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.acc">Аксессуары</dt><dd data-i18n="s.om.capAcc">Жемчужные серьги, тонкие золотые цепочки, винтажные часы, шёлковый шарф, структурированная кожаная сумка без видимого брендинга</dd></div>
+          </dl>
+          <h3 class="block-title" data-i18n="s.paletteTitle">Палитра</h3>
+          <div class="swatches">
+            <span class="sw" style="--c:#2B3A55"><i data-i18n="s.om.sw1">navy</i></span>
+            <span class="sw" style="--c:#C8A97E"><i data-i18n="s.om.sw2">camel</i></span>
+            <span class="sw" style="--c:#F1EAD9"><i data-i18n="s.om.sw3">кремовый</i></span>
+            <span class="sw" style="--c:#8A8D90"><i data-i18n="s.om.sw4">серый</i></span>
+            <span class="sw" style="--c:#4A3423"><i data-i18n="s.om.sw5">шоколад</i></span>
+            <span class="sw" style="--c:#6B6B3A"><i data-i18n="s.om.sw6">олива</i></span>
+            <span class="sw" style="--c:#8C2F39"><i data-i18n="s.om.sw7">бордо</i></span>
+          </div>
+          <h3 class="block-title" data-i18n="s.fabricTitle">Ткани и посадка</h3>
+          <p data-i18n="s.om.fabric">Только натуральные ткани: кашемир, меринос, шерсть, шёлк, плотный хлопок, твид, фланель, вельвет. Посадка спокойная, классическая, часто слегка свободная. Приёмы стиля: монохромные образы и сдержанные heritage-принты - "гусиная лапка", ёлочка, тартан.</p>
+          <div class="do-dont">
+            <div class="do"><h4 data-i18n="s.doTitle">Делай</h4><ul>
+              <li data-i18n="s.om.do1">Инвестируй в верхнюю одежду и обувь: они "делают" образ</li>
+              <li data-i18n="s.om.do2">Отдавай вещи портному ради идеальной посадки</li>
+              <li data-i18n="s.om.do3">Держи максимум 2-3 украшения в одном металле</li>
+            </ul></div>
+            <div class="dont"><h4 data-i18n="s.dontTitle">Не делай</h4><ul>
+              <li data-i18n="s.om.dont1">Видимые логотипы и брендинг</li>
+              <li data-i18n="s.om.dont2">Блестящие синтетические ткани</li>
+              <li data-i18n="s.om.dont3">Обтягивающие и чрезмерно декорированные вещи, больше одного акцентного цвета</li>
+            </ul></div>
+          </div>
+          <div class="callout">
+            <p data-i18n-html="s.om.diff"><strong>Old money vs quiet luxury:</strong> old money - традиция и нормы, quiet luxury - современный минимализм и личный вкус. По сути один гардероб в двух настроениях.<br><strong>Old money vs preppy:</strong> old money строже и монохромнее, preppy ярче и игривее.<br><strong>Old money vs classic:</strong> classic - нейтральная база вне контекста богатства, old money добавляет статусную сдержанность.</p>
+          </div>
+        </div>
+        <figure class="style-art">
+          <svg viewBox="0 0 220 120" role="img">
+            <title data-i18n="s.om.artTitle">Образ old money: тренч, кашемировый свитер, лоферы</title>
+            <g stroke="#1E1B16" stroke-width="2">
+              <g transform="translate(6,2)">
+                <path d="M8 10 Q26 4 44 10 L50 92 L2 92 Z" fill="#C8A97E"/>
+                <line x1="2" y1="48" x2="50" y2="48"/>
+                <rect x="21" y="44" width="10" height="8" fill="none"/>
+                <path d="M26 10 L20 26 M26 10 L32 26" fill="none"/>
+              </g>
+              <g transform="translate(80,16)">
+                <rect x="8" y="8" width="32" height="56" rx="2" fill="#F1EAD9"/>
+                <path d="M18 8 Q24 14 30 8" fill="none"/>
+                <line x1="8" y1="56" x2="40" y2="56"/>
+                <line x1="16" y1="57" x2="16" y2="63"/>
+                <line x1="24" y1="57" x2="24" y2="63"/>
+                <line x1="32" y1="57" x2="32" y2="63"/>
+              </g>
+              <g transform="translate(148,40)">
+                <path d="M8 28 L8 16 Q9 10 16 10 L28 10 Q36 10 42 15 L52 20 Q57 22 57 26 L57 28 Z" fill="#4A3423"/>
+                <path d="M20 10 Q24 16 23 21" fill="none"/>
+                <line x1="8" y1="28" x2="57" y2="28"/>
+                <rect x="8" y="28" width="10" height="4" fill="#4A3423"/>
+              </g>
+            </g>
+          </svg>
+          <figcaption data-i18n="s.om.artCap">Camel тренч + кремовый кашемир + тёмные лоферы</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 CLASSIC -->
+  <section class="section alt" id="classic">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="s.cl.eyebrow">Стиль 04</span>
+        <h2 data-i18n="s.cl.name">Classic</h2>
+        <p class="lede" data-i18n="s.cl.phil">Вневременность: вещи, которые уместны сегодня и через десять лет. "Мода проходит, стиль вечен" (Ив Сен-Лоран).</p>
+      </div>
+      <div class="style-layout">
+        <div>
+          <p class="sit-line" data-i18n-html="s.cl.sit"><strong>Подходит для:</strong> работы, официальных и полуофициальных событий, повседневности с требованием элегантности.</p>
+          <h3 class="block-title" data-i18n="s.capTitle">Капсула стиля</h3>
+          <dl class="capsule">
+            <div class="capsule-row"><dt data-i18n="s.cap.top">Верх</dt><dd data-i18n="s.cl.capTop">Белая рубашка Oxford, полосатая бретонка, кашемировый пуловер, белая футболка премиум-качества</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.bottom">Низ</dt><dd data-i18n="s.cl.capBottom">Прямые тёмные джинсы, брюки прямого кроя, юбка-миди, маленькое чёрное платье</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.shoes">Обувь</dt><dd data-i18n="s.cl.capShoes">Лоферы, балетки, белые кеды, кожаные туфли</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.outer">Верхняя одежда</dt><dd data-i18n="s.cl.capOuter">Тренч, блейзер нейтрального цвета, кожаная куртка, шерстяное пальто</dd></div>
+          </dl>
+          <h3 class="block-title" data-i18n="s.paletteTitle">Палитра</h3>
+          <div class="swatches">
+            <span class="sw" style="--c:#1E1B16"><i data-i18n="s.cl.sw1">чёрный</i></span>
+            <span class="sw" style="--c:#2B3A55"><i data-i18n="s.cl.sw2">navy</i></span>
+            <span class="sw" style="--c:#FFFFFF"><i data-i18n="s.cl.sw3">белый</i></span>
+            <span class="sw" style="--c:#D8C7A5"><i data-i18n="s.cl.sw4">бежевый</i></span>
+            <span class="sw" style="--c:#C8A97E"><i data-i18n="s.cl.sw5">camel</i></span>
+            <span class="sw" style="--c:#8A8D90"><i data-i18n="s.cl.sw6">серый</i></span>
+            <span class="sw" style="--c:#8C2F39"><i data-i18n="s.cl.sw7">бордо</i></span>
+          </div>
+          <h3 class="block-title" data-i18n="s.fabricTitle">Ткани и посадка</h3>
+          <p data-i18n="s.cl.fabric">Натуральные ткани, чистые швы, минимум фурнитуры. Посадка: "облегает, а не обтягивает". Вневременные принты: полоска, мелкий горох, ёлочка, глен-плед. Приём стиля - монохром: один нейтральный цвет с головы до ног даёт мгновенную собранность.</p>
+          <div class="do-dont">
+            <div class="do"><h4 data-i18n="s.doTitle">Делай</h4><ul>
+              <li data-i18n="s.cl.do1">Начинай с посадки, а не с цены</li>
+              <li data-i18n="s.cl.do2">Держи структурированные базовые вещи: блейзер преображает образ за минуту</li>
+              <li data-i18n="s.cl.do3">Меньше вещей, но надёжных</li>
+            </ul></div>
+            <div class="dont"><h4 data-i18n="s.dontTitle">Не делай</h4><ul>
+              <li data-i18n="s.cl.dont1">Трендовые вещи "на один сезон"</li>
+              <li data-i18n="s.cl.dont2">Стопроцентный полиэстер и акрил</li>
+              <li data-i18n="s.cl.dont3">Драматичные силуэты и экстремальные вырезы</li>
+            </ul></div>
+          </div>
+          <div class="callout">
+            <p data-i18n-html="s.cl.diff"><strong>Classic среди соседей:</strong> самый нейтральный стиль и база для всех остальных. В отличие от минимализма допускает больше принтов и женственных деталей, в отличие от old money не несёт статусного подтекста.</p>
+          </div>
+        </div>
+        <figure class="style-art">
+          <svg viewBox="0 0 220 120" role="img">
+            <title data-i18n="s.cl.artTitle">Образ classic: белая рубашка, прямые брюки, балетки</title>
+            <g stroke="#1E1B16" stroke-width="2">
+              <g transform="translate(6,10)">
+                <path d="M9 12 L2 22 L8 28 L10 64 L38 64 L40 28 L46 22 L39 12 Q32 8 24 12 Q16 8 9 12 Z" fill="#FFFFFF"/>
+                <path d="M16 9 L24 20 L32 9 L32 15 L24 26 L16 15 Z" fill="#FFFFFF"/>
+                <circle cx="19" cy="17" r="1.3" fill="#1E1B16"/>
+                <circle cx="29" cy="17" r="1.3" fill="#1E1B16"/>
+                <line x1="24" y1="26" x2="24" y2="64"/>
+                <circle cx="24" cy="36" r="1.5" fill="#1E1B16"/>
+                <circle cx="24" cy="48" r="1.5" fill="#1E1B16"/>
+                <circle cx="24" cy="58" r="1.5" fill="#1E1B16"/>
+              </g>
+              <g transform="translate(80,10)">
+                <rect x="8" y="8" width="32" height="8" fill="#33383F"/>
+                <rect x="8" y="16" width="15" height="48" fill="#33383F"/>
+                <rect x="25" y="16" width="15" height="48" fill="#33383F"/>
+                <line x1="15" y1="18" x2="15" y2="62" stroke-width="1"/>
+                <line x1="33" y1="18" x2="33" y2="62" stroke-width="1"/>
+                <line x1="24" y1="16" x2="24" y2="26" stroke-width="1"/>
+                <circle cx="24" cy="12" r="1.8" fill="#1E1B16"/>
+              </g>
+              <g transform="translate(148,42)">
+                <path d="M8 28 L9 20 Q10 14 18 14 L32 14 Q40 15 45 19 L53 23 Q57 25 57 28 Z" fill="#8C2F39"/>
+                <path d="M17 14 Q25 21 34 19" fill="none"/>
+                <line x1="8" y1="28" x2="57" y2="28"/>
+              </g>
+            </g>
+          </svg>
+          <figcaption data-i18n="s.cl.artCap">Белая рубашка + прямые брюки + балетки</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 BUSINESS CASUAL -->
+  <section class="section" id="business-casual">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="s.bc.eyebrow">Стиль 05</span>
+        <h2 data-i18n="s.bc.name">Business casual</h2>
+        <p class="lede" data-i18n="s.bc.phil">Профессиональный вид без полного костюма. Формула: офисная одежда минус пиджак и галстук. Контекст всегда рабочий.</p>
+      </div>
+      <div class="style-layout">
+        <div>
+          <p class="sit-line" data-i18n-html="s.bc.sit"><strong>Подходит для:</strong> офиса, собеседований, деловых встреч, конференций. В консервативных отраслях - "костюм без галстука", в креативе - ближе к smart casual.</p>
+          <h3 class="block-title" data-i18n="s.capTitle">Капсула стиля</h3>
+          <dl class="capsule">
+            <div class="capsule-row"><dt data-i18n="s.cap.top">Верх</dt><dd data-i18n="s.bc.capTop">Рубашки на пуговицах, блузы, поло (в нестрогих офисах), свитеры и кардиганы поверх рубашки, блейзер опционально</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.bottom">Низ</dt><dd data-i18n="s.bc.capBottom">Чиносы, классические брюки, юбка-карандаш консервативной длины, платье до колена</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.shoes">Обувь</dt><dd data-i18n="s.bc.capShoes">Лоферы, оксфорды, броги, балетки, туфли на низком каблуке</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.acc">Аксессуары</dt><dd data-i18n="s.bc.capAcc">Кожаный ремень в цвет обуви, классические часы, сдержанные украшения, структурированная сумка</dd></div>
+          </dl>
+          <h3 class="block-title" data-i18n="s.paletteTitle">Палитра</h3>
+          <div class="swatches">
+            <span class="sw" style="--c:#6B4A2F"><i data-i18n="s.bc.sw1">коричневый</i></span>
+            <span class="sw" style="--c:#1E1B16"><i data-i18n="s.bc.sw2">чёрный</i></span>
+            <span class="sw" style="--c:#2B3A55"><i data-i18n="s.bc.sw3">navy</i></span>
+            <span class="sw" style="--c:#FFFFFF"><i data-i18n="s.bc.sw4">белый</i></span>
+            <span class="sw" style="--c:#A89B7C"><i data-i18n="s.bc.sw5">хаки</i></span>
+          </div>
+          <h3 class="block-title" data-i18n="s.fabricTitle">Ткани и посадка</h3>
+          <p data-i18n="s.bc.fabric">Ткани: хлопок, шерсть, габардин, тонкий трикотаж. Посадка аккуратная, деловая. Всё выглажено и чисто - в деловом контексте это часть дресс-кода.</p>
+          <div class="do-dont">
+            <div class="do"><h4 data-i18n="s.doTitle">Делай</h4><ul>
+              <li data-i18n="s.bc.do1">Подгоняй вещи по фигуре: плохая посадка убивает даже дорогой образ</li>
+              <li data-i18n="s.bc.do2">Учитывай культуру конкретного офиса</li>
+              <li data-i18n="s.bc.do3">На собеседование одевайся чуть формальнее ожидаемого</li>
+            </ul></div>
+            <div class="dont"><h4 data-i18n="s.dontTitle">Не делай</h4><ul>
+              <li data-i18n="s.bc.dont1">Джинсы и кроссовки "авось сойдёт"</li>
+              <li data-i18n="s.bc.dont2">Графические футболки, спортивная одежда, шорты</li>
+              <li data-i18n="s.bc.dont3">Слишком яркие цвета и принты, небрежный груминг</li>
+            </ul></div>
+          </div>
+          <div class="callout">
+            <p data-i18n-html="s.bc.diff"><strong>Business casual vs smart casual:</strong> business casual - профессиональный тон: деним и кеды под запретом. Smart casual - социальный контекст: тёмные джинсы и чистые кеды допустимы. Практический тест: пиджак и брюки из одного комплекта - это business casual.</p>
+          </div>
+        </div>
+        <figure class="style-art">
+          <svg viewBox="0 0 220 120" role="img">
+            <title data-i18n="s.bc.artTitle">Образ business casual: рубашка, чиносы, оксфорды</title>
+            <g stroke="#1E1B16" stroke-width="2">
+              <g transform="translate(6,10)">
+                <path d="M9 12 L2 22 L8 28 L10 64 L38 64 L40 28 L46 22 L39 12 Q32 8 24 12 Q16 8 9 12 Z" fill="#B9C8D8"/>
+                <path d="M16 9 L24 20 L32 9 L32 15 L24 26 L16 15 Z" fill="#B9C8D8"/>
+                <circle cx="19" cy="17" r="1.3" fill="#1E1B16"/>
+                <circle cx="29" cy="17" r="1.3" fill="#1E1B16"/>
+                <line x1="24" y1="26" x2="24" y2="64"/>
+                <circle cx="24" cy="36" r="1.5" fill="#1E1B16"/>
+                <circle cx="24" cy="48" r="1.5" fill="#1E1B16"/>
+                <circle cx="24" cy="58" r="1.5" fill="#1E1B16"/>
+              </g>
+              <g transform="translate(80,10)">
+                <rect x="8" y="8" width="32" height="8" fill="#C9B48A"/>
+                <rect x="8" y="16" width="15" height="48" fill="#C9B48A"/>
+                <rect x="25" y="16" width="15" height="48" fill="#C9B48A"/>
+                <line x1="9" y1="17" x2="17" y2="25"/>
+                <line x1="39" y1="17" x2="31" y2="25"/>
+                <circle cx="24" cy="12" r="1.8" fill="#1E1B16"/>
+              </g>
+              <g transform="translate(148,34)">
+                <path d="M8 28 L8 17 Q9 12 16 12 L28 12 Q36 12 42 16 L52 21 Q57 23 57 26 L57 28 Z" fill="#5A3D26"/>
+                <circle cx="31" cy="15" r="1.6" fill="#1E1B16"/>
+                <circle cx="36" cy="16" r="1.6" fill="#1E1B16"/>
+                <circle cx="41" cy="18" r="1.6" fill="#1E1B16"/>
+                <line x1="8" y1="28" x2="57" y2="28"/>
+                <rect x="8" y="28" width="10" height="4" fill="#5A3D26"/>
+              </g>
+            </g>
+          </svg>
+          <figcaption data-i18n="s.bc.artCap">Голубая рубашка + чиносы + оксфорды</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 PREPPY -->
+  <section class="section alt" id="preppy">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="s.pr.eyebrow">Стиль 06</span>
+        <h2 data-i18n="s.pr.name">Preppy</h2>
+        <p class="lede" data-i18n="s.pr.phil">Наследие кампусов Лиги плюща: опрятность и спортивный аристократизм. Стиль переживает возрождение с 2022 года.</p>
+      </div>
+      <div class="style-layout">
+        <div>
+          <p class="sit-line" data-i18n-html="s.pr.sit"><strong>Подходит для:</strong> учёбы, офиса с творческим уклоном, загородного отдыха: яхты, гольф, теннис.</p>
+          <h3 class="block-title" data-i18n="s.capTitle">Капсула стиля</h3>
+          <dl class="capsule">
+            <div class="capsule-row"><dt data-i18n="s.cap.top">Верх</dt><dd data-i18n="s.pr.capTop">Рубашка Oxford, поло, вязаный свитер с косами, кардиган, регбийка</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.bottom">Низ</dt><dd data-i18n="s.pr.capBottom">Чиносы, плиссированная или теннисная юбка, летом - шорты-бермуды</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.shoes">Обувь</dt><dd data-i18n="s.pr.capShoes">Пенни-лоферы, топсайдеры, балетки, белые кеды</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.outer">Верхняя одежда</dt><dd data-i18n="s.pr.capOuter">Navy блейзер, твидовый пиджак, стёганая куртка, тренч</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.acc">Аксессуары</dt><dd data-i18n="s.pr.capAcc">Репсовый галстук, кожаный ремень, шёлковый шарф, жемчуг, носки аргайл</dd></div>
+          </dl>
+          <h3 class="block-title" data-i18n="s.paletteTitle">Палитра</h3>
+          <div class="swatches">
+            <span class="sw" style="--c:#2B3A55"><i data-i18n="s.pr.sw1">navy</i></span>
+            <span class="sw" style="--c:#FFFFFF"><i data-i18n="s.pr.sw2">белый</i></span>
+            <span class="sw" style="--c:#A89B7C"><i data-i18n="s.pr.sw3">хаки</i></span>
+            <span class="sw" style="--c:#F1EAD9"><i data-i18n="s.pr.sw4">кремовый</i></span>
+            <span class="sw" style="--c:#8C2F39"><i data-i18n="s.pr.sw5">бордо</i></span>
+            <span class="sw" style="--c:#A8C4D8"><i data-i18n="s.pr.sw6">голубой</i></span>
+          </div>
+          <h3 class="block-title" data-i18n="s.fabricTitle">Ткани и посадка</h3>
+          <p data-i18n="s.pr.fabric">Ткани: хлопок, шерсть, лён, твид, вельвет. Посадка чистая, по плечам. Принты: полоска, гингем, аргайл, тартан. Акцентные цвета - по одному за раз: бордо, изумрудный, розовый, небесно-голубой.</p>
+          <div class="do-dont">
+            <div class="do"><h4 data-i18n="s.doTitle">Делай</h4><ul>
+              <li data-i18n="s.pr.do1">Наслаивай: блейзер поверх свитера поверх рубашки</li>
+              <li data-i18n="s.pr.do2">Бери один акцентный цвет за раз</li>
+              <li data-i18n="s.pr.do3">Сочетай 1-2 преппи-вещи с вещами вне стиля, чтобы не выглядеть костюмированно</li>
+            </ul></div>
+            <div class="dont"><h4 data-i18n="s.dontTitle">Не делай</h4><ul>
+              <li data-i18n="s.pr.dont1">Крупные логотипы</li>
+              <li data-i18n="s.pr.dont2">Всё преппи сразу в одном образе</li>
+              <li data-i18n="s.pr.dont3">Небрежность: стиль требует выглаженности</li>
+            </ul></div>
+          </div>
+          <div class="callout">
+            <p data-i18n-html="s.pr.diff"><strong>Preppy vs old money:</strong> preppy ярче и моложе, с принтами и пастелью; old money строже и монохромнее.<br><strong>Preppy vs classic:</strong> у preppy узнаваемые "школьные" коды - галстуки, аргайл, геральдика; classic нейтрален.</p>
+          </div>
+        </div>
+        <figure class="style-art">
+          <svg viewBox="0 0 220 120" role="img">
+            <title data-i18n="s.pr.artTitle">Образ preppy: поло, плиссированная юбка, пенни-лоферы</title>
+            <g stroke="#1E1B16" stroke-width="2">
+              <g transform="translate(6,10)">
+                <path d="M9 12 L2 22 L8 28 L10 64 L38 64 L40 28 L46 22 L39 12 Q32 8 24 12 Q16 8 9 12 Z" fill="#F7F5F0"/>
+                <rect x="16" y="6" width="16" height="8" rx="2" fill="#F7F5F0"/>
+                <line x1="24" y1="14" x2="24" y2="32"/>
+                <circle cx="24" cy="20" r="1.5" fill="#1E1B16"/>
+                <circle cx="24" cy="28" r="1.5" fill="#1E1B16"/>
+              </g>
+              <g transform="translate(80,10)">
+                <rect x="12" y="8" width="28" height="7" fill="#24344D"/>
+                <path d="M12 15 L40 15 L48 64 L4 64 Z" fill="#24344D"/>
+                <line x1="21" y1="17" x2="19" y2="62" stroke="#F7F5F0" stroke-width="1.5"/>
+                <line x1="30" y1="17" x2="30" y2="62" stroke="#F7F5F0" stroke-width="1.5"/>
+                <line x1="39" y1="17" x2="41" y2="62" stroke="#F7F5F0" stroke-width="1.5"/>
+              </g>
+              <g transform="translate(148,34)">
+                <path d="M8 28 L8 16 Q9 10 16 10 L28 10 Q36 10 42 15 L52 20 Q57 22 57 26 L57 28 Z" fill="#A9713F"/>
+                <path d="M20 10 Q24 16 23 21" fill="none"/>
+                <line x1="8" y1="28" x2="57" y2="28"/>
+                <rect x="8" y="28" width="10" height="4" fill="#A9713F"/>
+              </g>
+            </g>
+          </svg>
+          <figcaption data-i18n="s.pr.artCap">Белое поло + navy плиссе + пенни-лоферы</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 MINIMALISM -->
+  <section class="section" id="minimalism">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="s.mn.eyebrow">Стиль 07</span>
+        <h2 data-i18n="s.mn.name">Minimalism</h2>
+        <p class="lede" data-i18n="s.mn.phil">"Меньше, но лучше": осознанное потребление, чистые линии, отсутствие визуального шума. Одежда - фон для человека, а не наоборот.</p>
+      </div>
+      <div class="style-layout">
+        <div>
+          <p class="sit-line" data-i18n-html="s.mn.sit"><strong>Подходит для:</strong> любого контекста - от офиса до вечера, если выдержан уровень формальности вещей.</p>
+          <h3 class="block-title" data-i18n="s.capTitle">Капсула стиля</h3>
+          <dl class="capsule">
+            <div class="capsule-row"><dt data-i18n="s.cap.top">Верх</dt><dd data-i18n="s.mn.capTop">Белые и чёрные футболки, рубашки, водолазки, кашемировые пуловеры</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.bottom">Низ</dt><dd data-i18n="s.mn.capBottom">Тёмные джинсы, брюки прямого кроя, юбка-карандаш или миди</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.shoes">Обувь</dt><dd data-i18n="s.mn.capShoes">Белые кожаные кеды, лоферы, балетки, ботильоны</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.outer">Верхняя одежда</dt><dd data-i18n="s.mn.capOuter">Блейзер, тренч, пальто-кокон, кожаная куртка лаконичного кроя</dd></div>
+            <div class="capsule-row"><dt data-i18n="s.cap.acc">Аксессуары</dt><dd data-i18n="s.mn.capAcc">Одна качественная сумка-тоут, тонкие украшения, нейтральный ремень, шарф</dd></div>
+          </dl>
+          <h3 class="block-title" data-i18n="s.paletteTitle">Палитра</h3>
+          <div class="swatches">
+            <span class="sw" style="--c:#1E1B16"><i data-i18n="s.mn.sw1">чёрный</i></span>
+            <span class="sw" style="--c:#FFFFFF"><i data-i18n="s.mn.sw2">белый</i></span>
+            <span class="sw" style="--c:#8A8D90"><i data-i18n="s.mn.sw3">серый</i></span>
+            <span class="sw" style="--c:#D8C7A5"><i data-i18n="s.mn.sw4">бежевый</i></span>
+            <span class="sw" style="--c:#2B3A55"><i data-i18n="s.mn.sw5">navy</i></span>
+          </div>
+          <h3 class="block-title" data-i18n="s.fabricTitle">Ткани и посадка</h3>
+          <p data-i18n="s.mn.fabric">2-3 нейтральных базовых цвета + 1-2 акцента, принтов почти нет. Посадка чистая, часто слегка oversize, но силуэт контролируемый. Интерес создаётся фактурой и пропорциями, а не декором.</p>
+          <div class="do-dont">
+            <div class="do"><h4 data-i18n="s.doTitle">Делай</h4><ul>
+              <li data-i18n="s.mn.do1">Играй с фактурами: гладкая кожа + мягкий кашемир</li>
+              <li data-i18n="s.mn.do2">Собирай монохромные комплекты</li>
+              <li data-i18n="s.mn.do3">Инвестируй в крой</li>
+            </ul></div>
+            <div class="dont"><h4 data-i18n="s.dontTitle">Не делай</h4><ul>
+              <li data-i18n="s.mn.dont1">Громкие принты, логотипы, избыточный декор</li>
+              <li data-i18n="s.mn.dont2">Дешёвые ткани: в минимализме огрехи качества видны сразу</li>
+              <li data-i18n="s.mn.dont3">Плохая посадка: "скучный" - это про крой, а не про простоту</li>
+            </ul></div>
+          </div>
+          <div class="callout">
+            <p data-i18n-html="s.mn.diff"><strong>Minimalism vs classic:</strong> минимализм строже к принтам и декору, более архитектурный; classic теплее и допускает "уютные" детали.<br><strong>Minimalism vs quiet luxury:</strong> стили пересекаются, quiet luxury добавляет статусную составляющую и heritage-ткани.</p>
+          </div>
+        </div>
+        <figure class="style-art">
+          <svg viewBox="0 0 220 120" role="img">
+            <title data-i18n="s.mn.artTitle">Образ minimalism: водолазка, прямые брюки, белые кеды</title>
+            <g stroke="#1E1B16" stroke-width="2">
+              <g transform="translate(6,10)">
+                <rect x="16" y="4" width="16" height="10" fill="#23211D"/>
+                <rect x="8" y="14" width="32" height="50" rx="2" fill="#23211D"/>
+                <line x1="8" y1="56" x2="40" y2="56"/>
+                <line x1="16" y1="57" x2="16" y2="63"/>
+                <line x1="24" y1="57" x2="24" y2="63"/>
+                <line x1="32" y1="57" x2="32" y2="63"/>
+              </g>
+              <g transform="translate(80,10)">
+                <rect x="8" y="8" width="32" height="8" fill="#9AA0A6"/>
+                <rect x="8" y="16" width="15" height="48" fill="#9AA0A6"/>
+                <rect x="25" y="16" width="15" height="48" fill="#9AA0A6"/>
+                <line x1="15" y1="18" x2="15" y2="62" stroke-width="1"/>
+                <line x1="33" y1="18" x2="33" y2="62" stroke-width="1"/>
+                <line x1="24" y1="16" x2="24" y2="26" stroke-width="1"/>
+                <circle cx="24" cy="12" r="1.8" fill="#1E1B16"/>
+              </g>
+              <g transform="translate(148,34)">
+                <path d="M8 28 L8 18 Q9 12 16 12 L30 12 Q38 13 44 18 L52 22 Q57 24 57 27 L57 28 Z" fill="#FAFAF8"/>
+                <rect x="6" y="25" width="53" height="5" fill="#F7F4EE"/>
+                <line x1="32" y1="15" x2="38" y2="19"/>
+                <line x1="36" y1="14" x2="42" y2="18"/>
+                <line x1="40" y1="14" x2="46" y2="18"/>
+              </g>
+            </g>
+          </svg>
+          <figcaption data-i18n="s.mn.artCap">Чёрная водолазка + серые брюки + белые кеды</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="section alt" id="compare">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="tbl.eyebrow">Сравнение</span>
+        <h2 data-i18n="tbl.title">Все семь стилей - в одной таблице</h2>
+        <p class="lede" data-i18n="tbl.lede">Быстрый способ почувствовать разницу: настроение, формула, ключевые вещи и типичные ошибки каждого стиля.</p>
+      </div>
+      <div class="table-scroll reveal">
+        <table class="data">
+          <thead><tr>
+            <th data-i18n="tbl.h0">Критерий</th>
+            <th data-i18n="tbl.h1">Casual</th>
+            <th data-i18n="tbl.h2">Smart casual</th>
+            <th data-i18n="tbl.h3">Business casual</th>
+            <th data-i18n="tbl.h4">Classic</th>
+            <th data-i18n="tbl.h5">Preppy</th>
+            <th data-i18n="tbl.h6">Old money</th>
+            <th data-i18n="tbl.h7">Minimalism</th>
+          </tr></thead>
+          <tbody>
+            <tr><td data-i18n="tbl.r1l"><strong>Настроение</strong></td>
+              <td data-i18n="tbl.r1c1">Комфорт и свобода</td><td data-i18n="tbl.r1c2">Расслабленность с намерением</td><td data-i18n="tbl.r1c3">Профессионализм без костюма</td><td data-i18n="tbl.r1c4">Вневременность</td><td data-i18n="tbl.r1c5">Кампус Лиги плюща</td><td data-i18n="tbl.r1c6">Статус без демонстрации</td><td data-i18n="tbl.r1c7">Осознанная простота</td></tr>
+            <tr><td data-i18n="tbl.r2l"><strong>Формула</strong></td>
+              <td data-i18n="tbl.r2c1">Удобно</td><td data-i18n="tbl.r2c2">Повседневное + структура</td><td data-i18n="tbl.r2c3">Костюм минус галстук</td><td data-i18n="tbl.r2c4">Проверенное временем</td><td data-i18n="tbl.r2c5">Опрятный спорт-шик</td><td data-i18n="tbl.r2c6">Качество вместо логотипа</td><td data-i18n="tbl.r2c7">Меньше, но лучше</td></tr>
+            <tr><td data-i18n="tbl.r3l"><strong>Ключевой верх</strong></td>
+              <td data-i18n="tbl.r3c1">Футболка, худи</td><td data-i18n="tbl.r3c2">Рубашка Oxford, поло, блейзер</td><td data-i18n="tbl.r3c3">Рубашка, блуза, свитер</td><td data-i18n="tbl.r3c4">Белая рубашка, бретонка</td><td data-i18n="tbl.r3c5">Oxford, поло, трикотаж с косами</td><td data-i18n="tbl.r3c6">Кашемир, белая рубашка</td><td data-i18n="tbl.r3c7">Футболка, водолазка</td></tr>
+            <tr><td data-i18n="tbl.r4l"><strong>Ключевой низ</strong></td>
+              <td data-i18n="tbl.r4c1">Джинсы любые</td><td data-i18n="tbl.r4c2">Чиносы, тёмный деним</td><td data-i18n="tbl.r4c3">Брюки, юбка-карандаш</td><td data-i18n="tbl.r4c4">Прямые джинсы, миди</td><td data-i18n="tbl.r4c5">Чиносы, плиссе</td><td data-i18n="tbl.r4c6">Шерстяные брюки</td><td data-i18n="tbl.r4c7">Прямые брюки, тёмный деним</td></tr>
+            <tr><td data-i18n="tbl.r5l"><strong>Обувь</strong></td>
+              <td data-i18n="tbl.r5c1">Кеды, кроссовки</td><td data-i18n="tbl.r5c2">Лоферы, чистые кеды</td><td data-i18n="tbl.r5c3">Оксфорды, лоферы</td><td data-i18n="tbl.r5c4">Лоферы, балетки</td><td data-i18n="tbl.r5c5">Топсайдеры, пенни-лоферы</td><td data-i18n="tbl.r5c6">Лоферы, броги</td><td data-i18n="tbl.r5c7">Белые кеды, мюли</td></tr>
+            <tr><td data-i18n="tbl.r6l"><strong>Палитра</strong></td>
+              <td data-i18n="tbl.r6c1">Свободная</td><td data-i18n="tbl.r6c2">Нейтральная</td><td data-i18n="tbl.r6c3">Нейтральная, приглушённая</td><td data-i18n="tbl.r6c4">Нейтральная + сдержанные акценты</td><td data-i18n="tbl.r6c5">Navy, белый, хаки + пастель</td><td data-i18n="tbl.r6c6">Navy, camel, крем, олива + бордо</td><td data-i18n="tbl.r6c7">2-3 нейтрали + 1 акцент</td></tr>
+            <tr><td data-i18n="tbl.r7l"><strong>Принты</strong></td>
+              <td data-i18n="tbl.r7c1">Любые</td><td data-i18n="tbl.r7c2">Сдержанные</td><td data-i18n="tbl.r7c3">Минимум</td><td data-i18n="tbl.r7c4">Полоска, горох, клетка</td><td data-i18n="tbl.r7c5">Полоска, гингем, аргайл, тартан</td><td data-i18n="tbl.r7c6">Heritage-принты умеренно</td><td data-i18n="tbl.r7c7">Почти нет</td></tr>
+            <tr><td data-i18n="tbl.r8l"><strong>Ткани</strong></td>
+              <td data-i18n="tbl.r8c1">Деним, джерси</td><td data-i18n="tbl.r8c2">Хлопок, лён, меринос</td><td data-i18n="tbl.r8c3">Хлопок, шерсть, габардин</td><td data-i18n="tbl.r8c4">Натуральные, качественные</td><td data-i18n="tbl.r8c5">Хлопок, твид, вельвет</td><td data-i18n="tbl.r8c6">Кашемир, шерсть, шёлк, твид</td><td data-i18n="tbl.r8c7">Хлопок, шерсть, кожа</td></tr>
+            <tr><td data-i18n="tbl.r9l"><strong>Логотипы</strong></td>
+              <td data-i18n="tbl.r9c1">Допустимы</td><td data-i18n="tbl.r9c2">Нет</td><td data-i18n="tbl.r9c3">Нет</td><td data-i18n="tbl.r9c4">Нет</td><td data-i18n="tbl.r9c5">Мелкие, геральдика</td><td data-i18n="tbl.r9c6">Строго нет</td><td data-i18n="tbl.r9c7">Нет</td></tr>
+            <tr><td data-i18n="tbl.r10l"><strong>Типичная ошибка</strong></td>
+              <td data-i18n="tbl.r10c1">Неряшливость</td><td data-i18n="tbl.r10c2">Спортивная обувь и худи</td><td data-i18n="tbl.r10c3">Джинсы и кроссовки "авось сойдёт"</td><td data-i18n="tbl.r10c4">Скука без акцентов</td><td data-i18n="tbl.r10c5">"Костюм школьника" - всё сразу</td><td data-i18n="tbl.r10c6">Подделка статуса дешёвыми тканями</td><td data-i18n="tbl.r10c7">Дешёвые ткани</td></tr>
+            <tr><td data-i18n="tbl.r11l"><strong>Контекст</strong></td>
+              <td data-i18n="tbl.r11c1">Выходные, дом</td><td data-i18n="tbl.r11c2">Офис-flex, ужин, нетворкинг</td><td data-i18n="tbl.r11c3">Офис, собеседования</td><td data-i18n="tbl.r11c4">Везде</td><td data-i18n="tbl.r11c5">Учёба, загород, офис-лайт</td><td data-i18n="tbl.r11c6">Статус, деловое, светское</td><td data-i18n="tbl.r11c7">Везде</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPSULE PRINCIPLES -->
+  <section class="section" id="capsule-principles">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="cap.eyebrow">База гардероба</span>
+        <h2 data-i18n="cap.title">Принципы капсульного гардероба</h2>
+        <p class="lede" data-i18n="cap.lede">Семь принципов, которые работают в любом стиле. Полный разбор с шаблоном 4x4 - в разделе "Капсула".</p>
+      </div>
+      <ol class="steps reveal">
+        <li data-i18n="cap.p1">Палитра прежде всего: 3-4 нейтральных + 1-2 акцента, всё сочетается между собой.</li>
+        <li data-i18n="cap.p2">Качество важнее количества: натуральные ткани; перед покупкой проверь, сочетается ли вещь минимум с тремя уже имеющимися.</li>
+        <li data-i18n="cap.p3">Посадка решает: заложи 15-20% бюджета на портного.</li>
+        <li data-i18n="cap.p4">Структура гардероба: примерно 40% верх, 30% низ, 30% верхняя одежда; обуви и сумок - меньше, но лучше.</li>
+        <li data-i18n="cap.p5">Инвестируй в "видимые" вещи: пальто, обувь, сумка, блейзер формируют впечатление.</li>
+        <li data-i18n="cap.p6">Силуэт и пропорции: объёмный верх + приталенный низ или наоборот; монохром вытягивает силуэт.</li>
+        <li data-i18n="cap.p7">Гардероб под реальную жизнь: строй под свою неделю, а не под воображаемую.</li>
+      </ol>
+      <p><a class="btn btn-ghost" href="capsule.html" data-i18n="cap.more">Открыть раздел "Капсула"</a></p>
+    </div>
+  </section>
+
+  <!-- NEXT STEPS + CTA -->
+  <section class="section dark" id="next">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="next.eyebrow">Что дальше</span>
+        <h2 data-i18n="next.title">Стиль выбран - время действовать</h2>
+        <p class="lede" data-i18n="next.lede">Примени знания: собери образ в конструкторе, разберись в сочетаниях или проверь себя в квизе.</p>
+      </div>
+      <div class="next-steps reveal">
+        <a class="next-card" href="combinations.html">
+          <span class="eyebrow" data-i18n="next.c1e">Раздел</span>
+          <h3 data-i18n="next.c1t">Сочетания</h3>
+          <p data-i18n="next.c1d">12 правил: как сочетать вещи и аксессуары - от ремня до принтов.</p>
+        </a>
+        <a class="next-card" href="capsule.html">
+          <span class="eyebrow" data-i18n="next.c2e">Раздел</span>
+          <h3 data-i18n="next.c2t">Капсула</h3>
+          <p data-i18n="next.c2d">Собери гардероб, где всё сочетается со всем: шаблон 4x4.</p>
+        </a>
+        <a class="next-card" href="quiz.html">
+          <span class="eyebrow" data-i18n="next.c3e">Интерактив</span>
+          <h3 data-i18n="next.c3t">Квизы</h3>
+          <p data-i18n="next.c3d">Узнай свой подтон, типаж фигуры и стиль за 10 минут.</p>
+        </a>
+      </div>
+      <p style="margin-top:2em"><a class="btn btn-light" href="builder.html" data-i18n="next.cta">Собрать образ в конструкторе</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand"><span class="brand-mark">SA</span><div><strong>Style Atelier</strong><p data-i18n="footer.tag">Школа стиля: цвет, фигура, образ</p></div></div>
+    <nav class="footer-nav" data-i18n-aria="a11y.navFooter" aria-label="Дополнительная навигация">
+      <a href="colors.html" data-i18n="nav.colors">Цвет</a>
+      <a href="figure.html" data-i18n="nav.figure">Фигура</a>
+      <a href="styles.html" data-i18n="nav.styles" class="active">Стили</a>
+      <a href="combinations.html" data-i18n="nav.combo">Сочетания</a>
+      <a href="capsule.html" data-i18n="nav.capsule">Капсула</a>
+      <a href="quiz.html" data-i18n="nav.quiz">Квизы</a>
+      <a href="builder.html" data-i18n="nav.builder">Конструктор</a>
+    </nav>
+    <p class="footer-note" data-i18n="footer.note">Образовательный проект. Правила стиля - ориентиры, а не догмы: ваш вкус решает.</p>
+  </div>
+</footer>
+<script>
+window.LANG = {
+ru: {
+  "a11y": {"skip": "Перейти к содержимому", "nav": "Основная навигация", "navFooter": "Дополнительная навигация", "langLabel": "Выбор языка", "menu": "Меню"},
+  "meta": {"title": "Style Atelier - Стили одежды: гид по 7 стилям", "desc": "Smart casual, casual, old money, классика и другие стили: философия, капсула вещей, палитры и правила. Двуязычная школа стиля."},
+  "nav": {"home": "Главная", "colors": "Цвет", "figure": "Фигура", "styles": "Стили", "combo": "Сочетания", "capsule": "Капсула", "builder": "Конструктор", "quiz": "Квизы"},
+  "footer": {"tag": "Школа стиля: цвет, фигура, образ", "note": "Образовательный проект. Правила стиля - ориентиры, а не догмы: ваш вкус решает."},
+  "hero": {"eyebrow": "Гид по стилям", "title": "Семь стилей - один язык вкуса", "lede": "Разбираем smart casual, casual, old money, классику и другие стили: философия, капсула вещей, палитра и правила. Найди свой стиль - или собери из них свой собственный.", "cta1": "Собрать образ", "cta2": "Пройти квиз стиля", "artTitle": "Вешалка с одеждой трёх стилей"},
+  "jump": {"sc": "Smart casual", "cs": "Casual", "om": "Old money", "cl": "Classic", "bc": "Business casual", "pr": "Preppy", "mn": "Minimalism"},
+  "s": {
+    "capTitle": "Капсула стиля",
+    "cap": {"top": "Верх", "bottom": "Низ", "shoes": "Обувь", "outer": "Верхняя одежда", "acc": "Аксессуары"},
+    "paletteTitle": "Палитра",
+    "fabricTitle": "Ткани и посадка",
+    "doTitle": "Делай",
+    "dontTitle": "Не делай",
+    "sc": {
+      "eyebrow": "Стиль 01", "name": "Smart casual",
+      "phil": "Золотая середина между строгим офисом и повседневностью. Девиз стиля: casual, но не sloppy - повседневный, но не неряшливый. Образ должен выглядеть намеренным: каждая вещь подобрана осознанно.",
+      "sit": "<strong>Подходит для:</strong> офиса с расслабленным дресс-кодом, деловых обедов, нетворкинга, ужинов в ресторане, casual friday, полуформальных мероприятий.",
+      "capTop": "Рубашка Oxford или шамбре, поло из хлопка или мериноса, тонкий трикотаж (водолазка, пуловер, кардиган), чистая футболка премиум-качества - только под пиджак",
+      "capBottom": "Чиносы, тёмные джинсы без потёртостей прямого или slim кроя, шерстяные брюки",
+      "capShoes": "Кожаные лоферы, броги, челси, чистые минималистичные кожаные кеды, дезерт-буты",
+      "capOuter": "Блейзер в фактурной ткани (твид, вельвет), бомбер из замши или шерсти, тренч, полевая куртка",
+      "capAcc": "Кожаный ремень, классические часы - минимум и по делу",
+      "sw1": "чёрный", "sw2": "navy", "sw3": "серый", "sw4": "белый", "sw5": "бежевый", "sw6": "коричневый",
+      "fabric": "Ткани: хлопок, лён, меринос, шерсть, кашемир. Посадка аккуратная и структурированная, но не обтягивающая. Рукава рубашки можно закатать, манжеты брюк - подвернуть: так формальность смягчается.",
+      "do1": "Выбирай вещи с чёткой структурой и хорошей посадкой",
+      "do2": "Держи аксессуары минимальными: кожаный ремень, классические часы",
+      "do3": "Заправляй рубашку, если сверху блейзер",
+      "dont1": "Худи, графические футболки, спортивные кроссовки",
+      "dont2": "Рваные и мешковатые вещи, слишком яркие принты",
+      "dont3": "Рубашка навыпуск под блейзером",
+      "diff": "<strong>Smart casual vs business casual:</strong> business casual начинается с костюма и расслабляет его, а smart casual начинается с повседневного комплекта и наряжает его. Практический тест: пиджак и брюки из одного комплекта - это business casual.<br><strong>Smart casual vs casual:</strong> casual - комфорт без полировки, smart casual добавляет структуру: блейзер, чистые туфли, аккуратные брюки.",
+      "artTitle": "Образ smart casual: блейзер, чиносы, лоферы",
+      "artCap": "Navy блейзер + бежевые чиносы + коричневые лоферы"
+    },
+    "cs": {
+      "eyebrow": "Стиль 02", "name": "Casual",
+      "phil": "Комфорт и самовыражение без обязательств дресс-кода. Важно: casual - не «всё что угодно», нижняя граница - аккуратность.",
+      "sit": "<strong>Подходит для:</strong> выходных, прогулок, неформальных встреч, творческих профессий без дресс-кода.",
+      "capTop": "Футболки, рубашки навыпуск, свитшоты, худи",
+      "capBottom": "Джинсы любого оттенка, джоггеры, летом - шорты",
+      "capShoes": "Кеды, кроссовки, сандалии, повседневные ботинки",
+      "capOuter": "Джинсовка, бомбер, парка, флиска",
+      "sw1": "деним", "sw2": "белый", "sw3": "хаки", "sw4": "красный", "sw5": "горчица", "sw6": "чёрный",
+      "fabric": "Ткани: деним, джерси, флис, хлопок. Посадка свободная, relaxed, но не мешкообразная. Яркие цвета и принты допустимы - палитра здесь самая свободная из всех стилей.",
+      "do1": "Держи вещи чистыми и опрятными",
+      "do2": "Подгоняй размер под фигуру: свободное - не значит бесформенное",
+      "do3": "Сочетай цвета осознанно",
+      "dont1": "Мятые и запятнанные вещи, вытянутые колени",
+      "dont2": "Спортивная форма вне спортзала",
+      "dont3": "Пляжная одежда в городе",
+      "diff": "<strong>Casual в иерархии стилей:</strong> это нижняя ступень шкалы. Всё, что добавляет структуру и намеренность - блейзер, чистые кожаные туфли, аккуратные брюки - уже уводит образ в сторону smart casual.",
+      "artTitle": "Образ casual: футболка, джинсы, кеды",
+      "artCap": "Белая футболка + джинсы + кеды"
+    },
+    "om": {
+      "eyebrow": "Стиль 03", "name": "Old money / Quiet luxury",
+      "phil": "Сигнал статуса через отказ его демонстрировать. Девиз: качество ткани важнее количества вещей, сдержанность важнее декора. Корни - традиции Восточного побережья США и британский загородный стиль.",
+      "sit": "<strong>Подходит для:</strong> статусных мероприятий, делового общения высокого уровня, повседневной жизни, где ценится вкус.",
+      "capTop": "Белая хлопковая рубашка, полосатые рубашки Oxford, водолазки и пуловеры из мериноса и кашемира, шёлковые топы",
+      "capBottom": "Широкие шерстяные брюки, чиносы, вельветовые брюки, юбка-карандаш или плиссированная юбка, классические джинсы без потёртостей",
+      "capShoes": "Кожаные лоферы (penny, tassel), броги, классические белые кожаные кеды, жокейские сапоги, элегантные мюли",
+      "capOuter": "Тренч цвета camel, двубортное шерстяное пальто, твидовый блейзер",
+      "capAcc": "Жемчужные серьги, тонкие золотые цепочки, винтажные часы, шёлковый шарф, структурированная кожаная сумка без видимого брендинга",
+      "sw1": "navy", "sw2": "camel", "sw3": "кремовый", "sw4": "серый", "sw5": "шоколад", "sw6": "олива", "sw7": "бордо",
+      "fabric": "Только натуральные ткани: кашемир, меринос, шерсть, шёлк, плотный хлопок, твид, фланель, вельвет. Посадка спокойная, классическая, часто слегка свободная. Приёмы стиля: монохромные образы и сдержанные heritage-принты - «гусиная лапка», ёлочка, тартан.",
+      "do1": "Инвестируй в верхнюю одежду и обувь: они «делают» образ",
+      "do2": "Отдавай вещи портному ради идеальной посадки",
+      "do3": "Держи максимум 2-3 украшения в одном металле",
+      "dont1": "Видимые логотипы и брендинг",
+      "dont2": "Блестящие синтетические ткани",
+      "dont3": "Обтягивающие и чрезмерно декорированные вещи, больше одного акцентного цвета",
+      "diff": "<strong>Old money vs quiet luxury:</strong> old money - традиция и нормы, quiet luxury - современный минимализм и личный вкус. По сути один гардероб в двух настроениях.<br><strong>Old money vs preppy:</strong> old money строже и монохромнее, preppy ярче и игривее.<br><strong>Old money vs classic:</strong> classic - нейтральная база вне контекста богатства, old money добавляет статусную сдержанность.",
+      "artTitle": "Образ old money: тренч, кашемировый свитер, лоферы",
+      "artCap": "Camel тренч + кремовый кашемир + тёмные лоферы"
+    },
+    "cl": {
+      "eyebrow": "Стиль 04", "name": "Classic",
+      "phil": "Вневременность: вещи, которые уместны сегодня и через десять лет. «Мода проходит, стиль вечен» (Ив Сен-Лоран).",
+      "sit": "<strong>Подходит для:</strong> работы, официальных и полуофициальных событий, повседневности с требованием элегантности.",
+      "capTop": "Белая рубашка Oxford, полосатая бретонка, кашемировый пуловер, белая футболка премиум-качества",
+      "capBottom": "Прямые тёмные джинсы, брюки прямого кроя, юбка-миди, маленькое чёрное платье",
+      "capShoes": "Лоферы, балетки, белые кеды, кожаные туфли",
+      "capOuter": "Тренч, блейзер нейтрального цвета, кожаная куртка, шерстяное пальто",
+      "sw1": "чёрный", "sw2": "navy", "sw3": "белый", "sw4": "бежевый", "sw5": "camel", "sw6": "серый", "sw7": "бордо",
+      "fabric": "Натуральные ткани, чистые швы, минимум фурнитуры. Посадка: «облегает, а не обтягивает». Вневременные принты: полоска, мелкий горох, ёлочка, глен-плед. Приём стиля - монохром: один нейтральный цвет с головы до ног даёт мгновенную собранность.",
+      "do1": "Начинай с посадки, а не с цены",
+      "do2": "Держи структурированные базовые вещи: блейзер преображает образ за минуту",
+      "do3": "Меньше вещей, но надёжных",
+      "dont1": "Трендовые вещи «на один сезон»",
+      "dont2": "Стопроцентный полиэстер и акрил",
+      "dont3": "Драматичные силуэты и экстремальные вырезы",
+      "diff": "<strong>Classic среди соседей:</strong> самый нейтральный стиль и база для всех остальных. В отличие от минимализма допускает больше принтов и женственных деталей, в отличие от old money не несёт статусного подтекста.",
+      "artTitle": "Образ classic: белая рубашка, прямые брюки, балетки",
+      "artCap": "Белая рубашка + прямые брюки + балетки"
+    },
+    "bc": {
+      "eyebrow": "Стиль 05", "name": "Business casual",
+      "phil": "Профессиональный вид без полного костюма. Формула: офисная одежда минус пиджак и галстук. Контекст всегда рабочий.",
+      "sit": "<strong>Подходит для:</strong> офиса, собеседований, деловых встреч, конференций. В консервативных отраслях - «костюм без галстука», в креативе - ближе к smart casual.",
+      "capTop": "Рубашки на пуговицах, блузы, поло (в нестрогих офисах), свитеры и кардиганы поверх рубашки, блейзер опционально",
+      "capBottom": "Чиносы, классические брюки, юбка-карандаш консервативной длины, платье до колена",
+      "capShoes": "Лоферы, оксфорды, броги, балетки, туфли на низком каблуке",
+      "capAcc": "Кожаный ремень в цвет обуви, классические часы, сдержанные украшения, структурированная сумка",
+      "sw1": "коричневый", "sw2": "чёрный", "sw3": "navy", "sw4": "белый", "sw5": "хаки",
+      "fabric": "Ткани: хлопок, шерсть, габардин, тонкий трикотаж. Посадка аккуратная, деловая. Всё выглажено и чисто - в деловом контексте это часть дресс-кода.",
+      "do1": "Подгоняй вещи по фигуре: плохая посадка убивает даже дорогой образ",
+      "do2": "Учитывай культуру конкретного офиса",
+      "do3": "На собеседование одевайся чуть формальнее ожидаемого",
+      "dont1": "Джинсы и кроссовки «авось сойдёт»",
+      "dont2": "Графические футболки, спортивная одежда, шорты",
+      "dont3": "Слишком яркие цвета и принты, небрежный груминг",
+      "diff": "<strong>Business casual vs smart casual:</strong> business casual - профессиональный тон: деним и кеды под запретом. Smart casual - социальный контекст: тёмные джинсы и чистые кеды допустимы. Практический тест: пиджак и брюки из одного комплекта - это business casual.",
+      "artTitle": "Образ business casual: рубашка, чиносы, оксфорды",
+      "artCap": "Голубая рубашка + чиносы + оксфорды"
+    },
+    "pr": {
+      "eyebrow": "Стиль 06", "name": "Preppy",
+      "phil": "Наследие кампусов Лиги плюща: опрятность и спортивный аристократизм. Стиль переживает возрождение с 2022 года.",
+      "sit": "<strong>Подходит для:</strong> учёбы, офиса с творческим уклоном, загородного отдыха: яхты, гольф, теннис.",
+      "capTop": "Рубашка Oxford, поло, вязаный свитер с косами, кардиган, регбийка",
+      "capBottom": "Чиносы, плиссированная или теннисная юбка, летом - шорты-бермуды",
+      "capShoes": "Пенни-лоферы, топсайдеры, балетки, белые кеды",
+      "capOuter": "Navy блейзер, твидовый пиджак, стёганая куртка, тренч",
+      "capAcc": "Репсовый галстук, кожаный ремень, шёлковый шарф, жемчуг, носки аргайл",
+      "sw1": "navy", "sw2": "белый", "sw3": "хаки", "sw4": "кремовый", "sw5": "бордо", "sw6": "голубой",
+      "fabric": "Ткани: хлопок, шерсть, лён, твид, вельвет. Посадка чистая, по плечам. Принты: полоска, гингем, аргайл, тартан. Акцентные цвета - по одному за раз: бордо, изумрудный, розовый, небесно-голубой.",
+      "do1": "Наслаивай: блейзер поверх свитера поверх рубашки",
+      "do2": "Бери один акцентный цвет за раз",
+      "do3": "Сочетай 1-2 преппи-вещи с вещами вне стиля, чтобы не выглядеть костюмированно",
+      "dont1": "Крупные логотипы",
+      "dont2": "Всё преппи сразу в одном образе",
+      "dont3": "Небрежность: стиль требует выглаженности",
+      "diff": "<strong>Preppy vs old money:</strong> preppy ярче и моложе, с принтами и пастелью; old money строже и монохромнее.<br><strong>Preppy vs classic:</strong> у preppy узнаваемые «школьные» коды - галстуки, аргайл, геральдика; classic нейтрален.",
+      "artTitle": "Образ preppy: поло, плиссированная юбка, пенни-лоферы",
+      "artCap": "Белое поло + navy плиссе + пенни-лоферы"
+    },
+    "mn": {
+      "eyebrow": "Стиль 07", "name": "Minimalism",
+      "phil": "«Меньше, но лучше»: осознанное потребление, чистые линии, отсутствие визуального шума. Одежда - фон для человека, а не наоборот.",
+      "sit": "<strong>Подходит для:</strong> любого контекста - от офиса до вечера, если выдержан уровень формальности вещей.",
+      "capTop": "Белые и чёрные футболки, рубашки, водолазки, кашемировые пуловеры",
+      "capBottom": "Тёмные джинсы, брюки прямого кроя, юбка-карандаш или миди",
+      "capShoes": "Белые кожаные кеды, лоферы, балетки, ботильоны",
+      "capOuter": "Блейзер, тренч, пальто-кокон, кожаная куртка лаконичного кроя",
+      "capAcc": "Одна качественная сумка-тоут, тонкие украшения, нейтральный ремень, шарф",
+      "sw1": "чёрный", "sw2": "белый", "sw3": "серый", "sw4": "бежевый", "sw5": "navy",
+      "fabric": "2-3 нейтральных базовых цвета + 1-2 акцента, принтов почти нет. Посадка чистая, часто слегка oversize, но силуэт контролируемый. Интерес создаётся фактурой и пропорциями, а не декором.",
+      "do1": "Играй с фактурами: гладкая кожа + мягкий кашемир",
+      "do2": "Собирай монохромные комплекты",
+      "do3": "Инвестируй в крой",
+      "dont1": "Громкие принты, логотипы, избыточный декор",
+      "dont2": "Дешёвые ткани: в минимализме огрехи качества видны сразу",
+      "dont3": "Плохая посадка: «скучный» - это про крой, а не про простоту",
+      "diff": "<strong>Minimalism vs classic:</strong> минимализм строже к принтам и декору, более архитектурный; classic теплее и допускает «уютные» детали.<br><strong>Minimalism vs quiet luxury:</strong> стили пересекаются, quiet luxury добавляет статусную составляющую и heritage-ткани.",
+      "artTitle": "Образ minimalism: водолазка, прямые брюки, белые кеды",
+      "artCap": "Чёрная водолазка + серые брюки + белые кеды"
+    }
+  },
+  "tbl": {
+    "eyebrow": "Сравнение", "title": "Все семь стилей - в одной таблице",
+    "lede": "Быстрый способ почувствовать разницу: настроение, формула, ключевые вещи и типичные ошибки каждого стиля.",
+    "h0": "Критерий", "h1": "Casual", "h2": "Smart casual", "h3": "Business casual", "h4": "Classic", "h5": "Preppy", "h6": "Old money", "h7": "Minimalism",
+    "r1l": "Настроение", "r1c1": "Комфорт и свобода", "r1c2": "Расслабленность с намерением", "r1c3": "Профессионализм без костюма", "r1c4": "Вневременность", "r1c5": "Кампус Лиги плюща", "r1c6": "Статус без демонстрации", "r1c7": "Осознанная простота",
+    "r2l": "Формула", "r2c1": "Удобно", "r2c2": "Повседневное + структура", "r2c3": "Костюм минус галстук", "r2c4": "Проверенное временем", "r2c5": "Опрятный спорт-шик", "r2c6": "Качество вместо логотипа", "r2c7": "Меньше, но лучше",
+    "r3l": "Ключевой верх", "r3c1": "Футболка, худи", "r3c2": "Рубашка Oxford, поло, блейзер", "r3c3": "Рубашка, блуза, свитер", "r3c4": "Белая рубашка, бретонка", "r3c5": "Oxford, поло, трикотаж с косами", "r3c6": "Кашемир, белая рубашка", "r3c7": "Футболка, водолазка",
+    "r4l": "Ключевой низ", "r4c1": "Джинсы любые", "r4c2": "Чиносы, тёмный деним", "r4c3": "Брюки, юбка-карандаш", "r4c4": "Прямые джинсы, миди", "r4c5": "Чиносы, плиссе", "r4c6": "Шерстяные брюки", "r4c7": "Прямые брюки, тёмный деним",
+    "r5l": "Обувь", "r5c1": "Кеды, кроссовки", "r5c2": "Лоферы, чистые кеды", "r5c3": "Оксфорды, лоферы", "r5c4": "Лоферы, балетки", "r5c5": "Топсайдеры, пенни-лоферы", "r5c6": "Лоферы, броги", "r5c7": "Белые кеды, мюли",
+    "r6l": "Палитра", "r6c1": "Свободная", "r6c2": "Нейтральная", "r6c3": "Нейтральная, приглушённая", "r6c4": "Нейтральная + сдержанные акценты", "r6c5": "Navy, белый, хаки + пастель", "r6c6": "Navy, camel, крем, олива + бордо", "r6c7": "2-3 нейтрали + 1 акцент",
+    "r7l": "Принты", "r7c1": "Любые", "r7c2": "Сдержанные", "r7c3": "Минимум", "r7c4": "Полоска, горох, клетка", "r7c5": "Полоска, гингем, аргайл, тартан", "r7c6": "Heritage-принты умеренно", "r7c7": "Почти нет",
+    "r8l": "Ткани", "r8c1": "Деним, джерси", "r8c2": "Хлопок, лён, меринос", "r8c3": "Хлопок, шерсть, габардин", "r8c4": "Натуральные, качественные", "r8c5": "Хлопок, твид, вельвет", "r8c6": "Кашемир, шерсть, шёлк, твид", "r8c7": "Хлопок, шерсть, кожа",
+    "r9l": "Логотипы", "r9c1": "Допустимы", "r9c2": "Нет", "r9c3": "Нет", "r9c4": "Нет", "r9c5": "Мелкие, геральдика", "r9c6": "Строго нет", "r9c7": "Нет",
+    "r10l": "Типичная ошибка", "r10c1": "Неряшливость", "r10c2": "Спортивная обувь и худи", "r10c3": "Джинсы и кроссовки «авось сойдёт»", "r10c4": "Скука без акцентов", "r10c5": "«Костюм школьника» - всё сразу", "r10c6": "Подделка статуса дешёвыми тканями", "r10c7": "Дешёвые ткани",
+    "r11l": "Контекст", "r11c1": "Выходные, дом", "r11c2": "Офис-flex, ужин, нетворкинг", "r11c3": "Офис, собеседования", "r11c4": "Везде", "r11c5": "Учёба, загород, офис-лайт", "r11c6": "Статус, деловое, светское", "r11c7": "Везде"
+  },
+  "cap": {
+    "eyebrow": "База гардероба", "title": "Принципы капсульного гардероба",
+    "lede": "Семь принципов, которые работают в любом стиле. Полный разбор с шаблоном 4x4 - в разделе «Капсула».",
+    "p1": "Палитра прежде всего: 3-4 нейтральных + 1-2 акцента, всё сочетается между собой.",
+    "p2": "Качество важнее количества: натуральные ткани; перед покупкой проверь, сочетается ли вещь минимум с тремя уже имеющимися.",
+    "p3": "Посадка решает: заложи 15-20% бюджета на портного.",
+    "p4": "Структура гардероба: примерно 40% верх, 30% низ, 30% верхняя одежда; обуви и сумок - меньше, но лучше.",
+    "p5": "Инвестируй в «видимые» вещи: пальто, обувь, сумка, блейзер формируют впечатление.",
+    "p6": "Силуэт и пропорции: объёмный верх + приталенный низ или наоборот; монохром вытягивает силуэт.",
+    "p7": "Гардероб под реальную жизнь: строй под свою неделю, а не под воображаемую.",
+    "more": "Открыть раздел «Капсула»"
+  },
+  "next": {
+    "eyebrow": "Что дальше", "title": "Стиль выбран - время действовать",
+    "lede": "Примени знания: собери образ в конструкторе, разберись в сочетаниях или проверь себя в квизе.",
+    "c1e": "Раздел", "c1t": "Сочетания", "c1d": "12 правил: как сочетать вещи и аксессуары - от ремня до принтов.",
+    "c2e": "Раздел", "c2t": "Капсула", "c2d": "Собери гардероб, где всё сочетается со всем: шаблон 4x4.",
+    "c3e": "Интерактив", "c3t": "Квизы", "c3d": "Узнай свой подтон, типаж фигуры и стиль за 10 минут.",
+    "cta": "Собрать образ в конструкторе"
+  }
+},
+en: {
+  "a11y": {"skip": "Skip to content", "nav": "Main navigation", "navFooter": "Footer navigation", "langLabel": "Language selection", "menu": "Menu"},
+  "meta": {"title": "Style Atelier - Clothing styles: a guide to 7 styles", "desc": "Smart casual, casual, old money, classic and more: philosophy, capsule pieces, palettes and rules. A bilingual school of style."},
+  "nav": {"home": "Home", "colors": "Color", "figure": "Figure", "styles": "Styles", "combo": "Combinations", "capsule": "Capsule", "builder": "Builder", "quiz": "Quizzes"},
+  "footer": {"tag": "The school of style: color, figure, outfit", "note": "An educational project. Style rules are guidelines, not dogma: your taste decides."},
+  "hero": {"eyebrow": "Style guide", "title": "Seven styles, one language of taste", "lede": "Breaking down smart casual, casual, old money, classic and more: philosophy, capsule pieces, palettes and rules. Find your style - or blend your own.", "cta1": "Build an outfit", "cta2": "Take the style quiz", "artTitle": "A clothing rail with three styles"},
+  "jump": {"sc": "Smart casual", "cs": "Casual", "om": "Old money", "cl": "Classic", "bc": "Business casual", "pr": "Preppy", "mn": "Minimalism"},
+  "s": {
+    "capTitle": "Style capsule",
+    "cap": {"top": "Top", "bottom": "Bottom", "shoes": "Shoes", "outer": "Outerwear", "acc": "Accessories"},
+    "paletteTitle": "Palette",
+    "fabricTitle": "Fabrics and fit",
+    "doTitle": "Do",
+    "dontTitle": "Don't",
+    "sc": {
+      "eyebrow": "Style 01", "name": "Smart casual",
+      "phil": "The sweet spot between a strict office and everyday life. The motto: casual, but never sloppy. Every outfit should look intentional, each piece chosen with care.",
+      "sit": "<strong>Works for:</strong> relaxed office dress codes, business lunches, networking, restaurant dinners, casual Fridays, semi-formal events.",
+      "capTop": "Oxford or chambray shirt, cotton or merino polo, fine knitwear (turtleneck, sweater, cardigan), a clean premium T-shirt - only under a jacket",
+      "capBottom": "Chinos, dark rinse jeans in straight or slim cut, wool trousers",
+      "capShoes": "Leather loafers, brogues, Chelsea boots, clean minimal leather sneakers, desert boots",
+      "capOuter": "Blazer in textured fabric (tweed, corduroy), suede or wool bomber, trench coat, field jacket",
+      "capAcc": "Leather belt, classic watch - minimal and purposeful",
+      "sw1": "black", "sw2": "navy", "sw3": "gray", "sw4": "white", "sw5": "beige", "sw6": "brown",
+      "fabric": "Fabrics: cotton, linen, merino, wool, cashmere. Neat, structured fit - never tight. Roll shirt sleeves, cuff trousers: small moves that soften formality.",
+      "do1": "Choose pieces with clear structure and a good fit",
+      "do2": "Keep accessories minimal: a leather belt, a classic watch",
+      "do3": "Tuck in your shirt when wearing a blazer",
+      "dont1": "Hoodies, graphic tees, sport sneakers",
+      "dont2": "Ripped and baggy pieces, overly loud prints",
+      "dont3": "An untucked shirt under a blazer",
+      "diff": "<strong>Smart casual vs business casual:</strong> business casual starts with a suit and relaxes it, while smart casual starts with a casual outfit and dresses it up. The practical test: jacket and trousers from one suit means business casual.<br><strong>Smart casual vs casual:</strong> casual is comfort without polish; smart casual adds structure: a blazer, clean shoes, neat trousers.",
+      "artTitle": "Smart casual outfit: blazer, chinos, loafers",
+      "artCap": "Navy blazer + beige chinos + brown loafers"
+    },
+    "cs": {
+      "eyebrow": "Style 02", "name": "Casual",
+      "phil": "Comfort and self-expression with no dress code attached. One caveat: casual does not mean 'anything goes' - neatness is the baseline.",
+      "sit": "<strong>Works for:</strong> weekends, walks, informal meetups, creative jobs with no dress code.",
+      "capTop": "T-shirts, untucked shirts, sweatshirts, hoodies",
+      "capBottom": "Jeans in any wash, joggers, shorts in summer",
+      "capShoes": "Sneakers, trainers, sandals, everyday boots",
+      "capOuter": "Denim jacket, bomber, parka, fleece",
+      "sw1": "denim", "sw2": "white", "sw3": "khaki", "sw4": "red", "sw5": "mustard", "sw6": "black",
+      "fabric": "Fabrics: denim, jersey, fleece, cotton. Relaxed fit, but never shapeless. Bright colors and prints are welcome - the freest palette of all styles.",
+      "do1": "Keep everything clean and neat",
+      "do2": "Size to your body: relaxed does not mean shapeless",
+      "do3": "Combine colors with intent",
+      "dont1": "Wrinkled or stained pieces, baggy knees",
+      "dont2": "Gym wear outside the gym",
+      "dont3": "Beachwear in the city",
+      "diff": "<strong>Casual in the style hierarchy:</strong> this is the bottom rung. Anything that adds structure and intent - a blazer, clean leather shoes, neat trousers - already moves the outfit toward smart casual.",
+      "artTitle": "Casual outfit: T-shirt, jeans, sneakers",
+      "artCap": "White T-shirt + jeans + sneakers"
+    },
+    "om": {
+      "eyebrow": "Style 03", "name": "Old money / Quiet luxury",
+      "phil": "Signal status by refusing to show it. The creed: fabric quality over quantity, restraint over decoration. Roots in US East Coast tradition and the British country look.",
+      "sit": "<strong>Works for:</strong> high-status events, top-level business settings, everyday life where taste matters.",
+      "capTop": "White cotton shirt, striped Oxford shirts, merino and cashmere turtlenecks and sweaters, silk tops",
+      "capBottom": "Wide wool trousers, chinos, corduroy trousers, pencil or pleated skirt, classic jeans with no distressing",
+      "capShoes": "Leather loafers (penny, tassel), brogues, classic white leather sneakers, riding boots, elegant mules",
+      "capOuter": "Camel trench coat, double-breasted wool coat, tweed blazer",
+      "capAcc": "Pearl earrings, thin gold chains, a vintage watch, silk scarf, structured leather bag with no visible branding",
+      "sw1": "navy", "sw2": "camel", "sw3": "cream", "sw4": "gray", "sw5": "chocolate", "sw6": "olive", "sw7": "bordeaux",
+      "fabric": "Natural fabrics only: cashmere, merino, wool, silk, heavy cotton, tweed, flannel, corduroy. Calm, classic, often slightly relaxed fit. Signature moves: monochrome outfits and restrained heritage prints - houndstooth, herringbone, tartan.",
+      "do1": "Invest in outerwear and shoes: they make the outfit",
+      "do2": "Have pieces tailored for a perfect fit",
+      "do3": "Wear no more than 2-3 pieces of jewelry in one metal",
+      "dont1": "Visible logos and branding",
+      "dont2": "Shiny synthetic fabrics",
+      "dont3": "Tight or overdressed pieces, more than one accent color",
+      "diff": "<strong>Old money vs quiet luxury:</strong> old money is tradition and codes; quiet luxury is modern minimalism and personal taste. Essentially one wardrobe in two moods.<br><strong>Old money vs preppy:</strong> old money is stricter and more monochrome; preppy is brighter and more playful.<br><strong>Old money vs classic:</strong> classic is a neutral base with no wealth context; old money adds status restraint.",
+      "artTitle": "Old money outfit: trench coat, cashmere sweater, loafers",
+      "artCap": "Camel trench + cream cashmere + dark loafers"
+    },
+    "cl": {
+      "eyebrow": "Style 04", "name": "Classic",
+      "phil": "Timelessness: pieces that look right today and in ten years. 'Fashions fade, style is eternal' (Yves Saint Laurent).",
+      "sit": "<strong>Works for:</strong> work, formal and semi-formal events, everyday life with an elegance requirement.",
+      "capTop": "White Oxford shirt, striped breton top, cashmere sweater, premium white T-shirt",
+      "capBottom": "Straight dark jeans, straight-cut trousers, midi skirt, little black dress",
+      "capShoes": "Loafers, ballet flats, white sneakers, leather shoes",
+      "capOuter": "Trench coat, neutral blazer, leather jacket, wool coat",
+      "sw1": "black", "sw2": "navy", "sw3": "white", "sw4": "beige", "sw5": "camel", "sw6": "gray", "sw7": "bordeaux",
+      "fabric": "Natural fabrics, clean seams, minimal hardware. Fit: 'skim, don't cling'. Timeless prints: stripes, polka dots, herringbone, glen plaid. Signature move: monochrome - one neutral head to toe for instant polish.",
+      "do1": "Start with fit, not price",
+      "do2": "Keep structured basics: a blazer transforms any outfit in a minute",
+      "do3": "Fewer pieces, but reliable ones",
+      "dont1": "One-season trend pieces",
+      "dont2": "100% polyester and acrylic",
+      "dont3": "Dramatic silhouettes and extreme cuts",
+      "diff": "<strong>Classic among its neighbors:</strong> the most neutral style and the base for all others. Unlike minimalism it welcomes more prints and feminine details; unlike old money it carries no status subtext.",
+      "artTitle": "Classic outfit: white shirt, straight trousers, ballet flats",
+      "artCap": "White shirt + straight trousers + ballet flats"
+    },
+    "bc": {
+      "eyebrow": "Style 05", "name": "Business casual",
+      "phil": "A professional look without the full suit. The formula: office wear minus the jacket and tie. The context is always work.",
+      "sit": "<strong>Works for:</strong> the office, interviews, business meetings, conferences. In conservative industries it means 'a suit without the tie'; in creative fields it leans toward smart casual.",
+      "capTop": "Button-up shirts, blouses, polos (in relaxed offices), sweaters and cardigans over shirts, optional blazer",
+      "capBottom": "Chinos, classic trousers, pencil skirt in a conservative length, knee-length dress",
+      "capShoes": "Loafers, oxfords, brogues, ballet flats, low-heel shoes",
+      "capAcc": "Leather belt matching the shoes, classic watch, restrained jewelry, structured bag",
+      "sw1": "brown", "sw2": "black", "sw3": "navy", "sw4": "white", "sw5": "khaki",
+      "fabric": "Fabrics: cotton, wool, gabardine, fine knitwear. Neat, businesslike fit. Everything pressed and clean - in a business context that is part of the dress code.",
+      "do1": "Fit everything to your body: poor fit ruins even an expensive outfit",
+      "do2": "Read the culture of your specific office",
+      "do3": "For interviews, dress a notch above expectations",
+      "dont1": "Jeans and sneakers on a 'hope it passes' basis",
+      "dont2": "Graphic tees, sportswear, shorts",
+      "dont3": "Overly bright colors and prints, careless grooming",
+      "diff": "<strong>Business casual vs smart casual:</strong> business casual is a professional tone: denim and sneakers are off limits. Smart casual is a social context: dark jeans and clean sneakers are allowed. The practical test: jacket and trousers from one suit means business casual.",
+      "artTitle": "Business casual outfit: shirt, chinos, oxfords",
+      "artCap": "Blue shirt + chinos + oxfords"
+    },
+    "pr": {
+      "eyebrow": "Style 06", "name": "Preppy",
+      "phil": "The heritage of Ivy League campuses: neatness with a sporty, aristocratic streak. Firmly back in fashion since 2022.",
+      "sit": "<strong>Works for:</strong> studying, creative-leaning offices, country leisure: yachting, golf, tennis.",
+      "capTop": "Oxford shirt, polo, cable-knit sweater, cardigan, rugby shirt",
+      "capBottom": "Chinos, pleated or tennis skirt, Bermuda shorts in summer",
+      "capShoes": "Penny loafers, boat shoes, ballet flats, white sneakers",
+      "capOuter": "Navy blazer, tweed jacket, quilted jacket, trench coat",
+      "capAcc": "Repp tie, leather belt, silk scarf, pearls, argyle socks",
+      "sw1": "navy", "sw2": "white", "sw3": "khaki", "sw4": "cream", "sw5": "bordeaux", "sw6": "light blue",
+      "fabric": "Fabrics: cotton, wool, linen, tweed, corduroy. Clean fit, true at the shoulder. Prints: stripes, gingham, argyle, tartan. Accent colors one at a time: bordeaux, emerald, pink, sky blue.",
+      "do1": "Layer: blazer over sweater over shirt",
+      "do2": "Take one accent color at a time",
+      "do3": "Mix 1-2 preppy pieces with non-preppy ones to avoid looking costumed",
+      "dont1": "Large logos",
+      "dont2": "Full preppy head to toe in one outfit",
+      "dont3": "Sloppiness: the style demands crispness",
+      "diff": "<strong>Preppy vs old money:</strong> preppy is brighter and younger, with prints and pastels; old money is stricter and more monochrome.<br><strong>Preppy vs classic:</strong> preppy has recognizable 'school' codes - ties, argyle, heraldry; classic stays neutral.",
+      "artTitle": "Preppy outfit: polo, pleated skirt, penny loafers",
+      "artCap": "White polo + navy pleats + penny loafers"
+    },
+    "mn": {
+      "eyebrow": "Style 07", "name": "Minimalism",
+      "phil": "'Less but better': conscious consumption, clean lines, zero visual noise. Clothes are the backdrop for the person, not the other way round.",
+      "sit": "<strong>Works for:</strong> any setting, from office to evening, as long as the formality level holds.",
+      "capTop": "White and black T-shirts, shirts, turtlenecks, cashmere sweaters",
+      "capBottom": "Dark jeans, straight-cut trousers, pencil or midi skirt",
+      "capShoes": "White leather sneakers, loafers, ballet flats, ankle boots",
+      "capOuter": "Blazer, trench coat, cocoon coat, clean-cut leather jacket",
+      "capAcc": "One quality tote bag, delicate jewelry, neutral belt, scarf",
+      "sw1": "black", "sw2": "white", "sw3": "gray", "sw4": "beige", "sw5": "navy",
+      "fabric": "2-3 neutral base colors plus 1-2 accents, almost no prints. Clean fit, often slightly oversized, but the silhouette stays controlled. Interest comes from texture and proportion, not decoration.",
+      "do1": "Play with textures: smooth leather plus soft cashmere",
+      "do2": "Build monochrome outfits",
+      "do3": "Invest in cut",
+      "dont1": "Loud prints, logos, excess decoration",
+      "dont2": "Cheap fabrics: in minimalism flaws show immediately",
+      "dont3": "Poor fit: 'boring' is about cut, not simplicity",
+      "diff": "<strong>Minimalism vs classic:</strong> minimalism is stricter about prints and decor, more architectural; classic is warmer and welcomes 'cozy' details.<br><strong>Minimalism vs quiet luxury:</strong> the styles overlap; quiet luxury adds a status layer and heritage fabrics.",
+      "artTitle": "Minimalism outfit: turtleneck, straight trousers, white sneakers",
+      "artCap": "Black turtleneck + gray trousers + white sneakers"
+    }
+  },
+  "tbl": {
+    "eyebrow": "Comparison", "title": "All seven styles in one table",
+    "lede": "A quick way to feel the difference: mood, formula, key pieces and typical mistakes of each style.",
+    "h0": "Criterion", "h1": "Casual", "h2": "Smart casual", "h3": "Business casual", "h4": "Classic", "h5": "Preppy", "h6": "Old money", "h7": "Minimalism",
+    "r1l": "Mood", "r1c1": "Comfort and freedom", "r1c2": "Relaxed with intent", "r1c3": "Professional without the suit", "r1c4": "Timelessness", "r1c5": "Ivy League campus", "r1c6": "Status without showing off", "r1c7": "Conscious simplicity",
+    "r2l": "Formula", "r2c1": "Comfort first", "r2c2": "Casual plus structure", "r2c3": "The suit minus the tie", "r2c4": "Tried and true", "r2c5": "Neat sporty chic", "r2c6": "Quality over logos", "r2c7": "Less but better",
+    "r3l": "Key top", "r3c1": "T-shirt, hoodie", "r3c2": "Oxford shirt, polo, blazer", "r3c3": "Shirt, blouse, sweater", "r3c4": "White shirt, breton stripe", "r3c5": "Oxford, polo, cable knit", "r3c6": "Cashmere, white shirt", "r3c7": "T-shirt, turtleneck",
+    "r4l": "Key bottom", "r4c1": "Any jeans", "r4c2": "Chinos, dark denim", "r4c3": "Trousers, pencil skirt", "r4c4": "Straight jeans, midi", "r4c5": "Chinos, pleats", "r4c6": "Wool trousers", "r4c7": "Straight trousers, dark denim",
+    "r5l": "Shoes", "r5c1": "Sneakers, trainers", "r5c2": "Loafers, clean sneakers", "r5c3": "Oxfords, loafers", "r5c4": "Loafers, ballet flats", "r5c5": "Boat shoes, penny loafers", "r5c6": "Loafers, brogues", "r5c7": "White sneakers, mules",
+    "r6l": "Palette", "r6c1": "Free", "r6c2": "Neutral", "r6c3": "Neutral, muted", "r6c4": "Neutral plus restrained accents", "r6c5": "Navy, white, khaki plus pastels", "r6c6": "Navy, camel, cream, olive plus bordeaux", "r6c7": "2-3 neutrals plus 1 accent",
+    "r7l": "Prints", "r7c1": "Any", "r7c2": "Restrained", "r7c3": "Minimal", "r7c4": "Stripes, dots, checks", "r7c5": "Stripes, gingham, argyle, tartan", "r7c6": "Heritage prints in moderation", "r7c7": "Almost none",
+    "r8l": "Fabrics", "r8c1": "Denim, jersey", "r8c2": "Cotton, linen, merino", "r8c3": "Cotton, wool, gabardine", "r8c4": "Natural, quality", "r8c5": "Cotton, tweed, corduroy", "r8c6": "Cashmere, wool, silk, tweed", "r8c7": "Cotton, wool, leather",
+    "r9l": "Logos", "r9c1": "Acceptable", "r9c2": "No", "r9c3": "No", "r9c4": "No", "r9c5": "Small, heraldic", "r9c6": "Strictly no", "r9c7": "No",
+    "r10l": "Typical mistake", "r10c1": "Sloppiness", "r10c2": "Sport shoes and hoodies", "r10c3": "Jeans and sneakers, 'hope it passes'", "r10c4": "Dullness without accents", "r10c5": "'School uniform' - everything at once", "r10c6": "Faking status with cheap fabrics", "r10c7": "Cheap fabrics",
+    "r11l": "Context", "r11c1": "Weekends, home", "r11c2": "Flexible office, dinner, networking", "r11c3": "Office, interviews", "r11c4": "Everywhere", "r11c5": "Study, country, light office", "r11c6": "Status, business, social", "r11c7": "Everywhere"
+  },
+  "cap": {
+    "eyebrow": "Wardrobe basics", "title": "Capsule wardrobe principles",
+    "lede": "Seven principles that work in any style. The full breakdown with the 4x4 template lives in the Capsule section.",
+    "p1": "Start with palette: 3-4 neutrals plus 1-2 accents, everything mixes with everything.",
+    "p2": "Quality over quantity: natural fabrics; before buying, check the piece pairs with at least three you already own.",
+    "p3": "Fit decides: budget 15-20% for a tailor.",
+    "p4": "Wardrobe structure: roughly 40% tops, 30% bottoms, 30% outerwear; fewer shoes and bags, but better.",
+    "p5": "Invest in 'visible' pieces: coat, shoes, bag and blazer shape the impression.",
+    "p6": "Silhouette and proportion: voluminous top plus fitted bottom or vice versa; monochrome elongates.",
+    "p7": "Dress your real life: build for your actual week, not an imaginary one.",
+    "more": "Open the Capsule section"
+  },
+  "next": {
+    "eyebrow": "What's next", "title": "Style picked - time to act",
+    "lede": "Put knowledge to work: build an outfit in the builder, master combinations, or test yourself in a quiz.",
+    "c1e": "Section", "c1t": "Combinations", "c1d": "12 rules: how to combine pieces and accessories - from belts to prints.",
+    "c2e": "Section", "c2t": "Capsule", "c2d": "Build a wardrobe where everything goes with everything: the 4x4 template.",
+    "c3e": "Interactive", "c3t": "Quizzes", "c3d": "Discover your undertone, body type and style in 10 minutes.",
+    "cta": "Build an outfit in the builder"
+  }
+}
+};
+</script>
+<script src="js/common.js"></script>
+</body>
+</html>
